@@ -17,6 +17,9 @@ func ReadWords(fileInput string) []string {
 	for scanner.Scan() {
 		txtlines = append(txtlines, scanner.Text())
 	}
-	file.Close()
+	err = file.Close()
+	if err != nil {
+		log.Fatalf("Failed closing file: %s", err)
+	}
 	return txtlines
 }
