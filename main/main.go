@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+	inputs := Utils.ReadInput()
 	words := Utils.ReadWords("words.txt")
 	color.Green("Prints %s in green.", "text")
 	color.Red("We have red")
