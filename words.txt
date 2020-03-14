@@ -20,6 +20,7 @@ master
 666666
 qwertyuiop
 123321
+root
 mustang
 1234567890
 michael

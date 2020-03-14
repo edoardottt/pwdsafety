@@ -1,16 +1,15 @@
-package utils
+package Utils
 
 import (
 	"bufio"
-	"fmt"
 	"log"
 	"os"
 )
 
-func readWords(fileInput string) {
+func ReadWords(fileInput string) []string {
 	file, err := os.Open(fileInput)
 	if err != nil {
-		log.Fatalf("failed opening file: %s", err)
+		log.Fatalf("Failed opening file: %s", err)
 	}
 	scanner := bufio.NewScanner(file)
 	scanner.Split(bufio.ScanLines)
@@ -19,8 +18,5 @@ func readWords(fileInput string) {
 		txtlines = append(txtlines, scanner.Text())
 	}
 	file.Close()
-	result []string
-	for _, eachline := range txtlines {
-		fmt.Println(eachline)
-	}
+	return txtlines
 }
