@@ -12,4 +12,5 @@ func main() {
 	color.Green("Prints %s in green.", "text")
 	color.Red("We have red")
 	fmt.Printf("%v", words)
+	fmt.Printf("%v", inputs)
 }
