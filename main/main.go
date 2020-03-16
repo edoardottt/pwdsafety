@@ -7,10 +7,13 @@ import (
 )
 
 func main() {
-	inputs := Utils.ReadInput()
+	//inputs := Utils.ReadInput()
+	password := Utils.ReadSingleInput("Password")
 	words := Utils.ReadWords("words.txt")
 	color.Green("Prints %s in green.", "text")
 	color.Red("We have red")
 	fmt.Printf("%v", words)
-	fmt.Printf("%v", inputs)
+	println(password)
+	boo := Utils.FindExactly(words,password)
+	println(fmt.Printf("%v", boo))
 }
