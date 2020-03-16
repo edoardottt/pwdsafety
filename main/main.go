@@ -15,5 +15,5 @@ func main() {
 	fmt.Printf("%v", words)
 	println(password)
 	boo := Utils.FindExactly(words,password)
-	println(fmt.Printf("%v", boo))
+	fmt.Printf("%t", boo)
 }
