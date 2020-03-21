@@ -18,3 +18,13 @@ func Reverse(s string) string {
 	}
 	return string(runes)
 }
+
+//Check if the password is equal to one known password reversed
+func FindExactlyReversed(words []string, password string) bool {
+	for _, s := range words {
+		if Reverse(password)==s {
+			return true
+		}
+	}
+	return false
+}
