@@ -2,28 +2,28 @@ package Utils
 
 /*
 Scores known password
-	total = 18
-	It's present = 0
-	There isn't = 18
+	total = -18
+	It's present = -18
+	There isn't = 0
  */
 func KnownPwdScore(words []string, password string) float64 {
 	found := FindExactly(words,password)
-	if !found {
-		return 18
+	if found {
+		return -18
 	}
 	return 0
 }
 
 /*
 Scores known reversed password
-	total = 8
-	It's present = 0
-	There isn't = 8
+	total = -8
+	It's present = -8
+	There isn't = 0
 */
 func KnownPwdReverseScore(words []string, password string) float64 {
 	foundReverse := FindExactlyReversed(words,password)
-	if !foundReverse {
-		return 8
+	if foundReverse {
+		return -8
 	}
 	return 0
 }
@@ -35,21 +35,21 @@ Scores password's length
 	length <= 6 = 4
 	length==7 = 6
 	length==8 = 10
-	8 < length < 12 = 13
-	11 < length < 15 = 15
-	14 < length < 19 = 18
-	length >=19 = 20
+	8 < length < 12 = 17
+	11 < length < 15 = 24
+	14 < length < 19 = 27
+	length >=19 = 30
 */
 func LengthScore(password string) float64 {
 	length := len(password)
 	if length <=4 { return 0 }
 	if length <= 6 { return 4 }
-	if length==7 { return 5 }
-	if length==8 { return 7 }
-	if length > 8 && length < 12 { return 10 }
-	if length > 11 && length < 15 { return 13 }
-	if length > 14 && length < 19 { return 15 }
-	return 20
+	if length==7 { return 6 }
+	if length==8 { return 10 }
+	if length > 8 && length < 12 { return 17 }
+	if length > 11 && length < 15 { return 24 }
+	if length > 14 && length < 19 { return 27 }
+	return 30
 }
 
 /*
@@ -81,25 +81,27 @@ Scores How many different chars in relation to the length
 func DifferentCharScore(password string) float64 {
 	diffChars := HowManyDifferents(password)
 	total := len(password)
-	return float64((diffChars*20)/total)
+	return float64((diffChars*15)/total)
 }
 
 /*
 Scores Entropy's password
-	total = 18
-	< 28 bits = 2
-	28 - 35 bits = 5
-	36 - 69 bits = 8
-	70 - 120 bits = 18
-	120+ bits = 23
+	total = 35
+	< 28 bits = 3
+	28 - 35 bits = 7
+	36 - 59 bits = 18
+	60 - 80 bits = 24
+	81 - 120 bits = 29
+	120+ bits = 35
 */
 func EntropyScore(password string) float64 {
 	entropy := Entropy(password)
-	if entropy <= 28 { return 2 }
-	if entropy > 28  && entropy <=35 { return 5 }
-	if entropy > 35 && entropy <=69 { return 8 }
-	if entropy > 69 && entropy <=120 { return 18 }
-	return 23
+	if entropy <= 28 { return 3 }
+	if entropy > 28  && entropy <=35 { return 7 }
+	if entropy > 35 && entropy <=59 { return 18 }
+	if entropy > 59 && entropy <=80 { return 24 }
+	if entropy > 80 && entropy <=120 { return 29 }
+	return 35
 }
 
 //Grader
@@ -110,11 +112,11 @@ func Grader(words []string, password string) float64 {
 	compositionPwdScore := CompositionPwdScore(password)
 	differentCharScore := DifferentCharScore(password)
 	entropyScore := EntropyScore(password)
-	println("knownPwd",knownPwd)
+	/*println("knownPwd",knownPwd)
 	println("knownPwdReverse",knownPwdReverse)
 	println("lengthScore",lengthScore)
 	println("compositionPwdReverse",compositionPwdScore)
 	println("differentCharScore",differentCharScore)
-	println("entropyScore",entropyScore)
+	println("entropyScore",entropyScore)*/
 	return knownPwd + knownPwdReverse + lengthScore + compositionPwdScore + differentCharScore + entropyScore
 }
