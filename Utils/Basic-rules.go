@@ -60,11 +60,12 @@ func IsThereNumber(password string) bool {
 	return false
 }
 
+//Returns how many different types there are in the password
 func HowManyTypes(password string) int {
 	var howMany int
-	/*upperCase := false
-	lowerCase := false
-	numbers := false
-	symbols := false*/
+	if IsThereNumber(password) {howMany++}
+	if IsThereUpperCase(password) {howMany++}
+	if IsThereLowerCase(password) {howMany++}
+	if IsThereSymbol(password) {howMany++}
 	return howMany
 }

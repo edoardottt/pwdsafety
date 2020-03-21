@@ -19,6 +19,7 @@ func main() {
 	lower := Utils.IsThereLowerCase(password)
 	symbols := Utils.IsThereSymbol(password)
 	howMany := Utils.HowManyDifferents(password)
+	types := Utils.HowManyTypes(password)
 	fmt.Printf("%s %t", "Found in the famous passwords:",boo)
 	println("")
 	fmt.Println("Password's length:", length)
@@ -27,4 +28,5 @@ func main() {
 	fmt.Println("There is lowercase:", lower)
 	fmt.Println("There is symbols:", symbols)
 	fmt.Println("How many different character:", howMany)
+	fmt.Println("How many different types:", types)
 }
