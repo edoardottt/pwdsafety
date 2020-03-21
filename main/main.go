@@ -21,6 +21,8 @@ func main() {
 	symbols := Utils.IsThereSymbol(password)
 	howMany := Utils.HowManyDifferents(password)
 	types := Utils.HowManyTypes(password)
+	count := Utils.CountTypeElements(password)
+	entropy := Utils.Entropy(password)
 	fmt.Printf("%s %t", "Found in the famous passwords:",boo)
 	println("")
 	fmt.Printf("%s %t", "Found reversed in the famous passwords:",boa)
@@ -32,4 +34,6 @@ func main() {
 	fmt.Println("There is symbols:", symbols)
 	fmt.Println("How many different character:", howMany)
 	fmt.Println("How many different types:", types)
+	fmt.Println("Count elements:", count)
+	fmt.Println("Entropy:",entropy)
 }
