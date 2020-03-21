@@ -8,7 +8,7 @@ Scores known password
  */
 func KnownPwdScore(words []string, password string) float64 {
 	found := FindExactly(words,password)
-	if found {
+	if !found {
 		return 18
 	}
 	return 0
@@ -22,7 +22,7 @@ Scores known reversed password
 */
 func KnownPwdReverseScore(words []string, password string) float64 {
 	foundReverse := FindExactlyReversed(words,password)
-	if foundReverse {
+	if !foundReverse {
 		return 8
 	}
 	return 0
@@ -44,11 +44,11 @@ func LengthScore(password string) float64 {
 	length := len(password)
 	if length <=4 { return 0 }
 	if length <= 6 { return 4 }
-	if length==7 { return 6 }
-	if length==8 { return 10 }
-	if length > 8 && length < 12 { return 13 }
-	if length > 11 && length < 15 { return 15 }
-	if length > 14 && length < 19 { return 18 }
+	if length==7 { return 5 }
+	if length==8 { return 7 }
+	if length > 8 && length < 12 { return 10 }
+	if length > 11 && length < 15 { return 13 }
+	if length > 14 && length < 19 { return 15 }
 	return 20
 }
 
@@ -75,7 +75,7 @@ func CompositionPwdScore(password string) float64 {
 
 /*
 Scores How many different chars in relation to the length
-	total = 20
+	total = 15
 	n = (different_chars*total)/total_chars
 */
 func DifferentCharScore(password string) float64 {
@@ -89,17 +89,17 @@ Scores Entropy's password
 	total = 18
 	< 28 bits = 2
 	28 - 35 bits = 5
-	36 - 69 bits = 9
-	70 - 120 bits = 14
-	120+ bits = 18
+	36 - 69 bits = 8
+	70 - 120 bits = 18
+	120+ bits = 23
 */
 func EntropyScore(password string) float64 {
 	entropy := Entropy(password)
 	if entropy <= 28 { return 2 }
 	if entropy > 28  && entropy <=35 { return 5 }
-	if entropy > 35 && entropy <=69 { return 9 }
-	if entropy > 69 && entropy <=120 { return 14 }
-	return 18
+	if entropy > 35 && entropy <=69 { return 8 }
+	if entropy > 69 && entropy <=120 { return 18 }
+	return 23
 }
 
 //Grader
@@ -109,6 +109,12 @@ func Grader(words []string, password string) float64 {
 	lengthScore := LengthScore(password)
 	compositionPwdScore := CompositionPwdScore(password)
 	differentCharScore := DifferentCharScore(password)
-	entropyScore := Entropy(password)
+	entropyScore := EntropyScore(password)
+	println("knownPwd",knownPwd)
+	println("knownPwdReverse",knownPwdReverse)
+	println("lengthScore",lengthScore)
+	println("compositionPwdReverse",compositionPwdScore)
+	println("differentCharScore",differentCharScore)
+	println("entropyScore",entropyScore)
 	return knownPwd + knownPwdReverse + lengthScore + compositionPwdScore + differentCharScore + entropyScore
 }
