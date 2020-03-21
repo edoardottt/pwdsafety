@@ -32,7 +32,7 @@ func main() {
 	fmt.Println("There is UPPERCASE:", upper)
 	fmt.Println("There is lowercase:", lower)
 	fmt.Println("There is symbols:", symbols)
-	fmt.Println("How many different character:", howMany)
+	fmt.Println("How many different characters:", howMany)
 	fmt.Println("How many different types:", types)
 	fmt.Println("Count elements:", count)
 	fmt.Println("Entropy:",entropy)
