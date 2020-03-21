@@ -17,7 +17,7 @@ func GenerateSetString(input string) []byte {
 
 //Returns the number of differents characters used in password
 func HowManyDifferents(password string) int {
-	return len(GenerateSetString(password))-1 // -1 because there is '\n'
+	return len(GenerateSetString(password))
 }
 
 //Checks if there is at least one UPPERCASE character
@@ -43,7 +43,7 @@ func IsThereLowerCase(password string) bool {
 //Checks if there is at least one symbol
 func IsThereSymbol(password string) bool {
 	for _, r := range password {
-		if (r < 'A' || r > 'z') && (r < '0' || r > '9' ) && r!='\n' {
+		if (r < 'A' || r > 'z') && (r < '0' || r > '9' ) {
 			return true
 		}
 	}

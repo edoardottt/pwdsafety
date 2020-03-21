@@ -3,7 +3,7 @@ package Utils
 //Check if the password is equal to one known password
 func FindExactly(words []string, password string) bool {
 	for _, s := range words {
-		if password==s+"\n" {
+		if password==s {
 			return true
 		}
 	}
