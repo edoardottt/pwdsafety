@@ -42,7 +42,12 @@ func IsThereLowerCase(password string) bool {
 
 //Checks if there is at least one symbol
 func IsThereSymbol(password string) bool {
-	return true
+	for _, r := range password {
+		if (r < 'A' || r > 'z') && (r < '0' || r > '9' ) && r!='\n' {
+			return true
+		}
+	}
+	return false
 }
 
 //Checks if there is at least one number
