@@ -1,4 +1,4 @@
-module github.com/edoardottt/pwd-safety
+module pwd-safety
 
 go 1.14
 
