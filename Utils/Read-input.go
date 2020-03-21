@@ -21,5 +21,9 @@ func ReadSingleInput(input string) string {
 	reader := bufio.NewReader(os.Stdin)
 	fmt.Print("Enter "+ input + ": ")
 	text, _ := reader.ReadString('\n')
+	ind := len(text)
+	if ind > 0 && text[ind-1] == '\n' {
+		text = text[:ind-1]
+	}
 	return text
 }
