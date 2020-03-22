@@ -35,8 +35,8 @@ L = number of characters in your password
 
 Then R^L = the number of possible passwords and the log of it is the number of bits of entropy.
 
-
-SCORINGGGGG
+##############################################à
+##################################################SCORINGGGGG
 
 -------------------------------------------------
 SOME EXAMPLES :bar_chart:
@@ -50,9 +50,13 @@ SOME EXAMPLES :bar_chart:
 DOWNLOAD 📡
 -------------------------------------------------
 
-GIT command on prompt: git -clone https://github.com/edoardottt/pwd-safety.git
+- GIT command on prompt: 
+            
+            git -clone https://github.com/edoardottt/pwd-safety.git
 
-Download by Browser on: https://github.com/edoardottt/pwd-safety
+- Download by Browser on: 
+
+https://github.com/edoardottt/pwd-safety
 
 --------------------------
 If you liked it drop a :star:
