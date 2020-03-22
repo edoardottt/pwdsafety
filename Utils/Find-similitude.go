@@ -3,7 +3,7 @@ package Utils
 //Check if the password is equal to one known password
 func FindExactly(words []string, password string) bool {
 	for _, s := range words {
-		if password==s {
+		if password == s {
 			return true
 		}
 	}
@@ -22,7 +22,7 @@ func Reverse(s string) string {
 //Check if the password is equal to one known password reversed
 func FindExactlyReversed(words []string, password string) bool {
 	for _, s := range words {
-		if Reverse(password)==s {
+		if Reverse(password) == s {
 			return true
 		}
 	}
