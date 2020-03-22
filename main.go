@@ -13,7 +13,7 @@ func main() {
 	words := Utils.ReadWords("known-pwd.txt")
 	score := Utils.Grader(words, password)
 	DisplayResult(score)
-	if score <= 59 {
+	if score <= 68 {
 		SuggestPwd(words)
 	}
 }
