@@ -33,7 +33,7 @@ It calculates then the entropy of a password.
 Password entropy is a measurement of how unpredictable a password is.
 
 The formula for entropy is:
-              ![CodeCogsEqn](https://github.com/edoardottt/pwd-safety/blob/devel/Images/CodeCogsEqn.gif)
+              ![CodeCogsEqn](https://github.com/edoardottt/pwd-safety/blob/master/Images/CodeCogsEqn.gif)
               
 Where E = password entropy
 
@@ -72,15 +72,15 @@ Scoring parameters:
 SOME EXAMPLES :bar_chart:
 -------------------------------------------------
 
-![veryWeak](https://github.com/edoardottt/pwd-safety/blob/devel/Images/veryWeak.png)
+![veryWeak](https://github.com/edoardottt/pwd-safety/blob/master/Images/veryWeak.png)
 
-![weak](https://github.com/edoardottt/pwd-safety/blob/devel/Images/weak.png)
+![weak](https://github.com/edoardottt/pwd-safety/blob/master/Images/weak.png)
 
-![reasonable](https://github.com/edoardottt/pwd-safety/blob/devel/Images/reasonable.png)
+![reasonable](https://github.com/edoardottt/pwd-safety/blob/master/Images/reasonable.png)
 
-![strong](https://github.com/edoardottt/pwd-safety/blob/devel/Images/strong.png)
+![strong](https://github.com/edoardottt/pwd-safety/blob/master/Images/strong.png)
 
-![veryStrong](https://github.com/edoardottt/pwd-safety/blob/devel/Images/veryStrong.png)
+![veryStrong](https://github.com/edoardottt/pwd-safety/blob/master/Images/veryStrong.png)
 
 
 DOWNLOAD 📡
