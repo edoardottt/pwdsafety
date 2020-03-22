@@ -88,19 +88,19 @@ func DifferentCharScore(password string) float64 {
 Scores Entropy's password
 	total = 35
 	< 28 bits = 3
-	28 - 35 bits = 7
-	36 - 59 bits = 18
-	60 - 80 bits = 24
-	81 - 120 bits = 29
+	28 - 35 bits = 8
+	36 - 59 bits = 22
+	60 - 80 bits = 28
+	81 - 120 bits = 32
 	120+ bits = 35
 */
 func EntropyScore(password string) float64 {
 	entropy := Entropy(password)
 	if entropy <= 28 { return 3 }
-	if entropy > 28  && entropy <=35 { return 7 }
-	if entropy > 35 && entropy <=59 { return 18 }
-	if entropy > 59 && entropy <=80 { return 24 }
-	if entropy > 80 && entropy <=120 { return 29 }
+	if entropy > 28  && entropy <=35 { return 8 }
+	if entropy > 35 && entropy <=59 { return 22 }
+	if entropy > 59 && entropy <=80 { return 28 }
+	if entropy > 80 && entropy <=120 { return 32 }
 	return 35
 }
 
@@ -112,11 +112,7 @@ func Grader(words []string, password string) float64 {
 	compositionPwdScore := CompositionPwdScore(password)
 	differentCharScore := DifferentCharScore(password)
 	entropyScore := EntropyScore(password)
-	/*println("knownPwd",knownPwd)
-	println("knownPwdReverse",knownPwdReverse)
-	println("lengthScore",lengthScore)
-	println("compositionPwdReverse",compositionPwdScore)
-	println("differentCharScore",differentCharScore)
-	println("entropyScore",entropyScore)*/
-	return knownPwd + knownPwdReverse + lengthScore + compositionPwdScore + differentCharScore + entropyScore
+	score :=  knownPwd + knownPwdReverse + lengthScore + compositionPwdScore + differentCharScore + entropyScore
+	if score > 0 { return score}
+	return 0
 }
