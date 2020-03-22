@@ -14,7 +14,9 @@ This is a light command line tool that checks how much a password is safe.
 DESCRIPTION 🔦 
 -------------------------------------------------
 
-Just write go run man.go in your terminal inside ../pwd-safety$
+Just write **go run main.go** in your terminal inside ../pwd-safety$
+
+So: ../pwd-safety$ go run main.go
 
 It reads from standard input the entered password.
 
