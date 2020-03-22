@@ -97,12 +97,15 @@ func CompositionPwdScore(password string) float64 {
 
 /*
 Scores How many different chars in relation to the length
-	total = 20
+	total = 15
 	n = (different_chars*total)/total_chars
 */
 func DifferentCharScore(password string) float64 {
 	diffChars := HowManyDifferents(password)
 	total := len(password)
+	if total == 0 {
+		return 0
+	}
 	return float64((diffChars * 15) / total)
 }
 
@@ -114,11 +117,15 @@ Scores Entropy's password
 	36 - 59 bits = 20
 	60 - 80 bits = 24
 	81 - 120 bits = 28
-	120+ bits = 30
+	120+ bits = 35
 */
 func EntropyScore(password string) float64 {
 	entropy := Entropy(password)
-	return float64((entropy * 30) / 130)
+	entropyScore := float64((entropy * 35) / 130)
+	if entropyScore > 35 {
+		return 35
+	}
+	return entropyScore
 }
 
 //Grader
