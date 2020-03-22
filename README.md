@@ -37,6 +37,7 @@ L = number of characters in your password
 
 Then R^L = the number of possible passwords and the log of it is the number of bits of entropy.
 
+When the score <= 68(reasonable) it generates a random password using a list of all english words.
 
 SCORING 💯
 -------------------------------------------------
@@ -90,6 +91,12 @@ https://github.com/edoardottt/pwd-safety
 
 VERSIONING :books:
 --------------------------------------------
+
+**[v0.1.1](https://github.com/edoardottt/pwd-safety/releases/tag/v0.1.1):**
+  
+          - Added:
+                  - Generates random password when score <= REASONABLE
+                  - Errors code table
 
 **[v0.1](https://github.com/edoardottt/pwd-safety/releases/tag/v0.1):**
   
