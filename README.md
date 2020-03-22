@@ -2,6 +2,8 @@
 
 This is a light command line tool that checks how much a password is safe.
 
+**This tool doesn't store any information!**
+
 ![gobadge](https://github.com/edoardottt/pwd-safety/blob/devel/Images/gobadge)
 
 
