@@ -118,22 +118,7 @@ Scores Entropy's password
 */
 func EntropyScore(password string) float64 {
 	entropy := Entropy(password)
-	if entropy <= 28 {
-		return 3
-	}
-	if entropy > 28 && entropy <= 35 {
-		return 8
-	}
-	if entropy > 35 && entropy <= 59 {
-		return 20
-	}
-	if entropy > 59 && entropy <= 80 {
-		return 24
-	}
-	if entropy > 80 && entropy <= 120 {
-		return 28
-	}
-	return 30
+	return float64((entropy * 30) / 130)
 }
 
 //Grader
