@@ -32,10 +32,10 @@ func KnownPwdReverseScore(words []string, password string) float64 {
 Scores password's length
 	total = 20
 	length <= 4 = 0
-	length <= 6 = 4
-	length==7 = 6
-	length==8 = 10
-	8 < length < 12 = 14
+	length <= 6 = 1
+	length==7 = 3
+	length==8 = 8
+	8 < length < 12 = 13
 	11 < length < 15 = 22
 	14 < length < 19 = 27
 	length >=19 = 30
@@ -46,16 +46,16 @@ func LengthScore(password string) float64 {
 		return 0
 	}
 	if length <= 6 {
-		return 4
+		return 1
 	}
 	if length == 7 {
-		return 6
+		return 3
 	}
 	if length == 8 {
-		return 10
+		return 8
 	}
 	if length > 8 && length < 12 {
-		return 14
+		return 13
 	}
 	if length > 11 && length < 15 {
 		return 22
@@ -97,7 +97,7 @@ func CompositionPwdScore(password string) float64 {
 
 /*
 Scores How many different chars in relation to the length
-	total = 15
+	total = 20
 	n = (different_chars*total)/total_chars
 */
 func DifferentCharScore(password string) float64 {
@@ -111,10 +111,10 @@ Scores Entropy's password
 	total = 35
 	< 28 bits = 3
 	28 - 35 bits = 8
-	36 - 59 bits = 22
-	60 - 80 bits = 28
-	81 - 120 bits = 32
-	120+ bits = 35
+	36 - 59 bits = 20
+	60 - 80 bits = 24
+	81 - 120 bits = 28
+	120+ bits = 30
 */
 func EntropyScore(password string) float64 {
 	entropy := Entropy(password)
@@ -125,15 +125,15 @@ func EntropyScore(password string) float64 {
 		return 8
 	}
 	if entropy > 35 && entropy <= 59 {
-		return 22
+		return 20
 	}
 	if entropy > 59 && entropy <= 80 {
-		return 28
+		return 24
 	}
 	if entropy > 80 && entropy <= 120 {
-		return 32
+		return 28
 	}
-	return 35
+	return 30
 }
 
 //Grader
