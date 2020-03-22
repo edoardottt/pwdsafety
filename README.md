@@ -2,6 +2,8 @@
 
 This is a light command line tool that checks how much a password is safe.
 
+![gobadge](https://github.com/edoardottt/pwd-safety/blob/devel/Images/gobadge)
+
 
 DESCRIPTION 🔦 
 -------------------------------------------------
@@ -23,7 +25,8 @@ It calculates then the entropy of a password.
 Password entropy is a measurement of how unpredictable a password is.
 
 The formula for entropy is:
-              //image
+              ![CodeCogsEqn](https://github.com/edoardottt/pwd-safety/blob/devel/Images/CodeCogsEqn.gif)
+              
 Where E = password entropy
 
 R = pool of unique characters
