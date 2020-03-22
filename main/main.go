@@ -6,13 +6,6 @@ import (
 	"pwd-safety/Utils"
 )
 
-/*
-color.Green("Prints %s in green.", "text")
-color.Red("We have red")
-println(password)
-*/
-
-
 func main() {
 	password := Utils.ReadSingleInput("Password")
 	words := Utils.ReadWords("known-pwd.txt")
