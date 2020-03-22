@@ -2,7 +2,9 @@
 
 This is a light command line tool that checks how much a password is safe.
 
-![logo](https://github.com/edoardottt/pwd-safety/blob/devel/Images/logo.png)
+<p align="center">
+  <imgsrc="https://github.com/edoardottt/pwd-safety/blob/devel/Images/logo.png">
+</p>
 
 **This tool doesn't store any information!**
 
