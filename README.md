@@ -41,10 +41,16 @@ Then R^L = the number of possible passwords and the log of it is the number of b
 -------------------------------------------------
 SOME EXAMPLES :bar_chart:
 -------------------------------------------------
-**Take a look**
 
-//IMAGES
+![veryWeak](https://github.com/edoardottt/pwd-safety/blob/devel/Images/veryWeak.png)
 
+![weak](https://github.com/edoardottt/pwd-safety/blob/devel/Images/weak.png)
+
+![reasonable](https://github.com/edoardottt/pwd-safety/blob/devel/Images/reasonable.png)
+
+![strong](https://github.com/edoardottt/pwd-safety/blob/devel/Images/strong.png)
+
+![veryStrong](https://github.com/edoardottt/pwd-safety/blob/devel/Images/veryStrong.png)
 
 -------------------------------------------------
 DOWNLOAD 📡
