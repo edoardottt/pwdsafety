@@ -85,6 +85,14 @@ DOWNLOAD 📡
 
 https://github.com/edoardottt/pwd-safety
 
+
+VERSIONING :books:
+--------------------------------------------
+
+**[v0.1](https://github.com/edoardottt/pwd-safety/releases/tag/v0.1):**
+  
+          - First pre-release
+
 --------------------------
 If you liked it drop a :star:
 --------------------------
