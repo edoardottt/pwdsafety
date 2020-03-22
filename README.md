@@ -35,10 +35,31 @@ L = number of characters in your password
 
 Then R^L = the number of possible passwords and the log of it is the number of bits of entropy.
 
-##############################################à
-##################################################SCORINGGGGG
 
+SCORING 💯
 -------------------------------------------------
+
+Max score: 100
+
+Scores:
+  - Very weak: 0 - 35
+  - Weak: 36 - 59
+  - Reasonable: 60 - 68
+  - Strong: 69 - 80
+  - Very strong: 81 -100
+  
+Scoring parameters:
+  - Found in known password
+  - Found in known password reverse
+  - Composition:
+      - numbers
+      - symbols
+      - uppercase
+      - lowercase
+  - Unique different characters
+  - Length
+  - Entropy
+
 SOME EXAMPLES :bar_chart:
 -------------------------------------------------
 
@@ -52,7 +73,7 @@ SOME EXAMPLES :bar_chart:
 
 ![veryStrong](https://github.com/edoardottt/pwd-safety/blob/devel/Images/veryStrong.png)
 
--------------------------------------------------
+
 DOWNLOAD 📡
 -------------------------------------------------
 
