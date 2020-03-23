@@ -20,7 +20,9 @@ So: ../pwd-safety$ go run main.go
 
 It reads from standard input the entered password.
 
-First, it searches in the known-pwd.txt file if there is the password or the reverse password.
+First, it searches in known-pwd1.txt and known-pwd2.txt files if there is the password or the reverse password.
+
+The calculation isn't immediate, **It searches for over 5.2 million passwords**
 
 Then, just do little calculations, checking if the basic rules are respected. 
 
