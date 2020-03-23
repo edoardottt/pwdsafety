@@ -10,11 +10,12 @@ import (
 func main() {
 	password := Utils.ReadSingleInput("Password")
 	CheckPwd(password)
-	words := Utils.ReadWords("known-pwd.txt")
-	score := Utils.Grader(words, password)
+	words1 := Utils.ReadWords("Known-pwds/known-pwd1.txt")
+	words2 := Utils.ReadWords("Known-pwds/known-pwd2.txt")
+	score := Utils.Grader(words1, words2, password)
 	DisplayResult(score)
 	if score <= 68 {
-		SuggestPwd(words)
+		SuggestPwd(words1, words2)
 	}
 }
 
@@ -41,10 +42,10 @@ func DisplayResult(score float64) {
 }
 
 //Suggest a new random password
-func SuggestPwd(words []string) {
+func SuggestPwd(words1 []string, words2 []string) {
 	engWords := Utils.ReadWords("eng_words_list.txt")
 	randomPwd := Utils.GenerateRandom(engWords)
-	scoreRandomPwd := Utils.Grader(words, randomPwd)
+	scoreRandomPwd := Utils.Grader(words1, words2, randomPwd)
 	println("You should use this instead...")
 	println(randomPwd)
 	DisplayResult(scoreRandomPwd)
