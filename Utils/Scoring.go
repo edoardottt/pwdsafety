@@ -130,10 +130,14 @@ func EntropyScore(password string) float64 {
 
 //Grader
 func Grader(words1 []string, words2 []string, password string) float64 {
+	var knownPwd2 float64 = 0
+	var knownPwdReverse2 float64 = 0
 	knownPwd1 := KnownPwdScore(words1, password)
 	knownPwdReverse1 := KnownPwdReverseScore(words1, password)
-	knownPwd2 := KnownPwdScore(words2, password)
-	knownPwdReverse2 := KnownPwdReverseScore(words2, password)
+	if knownPwd1+knownPwdReverse1 == 0 {
+		knownPwd2 = KnownPwdScore(words2, password)
+		knownPwdReverse2 = KnownPwdReverseScore(words2, password)
+	}
 	lengthScore := LengthScore(password)
 	compositionPwdScore := CompositionPwdScore(password)
 	differentCharScore := DifferentCharScore(password)
