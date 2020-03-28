@@ -43,7 +43,7 @@ func IsThereLowerCase(password string) bool {
 //Checks if there is at least one symbol
 func IsThereSymbol(password string) bool {
 	for _, r := range password {
-		if (r < 'A' || r > 'z') && (r < '0' || r > '9' ) {
+		if (r < 'A' || r > 'z') && (r < '0' || r > '9') {
 			return true
 		}
 	}
@@ -63,9 +63,17 @@ func IsThereNumber(password string) bool {
 //Returns how many different types there are in the password
 func HowManyTypes(password string) int {
 	var howMany int
-	if IsThereNumber(password) {howMany++}
-	if IsThereUpperCase(password) {howMany++}
-	if IsThereLowerCase(password) {howMany++}
-	if IsThereSymbol(password) {howMany++}
+	if IsThereNumber(password) {
+		howMany++
+	}
+	if IsThereUpperCase(password) {
+		howMany++
+	}
+	if IsThereLowerCase(password) {
+		howMany++
+	}
+	if IsThereSymbol(password) {
+		howMany++
+	}
 	return howMany
 }
