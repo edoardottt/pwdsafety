@@ -1,3 +1,0 @@
-package Tests
-
-//import "testing"
