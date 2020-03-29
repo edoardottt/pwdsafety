@@ -61,8 +61,8 @@ SCORING 💯
   
 **Scoring parameters:**
   - Found in known password
-  - Found in known password reverse
-  - Composition:
+  - Found in known password reversed
+  - Password composition:
       - numbers
       - symbols
       - uppercase
