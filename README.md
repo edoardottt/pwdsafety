@@ -50,16 +50,16 @@ When the score <= 68(reasonable) it generates a random password using a list of 
 SCORING 💯
 -------------------------------------------------
 
-Max score: 100
+**Max score: 100**
 
-Scores:
+**Scores:**
   - Very weak: 0 - 35
   - Weak: 36 - 59
   - Reasonable: 60 - 68
   - Strong: 69 - 80
   - Very strong: 81 -100
   
-Scoring parameters:
+**Scoring parameters:**
   - Found in known password
   - Found in known password reverse
   - Composition:
