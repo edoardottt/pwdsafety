@@ -73,7 +73,7 @@ SCORING 💯
 
 SOME EXAMPLES :bar_chart:
 -------------------------------------------------
-
+- Very weak password:
 ![veryWeak](https://github.com/edoardottt/pwd-safety/blob/master/Images/veryWeak.png)
 
 ![weak](https://github.com/edoardottt/pwd-safety/blob/master/Images/weak.png)
