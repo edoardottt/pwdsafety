@@ -73,23 +73,23 @@ SCORING 💯
 
 SOME EXAMPLES :bar_chart:
 -------------------------------------------------
-- Very weak password:
+- **Very weak password:**
 
 ![veryWeak](https://github.com/edoardottt/pwd-safety/blob/master/Images/veryWeak.png)
 
-- Weak password:
+- **Weak password:**
 
 ![weak](https://github.com/edoardottt/pwd-safety/blob/master/Images/weak.png)
 
-- Reasonable password
+- **Reasonable password**
 
 ![reasonable](https://github.com/edoardottt/pwd-safety/blob/master/Images/reasonable.png)
 
-- Strong password
+- **Strong password**
 
 ![strong](https://github.com/edoardottt/pwd-safety/blob/master/Images/strong.png)
 
-- Very strong password
+- **Very strong password**
 
 ![veryStrong](https://github.com/edoardottt/pwd-safety/blob/master/Images/veryStrong.png)
 
