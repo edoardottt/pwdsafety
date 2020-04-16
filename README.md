@@ -24,9 +24,7 @@ First, it searches in known-pwd1.txt and known-pwd2.txt files if there is the pa
 
 The calculation isn't immediate, **It searches for over 5.2 million hacked passwords**
 
-Then, just do little calculations, checking if the basic rules are respected. 
-
-Like if there are UPPERCASE CHARS, lowercase chars, numb3rs and symbols.
+Then, just do little calculations, checking if the basic rules are respected, like if there are UPPERCASE CHARS, lowercase chars, numb3rs and symbols.
 
 It stores the length of the password and the ratio [ unique different chars / total chars].
 
