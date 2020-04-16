@@ -1,6 +1,8 @@
 package Utils
 
-import "math"
+import (
+	"math"
+)
 
 //Returns the entropy of password
 func Entropy(password string) float64 {
