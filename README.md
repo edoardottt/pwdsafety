@@ -6,7 +6,7 @@ This is a command line tool that checks how much a password is safe.
   <img src="https://github.com/edoardottt/pwd-safety/blob/master/Images/logo.png">
 </p>
 
-**This tool doesn't store any information!**
+**This tool doesn't store any information!!**
 
 ![gobadge](https://github.com/edoardottt/pwd-safety/blob/master/Images/gobadge)
 
