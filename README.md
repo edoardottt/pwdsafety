@@ -12,18 +12,24 @@ This is a command line tool that checks how much a password is safe.
 
 **This tool doesn't store any information!!**
 
-DESCRIPTION 🔦 
+USAGE 💡
 -------------------------------------------------
 
-After downloaded the package and extracted inside go/ folder, for comfort, create the alias[LINUX]:
+- LINUX 
+  After downloaded the package and extracted inside go/ folder, for comfort, create the alias:
 
-Edit the file /home/{USER}/.bashrc and append to it this row:
-  
-    alias pwdsafety='cd /home/<YOUR_USER>/go/pwd-safety && go run main.go && cd $OLDPWD'
+  Edit the file /home/{USER}/.bashrc and append to it this row:
 
-Then just write **pwdsafety** in your terminal where you want
+      alias pwdsafety='cd /home/<YOUR_USER>/go/pwd-safety && go run main.go && cd $OLDPWD'
 
-Or, if you are on another OS, just pwd-safety$ go run main.go inside pwd-safety folder.
+  Then just write **pwdsafety** in your terminal where you want
+
+- Other OS(Windows,MacOS and so on...) just:
+
+  pwd-safety$ go run main.go [inside pwd-safety/ folder].
+
+DESCRIPTION 🔦 
+-------------------------------------------------
 
 It reads from standard input the entered password.
 
