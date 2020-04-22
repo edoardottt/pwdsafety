@@ -10,7 +10,9 @@ This is a command line tool that checks how much a password is safe.
 
 **This tool doesn't store any information!!**
 
-If you want to use it anywhere, type on cli "alias pwdsafety='cd /home/edoardottt/go/pwd-safety && go run main.go && cd $OLDPWD'"
+**If you want to use it anywhere, type on cli**
+
+"alias pwdsafety='cd /home/<YOUR_USER>/go/pwd-safety && go run main.go && cd $OLDPWD'"
 
 DESCRIPTION 🔦 
 -------------------------------------------------
