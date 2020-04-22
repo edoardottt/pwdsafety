@@ -1,4 +1,4 @@
-package Utils
+package utils
 
 import (
 	"math/rand"
@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+//GenerateRandom : Generate a strong random password
 func GenerateRandom(engWords []string) string {
 	rand.Seed(time.Now().UnixNano())
 	max := len(engWords) - 1

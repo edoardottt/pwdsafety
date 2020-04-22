@@ -1,8 +1,8 @@
-package Tests
+package tests
 
 import (
 	"fmt"
-	"pwd-safety/Utils"
+	"pwd-safety/utils"
 	"strconv"
 	"testing"
 )
@@ -21,7 +21,7 @@ func TestReverse(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		if output := Utils.Reverse(test.input); output != test.expected {
+		if output := utils.Reverse(test.input); output != test.expected {
 			errorString := fmt.Sprintf("Test Failed: %s inputted, %s expected, received: %s", test.input, test.expected, output)
 			t.Error(errorString)
 		}
@@ -43,7 +43,7 @@ func TestFindExactly(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		if output := Utils.FindExactly(test.words, test.password); output != test.expected {
+		if output := utils.FindExactly(test.words, test.password); output != test.expected {
 			errorString := fmt.Sprintf("Test Failed: %v words inputted, %s password inputted, %s expected, received: %s", test.words, test.password, strconv.FormatBool(test.expected), strconv.FormatBool(output))
 			t.Error(errorString)
 		}
@@ -65,7 +65,7 @@ func TestFindExactlyReversed(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		if output := Utils.FindExactlyReversed(test.words, test.password); output != test.expected {
+		if output := utils.FindExactlyReversed(test.words, test.password); output != test.expected {
 			errorString := fmt.Sprintf("Test Failed: %v words inputted, %s password inputted, %s expected, received: %s", test.words, test.password, strconv.FormatBool(test.expected), strconv.FormatBool(output))
 			t.Error(errorString)
 		}

@@ -1,8 +1,8 @@
-package Tests
+package tests
 
 import (
 	"fmt"
-	"pwd-safety/Utils"
+	"pwd-safety/utils"
 	"testing"
 )
 
@@ -41,7 +41,7 @@ func TestReadWords(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		if output := Utils.ReadWords(test.input); !testEqString(test.expected, output) {
+		if output := utils.ReadWords(test.input); !testEqString(test.expected, output) {
 			errorString := fmt.Sprintf("Test Failed: %s inputted, %v expected, received: %v", test.input, test.expected, output)
 			t.Error(errorString)
 		}

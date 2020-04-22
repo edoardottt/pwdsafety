@@ -1,6 +1,6 @@
-package Utils
+package utils
 
-//Check if the password is equal to one known password
+//FindExactly : Check if the password is equal to one known password
 func FindExactly(words []string, password string) bool {
 	for _, s := range words {
 		if password == s {
@@ -10,7 +10,7 @@ func FindExactly(words []string, password string) bool {
 	return false
 }
 
-//Reverse the input string
+//Reverse : Reverse the input string
 func Reverse(s string) string {
 	runes := []rune(s)
 	for i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {
@@ -19,7 +19,7 @@ func Reverse(s string) string {
 	return string(runes)
 }
 
-//Check if the password is equal to one known password reversed
+//FindExactlyReversed : Check if the password is equal to one known password reversed
 func FindExactlyReversed(words []string, password string) bool {
 	for _, s := range words {
 		if Reverse(password) == s {

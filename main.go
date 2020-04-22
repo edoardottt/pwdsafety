@@ -4,22 +4,22 @@ import (
 	"fmt"
 	"github.com/fatih/color"
 	"os"
-	"pwd-safety/Utils"
+	"pwd-safety/utils"
 )
 
 func main() {
-	password := Utils.ReadSingleInput("Password")
+	password := utils.ReadSingleInput("Password")
 	CheckPwd(password)
-	words1 := Utils.ReadWords("Known-pwds/known-pwd1.txt")
-	words2 := Utils.ReadWords("Known-pwds/known-pwd2.txt")
-	score := Utils.Grader(words1, words2, password)
+	words1 := utils.ReadWords("Known-pwds/known-pwd1.txt")
+	words2 := utils.ReadWords("Known-pwds/known-pwd2.txt")
+	score := utils.Grader(words1, words2, password)
 	DisplayResult(score)
 	if score <= 68 {
 		SuggestPwd(words1, words2)
 	}
 }
 
-//Display the result for a password
+//DisplayResult : Display the result for a password
 func DisplayResult(score float64) {
 	scoreRounded := fmt.Sprintf("%.2f", score)
 	fmt.Printf("Score:%s/100", scoreRounded)
@@ -41,17 +41,17 @@ func DisplayResult(score float64) {
 	}
 }
 
-//Suggest a new random password
+//SuggestPwd : Suggest a new random password
 func SuggestPwd(words1 []string, words2 []string) {
-	engWords := Utils.ReadWords("eng_words_list.txt")
-	randomPwd := Utils.GenerateRandom(engWords)
-	scoreRandomPwd := Utils.Grader(words1, words2, randomPwd)
+	engWords := utils.ReadWords("eng_words_list.txt")
+	randomPwd := utils.GenerateRandom(engWords)
+	scoreRandomPwd := utils.Grader(words1, words2, randomPwd)
 	println("You should use this instead...")
 	println(randomPwd)
 	DisplayResult(scoreRandomPwd)
 }
 
-//Check if a password is blank
+//CheckPwd : Check if a password is blank
 func CheckPwd(password string) {
 	if len(password) == 0 {
 		println("Hey....Do you know what is password cracking?")

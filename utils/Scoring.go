@@ -1,6 +1,7 @@
-package Utils
+package utils
 
 /*
+KnownPwdScore :
 Scores known password
 	total = -18
 	It's present = -18
@@ -15,6 +16,7 @@ func KnownPwdScore(words []string, password string) float64 {
 }
 
 /*
+KnownPwdReverseScore :
 Scores known reversed password
 	total = -8
 	It's present = -8
@@ -29,6 +31,7 @@ func KnownPwdReverseScore(words []string, password string) float64 {
 }
 
 /*
+LengthScore :
 Scores password's length
 	total = 20
 	length <= 4 = 0
@@ -67,6 +70,7 @@ func LengthScore(password string) float64 {
 }
 
 /*
+CompositionPwdScore :
 Scores password's composition
 	total = 20
 	There is numbers = 5
@@ -96,6 +100,7 @@ func CompositionPwdScore(password string) float64 {
 }
 
 /*
+DifferentCharScore :
 Scores How many different chars in relation to the length
 	total = 15
 	n = (different_chars*total)/total_chars
@@ -110,6 +115,7 @@ func DifferentCharScore(password string) float64 {
 }
 
 /*
+EntropyScore :
 Scores Entropy's password
 	total = 35
 	< 28 bits = 3
@@ -128,12 +134,12 @@ func EntropyScore(password string) float64 {
 	return entropyScore
 }
 
-//Grader
+//Grader : Return the score of the password
 func Grader(words1 []string, words2 []string, password string) float64 {
 	var optimalLength = 27
 	var optimalDifferentCharScore float64 = 7
-	var knownPwd2 float64 = 0
-	var knownPwdReverse2 float64 = 0
+	var knownPwd2 float64
+	var knownPwdReverse2 float64
 	knownPwd1 := KnownPwdScore(words1, password)
 	knownPwdReverse1 := KnownPwdReverseScore(words1, password)
 	if knownPwd1+knownPwdReverse1 == 0 {

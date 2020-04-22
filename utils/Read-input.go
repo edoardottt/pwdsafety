@@ -1,4 +1,4 @@
-package Utils
+package utils
 
 import (
 	"bufio"
@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-//Reading all inputs from stdin
+//ReadInput : Reading all inputs from stdin
 func ReadInput() []string {
 	var result []string
 	inputs := [5]string{"name", "surname", "birthday(ddmmyyyy)", "telephone number", "pet's name"}
@@ -16,7 +16,7 @@ func ReadInput() []string {
 	return result
 }
 
-//Reading one single input
+//ReadSingleInput : Reading one single input
 func ReadSingleInput(input string) string {
 	reader := bufio.NewReader(os.Stdin)
 	fmt.Print("Enter " + input + ": ")

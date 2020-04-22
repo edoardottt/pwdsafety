@@ -1,4 +1,4 @@
-package Utils
+package utils
 
 import (
 	"bufio"
@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-//Read words from a file
+//ReadWords : Read words from a file
 func ReadWords(fileInput string) []string {
 	file, err := os.Open(fileInput)
 	if err != nil {

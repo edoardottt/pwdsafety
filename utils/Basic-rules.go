@@ -1,6 +1,6 @@
-package Utils
+package utils
 
-//Generates a set of unique characters in the input string
+//GenerateSetString : Generates a set of unique characters in the input string
 func GenerateSetString(input string) []byte {
 	set := map[byte]bool{}
 	result := []byte{}
@@ -15,12 +15,12 @@ func GenerateSetString(input string) []byte {
 	return result
 }
 
-//Returns the number of differents characters used in password
+//HowManyDifferents : Returns the number of differents characters used in password
 func HowManyDifferents(password string) int {
 	return len(GenerateSetString(password))
 }
 
-//Checks if there is at least one UPPERCASE character
+//IsThereUpperCase : Checks if there is at least one UPPERCASE character
 func IsThereUpperCase(password string) bool {
 	for _, r := range password {
 		if r >= 'A' && r <= 'Z' {
@@ -30,7 +30,7 @@ func IsThereUpperCase(password string) bool {
 	return false
 }
 
-//Checks if there is at least one lowercase character
+//IsThereLowerCase : Checks if there is at least one lowercase character
 func IsThereLowerCase(password string) bool {
 	for _, r := range password {
 		if r >= 'a' && r <= 'z' {
@@ -40,7 +40,7 @@ func IsThereLowerCase(password string) bool {
 	return false
 }
 
-//Checks if there is at least one symbol
+//IsThereSymbol : Checks if there is at least one symbol
 func IsThereSymbol(password string) bool {
 	for _, r := range password {
 		if (r < 'A' || r > 'z') && (r < '0' || r > '9') {
@@ -50,7 +50,7 @@ func IsThereSymbol(password string) bool {
 	return false
 }
 
-//Checks if there is at least one number
+//IsThereNumber : Checks if there is at least one number
 func IsThereNumber(password string) bool {
 	for _, r := range password {
 		if r >= '0' && r <= '9' {
@@ -60,7 +60,7 @@ func IsThereNumber(password string) bool {
 	return false
 }
 
-//Returns how many different types there are in the password
+//HowManyTypes : Returns how many different types there are in the password
 func HowManyTypes(password string) int {
 	var howMany int
 	if IsThereNumber(password) {
