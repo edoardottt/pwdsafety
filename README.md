@@ -21,6 +21,8 @@ First of all, type on Command line(to create the alias)[LINUX]:
 
 Then just write **pwdsafety** in your terminal.
 
+Or, if you are on another OS, just pwd-safety$ go run main.go inside pwd-safety folder.
+
 It reads from standard input the entered password.
 
 First, it searches in known-pwd1.txt and known-pwd2.txt files if there is the password or the reverse password.
