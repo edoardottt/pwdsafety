@@ -23,7 +23,7 @@ USAGE 💡
 
   - Edit the file /home/{USER}/.bashrc and append to it this row:
 
-      alias pwdsafety='cd /home/<YOUR_USER>/go/pwd-safety && go run main.go && cd $OLDPWD'
+        alias pwdsafety='cd /home/<YOUR_USER>/go/pwd-safety && go run main.go && cd $OLDPWD'
 
   - Then just write **pwdsafety** in your terminal where you want.
 
