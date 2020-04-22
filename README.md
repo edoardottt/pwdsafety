@@ -17,7 +17,7 @@ DESCRIPTION 🔦
 
 First of all, for comfort, create the alias[LINUX]:
 
-Edit the file /home/<USER>/.bashrc and append to it this row:
+Edit the file /home/{USER}/.bashrc and append to it this row:
   
     alias pwdsafety='cd /home/<YOUR_USER>/go/pwd-safety && go run main.go && cd $OLDPWD'
 
