@@ -10,16 +10,14 @@ This is a command line tool that checks how much a password is safe.
 
 **This tool doesn't store any information!!**
 
-**If you want to use it anywhere, type on cli**
-
-"alias pwdsafety='cd /home/<YOUR_USER>/go/pwd-safety && go run main.go && cd $OLDPWD'"
-
 DESCRIPTION 🔦 
 -------------------------------------------------
 
-Just write **go run main.go** in your terminal inside ../pwd-safety$
+First of all, type on Command line(to create the alias)[LINUX]:
 
-So: ../pwd-safety$ go run main.go
+/home/<YOUR_USER>$ alias pwdsafety='cd /home/<YOUR_USER>/go/pwd-safety && go run main.go && cd $OLDPWD'
+
+Then just write **pwdsafety** in your terminal.
 
 It reads from standard input the entered password.
 
