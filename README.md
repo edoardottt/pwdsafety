@@ -1,6 +1,7 @@
 # 🔒pwd-safety🔒
 
 ![gobadge](https://github.com/edoardottt/pwd-safety/blob/master/Images/gobadge)
+[![Go Report Card](https://goreportcard.com/badge/github.com/edoardottt/pwd-safety)](https://goreportcard.com/report/github.com/edoardottt/pwd-safety)
 
 This is a command line tool that checks how much a password is safe.
 
