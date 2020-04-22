@@ -1,22 +1,23 @@
 # 🔒pwd-safety🔒
 
+![gobadge](https://github.com/edoardottt/pwd-safety/blob/master/Images/gobadge)
+
 This is a command line tool that checks how much a password is safe.
 
 <p align="center">
   <img src="https://github.com/edoardottt/pwd-safety/blob/master/Images/logo.png">
 </p>
 
-**This tool doesn't store any information!**
-
-![gobadge](https://github.com/edoardottt/pwd-safety/blob/master/Images/gobadge)
-
+**This tool doesn't store any information!!**
 
 DESCRIPTION 🔦 
 -------------------------------------------------
 
-Just write **go run main.go** in your terminal inside ../pwd-safety$
+First of all, type on Command line(to create the alias)[LINUX]:
 
-So: ../pwd-safety$ go run main.go
+/home/<YOUR_USER>$ alias pwdsafety='cd /home/<YOUR_USER>/go/pwd-safety && go run main.go && cd $OLDPWD'
+
+Then just write **pwdsafety** in your terminal.
 
 It reads from standard input the entered password.
 
