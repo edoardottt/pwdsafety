@@ -15,7 +15,7 @@ This is a command line tool that checks how much a password is safe.
 DESCRIPTION 🔦 
 -------------------------------------------------
 
-First of all, for comfort, create the alias[LINUX]:
+After downloaded the package and extracted inside go/ folder, for comfort, create the alias[LINUX]:
 
 Edit the file /home/{USER}/.bashrc and append to it this row:
   
