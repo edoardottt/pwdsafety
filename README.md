@@ -12,22 +12,24 @@
 
 **This tool doesn't store any information!!**
 
+**Remember, never use personal info in (or related to) your password!**
+
 USAGE 💡
 -------------------------------------------------
 
 - LINUX 
 
-  After downloaded the package and extracted inside go/ folder, for comfort, create the alias:
+  - After downloaded the package and extracted inside go/ folder, for comfort, create the alias:
 
-  Edit the file /home/{USER}/.bashrc and append to it this row:
+  - Edit the file /home/{USER}/.bashrc and append to it this row:
 
       alias pwdsafety='cd /home/<YOUR_USER>/go/pwd-safety && go run main.go && cd $OLDPWD'
 
-  Then just write **pwdsafety** in your terminal where you want.
+  - Then just write **pwdsafety** in your terminal where you want.
 
 - Other OS(Windows,MacOS and so on...):
 
-  pwd-safety$ go run main.go [inside go/pwd-safety/ folder].
+  - pwd-safety$ go run main.go [inside go/pwd-safety/ folder].
 
 DESCRIPTION 🔦 
 -------------------------------------------------
