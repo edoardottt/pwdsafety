@@ -12,7 +12,7 @@
 
 **This tool doesn't store any information!!**
 
-**Remember, never use personal info in (or related to) your password!**
+**Remember, never use personal info in your password!**
 
 USAGE 💡
 -------------------------------------------------
