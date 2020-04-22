@@ -15,11 +15,13 @@ This is a command line tool that checks how much a password is safe.
 DESCRIPTION 🔦 
 -------------------------------------------------
 
-First of all, type on Command line(to create the alias)[LINUX]:
+First of all, for comfort, create the alias[LINUX]:
 
-/home/<YOUR_USER>$ alias pwdsafety='cd /home/<YOUR_USER>/go/pwd-safety && go run main.go && cd $OLDPWD'
+Edit the file /home/<USER>/.bashrc and append to it this row:
+  
+    alias pwdsafety='cd /home/<YOUR_USER>/go/pwd-safety && go run main.go && cd $OLDPWD'
 
-Then just write **pwdsafety** in your terminal.
+Then just write **pwdsafety** in your terminal where you want
 
 Or, if you are on another OS, just pwd-safety$ go run main.go inside pwd-safety folder.
 
