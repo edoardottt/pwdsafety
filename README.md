@@ -36,9 +36,7 @@ DESCRIPTION 🔦
 
 It reads from standard input the entered password.
 
-First, it searches in known-pwd1.txt and known-pwd2.txt files if there is the password or the reverse password.
-
-The calculation isn't immediate, **It searches for over 10.5 million hacked passwords**
+First, it searches in known-pwd.txt file if there is the password or the password reversed.
 
 Then, just do little calculations, checking if the basic rules are respected, like if there are UPPERCASE CHARS, lowercase chars, numb3rs and symbols.
 
