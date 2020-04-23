@@ -21,7 +21,7 @@ USAGE 💡
 
   - After downloaded the package and extracted inside go/ folder, for comfort, create the alias:
 
-  - Edit the file /home/{USER}/.bashrc and append to it this row:
+  - Edit the file /home/{USER}/.bashrc and append this row:
 
         alias pwdsafety='cd /home/<YOUR_USER>/go/pwd-safety && go run main.go && cd $OLDPWD'
 
