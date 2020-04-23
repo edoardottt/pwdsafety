@@ -17,7 +17,7 @@
 USAGE 💡
 -------------------------------------------------
 
-- LINUX 
+- **LINUX:**
 
   - After downloaded the package and extracted inside go/ folder, for comfort, create the alias:
 
@@ -27,7 +27,7 @@ USAGE 💡
 
   - Then just write **pwdsafety** in your terminal where you want.
 
-- Other OS(Windows,MacOS and so on...):
+- **Other OS(Windows,MacOS and so on...):**
 
   - pwd-safety$ go run main.go [inside go/pwd-safety/ folder].
 
