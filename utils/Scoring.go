@@ -135,22 +135,16 @@ func EntropyScore(password string) float64 {
 }
 
 //Grader : Return the score of the password
-func Grader(words1 []string, words2 []string, password string) float64 {
+func Grader(words1 []string, password string) float64 {
 	var optimalLength = 27
 	var optimalDifferentCharScore float64 = 7
-	var knownPwd2 float64
-	var knownPwdReverse2 float64
 	knownPwd1 := KnownPwdScore(words1, password)
 	knownPwdReverse1 := KnownPwdReverseScore(words1, password)
-	if knownPwd1+knownPwdReverse1 == 0 {
-		knownPwd2 = KnownPwdScore(words2, password)
-		knownPwdReverse2 = KnownPwdReverseScore(words2, password)
-	}
 	lengthScore := LengthScore(password)
 	compositionPwdScore := CompositionPwdScore(password)
 	differentCharScore := DifferentCharScore(password)
 	entropyScore := EntropyScore(password)
-	score := knownPwd1 + knownPwdReverse1 + knownPwd2 + knownPwdReverse2 + lengthScore + compositionPwdScore + differentCharScore + entropyScore
+	score := knownPwd1 + knownPwdReverse1 + lengthScore + compositionPwdScore + differentCharScore + entropyScore
 	//if it's an optimal password by very high length and good different/unique ratio score
 	if differentCharScore >= optimalDifferentCharScore && len(password) > optimalLength {
 		return 100
