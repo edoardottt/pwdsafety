@@ -33,38 +33,38 @@ func KnownPwdReverseScore(words []string, password string) float64 {
 /*
 LengthScore :
 Scores password's length
-	total = 20
-	length <= 4 = 0
-	length <= 6 = 1
-	length==7 = 3
+	total = 30
+	length<=7 = 0
 	length==8 = 8
-	8 < length < 12 = 13
-	11 < length < 15 = 22
-	14 < length < 19 = 27
-	length >=19 = 30
+	length==9 = 10
+	10 <= length <= 12 = 15
+	13 <= length <= 15 = 18
+	16 <= length <= 19 = 23
+	20 <= length <= 24 = 26
+	length >=25 = 30
 */
 func LengthScore(password string) float64 {
 	length := len(password)
-	if length <= 4 {
+	if length <= 7 {
 		return 0
 	}
-	if length <= 6 {
-		return 1
-	}
-	if length == 7 {
-		return 3
-	}
 	if length == 8 {
-		return 8
+		return 7
 	}
-	if length > 8 && length < 12 {
-		return 13
+	if length == 9 {
+		return 10
 	}
-	if length > 11 && length < 15 {
-		return 22
+	if length > 9 && length < 13 {
+		return 15
 	}
-	if length > 14 && length < 19 {
-		return 27
+	if length > 12 && length < 16 {
+		return 18
+	}
+	if length > 15 && length < 20 {
+		return 23
+	}
+	if length > 19 && length < 25 {
+		return 26
 	}
 	return 30
 }

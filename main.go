@@ -15,6 +15,8 @@ func main() {
 	score := utils.Grader(words1, words2, password)
 	DisplayResult(score)
 	if score <= 68 {
+		crackTime := utils.CrackTime(password)
+		println("A botnet can crack this pwd in " + utils.ShowCrackTime(crackTime))
 		SuggestPwd(words1, words2)
 	}
 }
@@ -51,9 +53,9 @@ func SuggestPwd(words1 []string, words2 []string) {
 	DisplayResult(scoreRandomPwd)
 }
 
-//CheckPwd : Check if a password is blank
+//CheckPwd : Check if a password is unuseful
 func CheckPwd(password string) {
-	if len(password) == 0 {
+	if len(password) <= 5 {
 		println("Hey....Do you know what is password cracking?")
 		os.Exit(1)
 	}

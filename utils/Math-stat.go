@@ -2,9 +2,10 @@ package utils
 
 import (
 	"math"
+	"strconv"
 )
 
-//Returns the entropy of password
+//Entropy : Returns the entropy of password
 func Entropy(password string) float64 {
 	var E float64
 	var pool float64 = 95
@@ -13,7 +14,7 @@ func Entropy(password string) float64 {
 	return E
 }
 
-//Counts the different types in password
+//CountTypeElements : Counts the different types in password
 func CountTypeElements(input string) map[string]float64 {
 	res := map[string]float64{"lower": 0, "number": 0, "symbol": 0, "upper": 0}
 	for i := 0; i < len(input); i++ {
@@ -32,4 +33,102 @@ func CountTypeElements(input string) map[string]float64 {
 		}
 	}
 	return res
+}
+
+//CrackTime : Returns the seconds needed to crack the password
+func CrackTime(password string) float64 {
+	const GPU float64 = 1000000000
+	var bots float64 = 20000
+	var KPS = bots * GPU
+	var combinations float64
+	length := float64(len(password))
+	var pool float64
+	if IsThereNumber(password) {
+		pool += 10
+	}
+	if IsThereUpperCase(password) {
+		pool += 26
+	}
+	if IsThereLowerCase(password) {
+		pool += 26
+	}
+	if IsThereSymbol(password) {
+		pool += 33
+	}
+	combinations = math.Pow(pool, length)
+	return combinations / KPS
+}
+
+//ShowCrackTime : Beautify the crack time (from seconds to human readable string )
+func ShowCrackTime(crackTime float64) string {
+	if crackTime <= 1 {
+		return "less than one second."
+	}
+	var Result string
+	var remainder float64
+	var seconds float64
+	var minutes float64
+	var hours float64
+	var days float64
+	var months float64
+	var years float64
+	var decades float64
+	var centuries float64
+	var secondsStr string
+	var minutesStr string
+	var hoursStr string
+	var daysStr string
+	var monthsStr string
+	var yearsStr string
+	var decadesStr string
+	var centuriesStr string
+	centuries = crackTime / 3110400000
+	remainder = math.Mod(crackTime, 3110400000)
+	decades = remainder / 311040000
+	remainder = math.Mod(remainder, 311040000)
+	years = remainder / 31104000
+	remainder = math.Mod(remainder, 31104000)
+	months = remainder / 2592000
+	remainder = math.Mod(remainder, 2592000)
+	days = remainder / 86400
+	remainder = math.Mod(remainder, 86400)
+	hours = remainder / 3600
+	remainder = math.Mod(remainder, 3600)
+	minutes = remainder / 60
+	seconds = math.Mod(remainder, 60)
+	if centuries > 1 {
+		centuriesStr = strconv.Itoa(int(centuries)) + " Centuries, "
+		Result += centuriesStr
+	}
+	if decades > 1 {
+		decadesStr = strconv.Itoa(int(decades)) + " Decades, "
+		Result += decadesStr
+	}
+	if years > 1 {
+		yearsStr = strconv.Itoa(int(years)) + " Years, "
+		Result += yearsStr
+	}
+	if months > 1 {
+		monthsStr = strconv.Itoa(int(months)) + " Months, "
+		Result += monthsStr
+	}
+	if days > 1 {
+		daysStr = strconv.Itoa(int(days)) + " Days, "
+		Result += daysStr
+	}
+	if hours > 1 {
+		hoursStr = strconv.Itoa(int(hours)) + " Hours, "
+		Result += hoursStr
+	}
+	if minutes > 1 {
+		minutesStr = strconv.Itoa(int(minutes)) + " Minutes, "
+		Result += minutesStr
+	}
+	if seconds > 1 {
+		secondsStr = strconv.Itoa(int(seconds)) + " Seconds, "
+		Result += secondsStr
+	}
+	runes := []rune(Result)
+	Result = string(runes[0 : len(Result)-2])
+	return Result + "."
 }
