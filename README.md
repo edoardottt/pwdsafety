@@ -17,15 +17,15 @@
 USAGE 💡
 -------------------------------------------------
 
-- **LINUX:**
+- **Linux:**
 
   - After downloaded the package and extracted inside go/ folder, for comfort, create the alias:
 
-  - Edit the file /home/{USER}/.bashrc and append this row:
+  - Edit the file /home/{REPLACE_USER}/.bashrc and append this row:
 
-        alias pwdsafety='cd /home/<YOUR_USER>/go/pwd-safety && go run main.go && cd $OLDPWD'
+        alias pwdsafety='cd /home/<REPLACE_USER>/go/pwd-safety && go run main.go && cd $OLDPWD'
 
-  - Then just write **pwdsafety** in your terminal where you want.
+  - Then just type **pwdsafety** in your terminal where you want and press enter.
 
 - **Other OS(Windows,MacOS and so on...):**
 
