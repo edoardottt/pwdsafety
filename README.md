@@ -109,13 +109,11 @@ SOME EXAMPLES :bar_chart:
 DOWNLOAD 📡
 -------------------------------------------------
 
-- GIT command on prompt: 
-            
-            git -clone https://github.com/edoardottt/pwd-safety.git
+- GIT command on  CLI: `git -clone https://github.com/edoardottt/pwd-safety.git`
 
-- Download by Browser on: 
+- Download by Browser: `https://github.com/edoardottt/pwd-safety`
 
-https://github.com/edoardottt/pwd-safety
+- WGET on Linux(Recommended on linux): `wget https://github.com/edoardottt/pwd-safety/archive/master.zip`
 
 
 VERSIONING :books:
