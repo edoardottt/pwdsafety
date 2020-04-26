@@ -8,7 +8,7 @@ import (
 )
 
 //Test if two slices of bytes are equal
-func testEqByte(a, b []byte) bool {
+func testEqRune(a, b []rune) bool {
 
 	// If one is nil, the other must also be nil.
 	if (a == nil) != (b == nil) {
@@ -31,17 +31,19 @@ func testEqByte(a, b []byte) bool {
 func TestGenerateSetString(t *testing.T) {
 	var tests = []struct {
 		input    string
-		expected []byte
+		expected []rune
 	}{
-		{"hellohello", []byte{'h', 'e', 'l', 'o'}},
-		{"", []byte{}},
-		{"abcdefghijklmnopqrstuvwxyz", []byte{'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'}},
-		{"blablablablabla", []byte{'b', 'l', 'a'}},
-		{".,:;-_à#ç@", []byte{'.', ',', ':', ';', '-', '_', 'à', '#', 'ç', '@'}},
+		{"hellohello", []rune{'h', 'e', 'l', 'o'}},
+		{"", []rune{}},
+		{"abcdefghijklmnopqrstuvwxyz", []rune{'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'}},
+		{"blablablablabla", []rune{'b', 'l', 'a'}},
+		{" !#$%&()*", []rune{' ', '!', '#', '$', '%', '&', '(', ')', '*'}},
+		{"+,-./:;<?@[]^",[]rune{'+',',','-','.','/',':',';','<','?','@','[',']','^'}},
+		{"=>`{|}~_",[]rune{'=','>','`','{','|','}','~','_'}},
 	}
 
 	for _, test := range tests {
-		if output := utils.GenerateSetString(test.input); !testEqByte(test.expected, output) {
+		if output := utils.GenerateSetString(test.input); !testEqRune(test.expected, output) {
 			errorString := fmt.Sprintf("Test Failed: %s inputted, %d expected, received: %d", test.input, test.expected, output)
 			t.Error(errorString)
 		}

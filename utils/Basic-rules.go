@@ -1,16 +1,21 @@
 package utils
 
+import (
+	"unicode/utf8"
+)
+
 //GenerateSetString : Generates a set of unique characters in the input string
-func GenerateSetString(input string) []byte {
-	set := map[byte]bool{}
-	result := []byte{}
-	for i := 0; i < len(input); i++ {
-		char := input[i]
+func GenerateSetString(input string) []rune {
+	set := map[rune]bool{}
+	result := []rune{}
+	for len(input) > 0 {
+		char, size := utf8.DecodeRuneInString(input)
 		existence := set[char]
 		if !existence {
 			set[char] = true // add element
 			result = append(result, char)
 		}
+		input = input[size:]
 	}
 	return result
 }
