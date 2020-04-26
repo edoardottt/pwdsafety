@@ -4,6 +4,8 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/edoardottt/pwd-safety)](https://goreportcard.com/report/github.com/edoardottt/pwd-safety)
 ![Go](https://github.com/edoardottt/pwd-safety/workflows/Go/badge.svg?branch=master)
 
+[![codecov](https://codecov.io/gh/edoardottt/pwd-safety/branch/master/graph/badge.svg)](https://codecov.io/gh/edoardottt/pwd-safety)
+
 **Command line tool that checks how much a password is safe.**
 
 <p align="center">
