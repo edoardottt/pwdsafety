@@ -1,5 +1,5 @@
-module pwd-safety
+module github.com/edoardottt/pwd-safety
 
-go 1.14
+go 1.13
 
 require github.com/fatih/color v1.9.0

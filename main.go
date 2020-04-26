@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"github.com/fatih/color"
 	"os"
-	"pwd-safety/utils"
+	"github.com/edoardottt/pwd-safety/utils"
 )
 
 func main() {

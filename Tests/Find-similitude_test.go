@@ -2,7 +2,7 @@ package tests
 
 import (
 	"fmt"
-	"pwd-safety/utils"
+	"github.com/edoardottt/pwd-safety/utils"
 	"strconv"
 	"testing"
 )
