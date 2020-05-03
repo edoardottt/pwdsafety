@@ -28,6 +28,7 @@ import (
 )
 
 func main() {
+	utils.Beautify()
 	password := utils.ReadSingleInput("Password")
 	CheckPwd(password)
 	words1 := utils.ReadWords("Known-pwds/known-pwd.txt")
