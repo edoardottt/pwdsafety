@@ -17,6 +17,7 @@
  *    Author:
  *      Edoardo Ottavianelli <edoardott@gmail.com>
  */
+
 package utils
 
 //FindExactly : Check if the password is equal to one known password
