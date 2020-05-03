@@ -30,7 +30,7 @@ import (
 
 //Beautify : If the terminal size is enough, print the label PWD-SAFETY.
 func Beautify() {
-	MIN_SIZE := 55
+	minSize := 55
 	firstLine := "                  _                  __      _         \n"
 	secondLine := " _ ____      ____| |      ___  __ _ / _| ___| |_ _   _ \n"
 	thirdLine := "| '_ \\ \\ /\\ / / _` |_____/ __|/ _` | |_ / _ \\ __| | | |\n"
@@ -49,7 +49,7 @@ func Beautify() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	if size >= MIN_SIZE {
+	if size >= minSize {
 		println(beauty)
 	}
 }
