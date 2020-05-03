@@ -10,7 +10,7 @@
 **Command line tool that checks how much a password is safe.**
 
 <p align="center">
-  <img src="https://github.com/edoardottt/pwd-safety/blob/master/Images/logo.png">
+  <img src="https://github.com/edoardottt/pwd-safety/blob/master/Images/logo.jpg">
 </p>
 
 **This tool doesn't store any information!!**
