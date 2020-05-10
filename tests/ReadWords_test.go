@@ -53,11 +53,11 @@ func TestReadWords(t *testing.T) {
 		input    string
 		expected []string
 	}{
-		{"TestFiles/Pwd1.txt", []string{"pass", "passwor", "password", "password", "passwrdpassword", "passsssssssword"}},
-		{"TestFiles/Pwd2.txt", []string{"main", "main", "main", "mainpassmain"}},
-		{"TestFiles/Pwd3.txt", nil},
-		{"TestFiles/Pwd4.txt", []string{"iwfcaheuhwilehli38ry2r8RYBW8RYBYELYT8AOVWYÒV8LOylR-ù-,à.èù-àq.vàfqè+"}},
-		{"TestFiles/Pwd5.txt", []string{"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"}},
+		{"testFiles/Pwd1.txt", []string{"pass", "passwor", "password", "password", "passwrdpassword", "passsssssssword"}},
+		{"testFiles/Pwd2.txt", []string{"main", "main", "main", "mainpassmain"}},
+		{"testFiles/Pwd3.txt", nil},
+		{"testFiles/Pwd4.txt", []string{"iwfcaheuhwilehli38ry2r8RYBW8RYBYELYT8AOVWYÒV8LOylR-ù-,à.èù-àq.vàfqè+"}},
+		{"testFiles/Pwd5.txt", []string{"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"}},
 	}
 
 	for _, test := range tests {

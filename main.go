@@ -31,7 +31,7 @@ func main() {
 	utils.Beautify()
 	password := utils.ReadSingleInput("Password")
 	CheckPwd(password)
-	words1 := utils.ReadWords("Known-pwds/known-pwd.txt")
+	words1 := utils.ReadWords("pwds/known-pwd.txt")
 	score := utils.Grader(words1, password)
 	DisplayResult(score)
 	if score <= 68 {
@@ -65,7 +65,7 @@ func DisplayResult(score float64) {
 
 //SuggestPwd : Suggest a new random password
 func SuggestPwd(words1 []string) {
-	engWords := utils.ReadWords("eng_words_list.txt")
+	engWords := utils.ReadWords("engWordsList.txt")
 	randomPwd := utils.GenerateRandom(engWords)
 	scoreRandomPwd := utils.Grader(words1, randomPwd)
 	println("You should use this instead...")
@@ -73,7 +73,7 @@ func SuggestPwd(words1 []string) {
 	DisplayResult(scoreRandomPwd)
 }
 
-//CheckPwd : Check if a password is unuseful
+//CheckPwd : Check if a password is useless
 func CheckPwd(password string) {
 	if len(password) <= 5 {
 		println("Hey....Do you know what is password cracking?")
