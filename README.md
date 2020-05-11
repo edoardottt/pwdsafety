@@ -32,7 +32,7 @@ USAGE 💡
 
 - **Other OS(Windows,MacOS and so on...):**
 
-  - pwd-safety$ go run main.go [inside go/pwd-safety/ folder].
+  - testing...
 
 DESCRIPTION 🔦 
 -------------------------------------------------
