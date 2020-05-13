@@ -1,16 +1,16 @@
 # 🔒pwd-safety🔒
 
-![gobadge](https://github.com/edoardottt/pwd-safety/blob/master/Images/gobadge)
-![version](https://github.com/edoardottt/pwd-safety/blob/master/Images/version.svg)
+![gobadge](https://github.com/edoardottt/pwd-safety/blob/master/images/gobadge)
+![version](https://github.com/edoardottt/pwd-safety/blob/master/images/version.svg)
 [![Go Report Card](https://goreportcard.com/badge/github.com/edoardottt/pwd-safety)](https://goreportcard.com/report/github.com/edoardottt/pwd-safety)
 ![Go](https://github.com/edoardottt/pwd-safety/workflows/Go/badge.svg?branch=master)
-![ubuntu-build](https://github.com/edoardottt/pwd-safety/blob/master/Images/ubuntu-build.svg)
+![ubuntu-build](https://github.com/edoardottt/pwd-safety/blob/master/images/ubuntu-build.svg)
 
 
 **Command line tool that checks how much a password is safe.**
 
 <p align="center">
-  <img src="https://github.com/edoardottt/pwd-safety/blob/master/Images/logo.png">
+  <img src="https://github.com/edoardottt/pwd-safety/blob/master/images/logo.png">
 </p>
 
 **This tool doesn't store any information!!**
