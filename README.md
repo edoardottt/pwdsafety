@@ -1,16 +1,16 @@
-# 🔒pwd-safety🔒
+# 🔒pwdsafety🔒
 
-![gobadge](https://github.com/edoardottt/pwd-safety/blob/master/images/gobadge)
-![version](https://github.com/edoardottt/pwd-safety/blob/master/images/version.svg)
-[![Go Report Card](https://goreportcard.com/badge/github.com/edoardottt/pwd-safety)](https://goreportcard.com/report/github.com/edoardottt/pwd-safety)
-![Go](https://github.com/edoardottt/pwd-safety/workflows/Go/badge.svg?branch=master)
-![ubuntu-build](https://github.com/edoardottt/pwd-safety/blob/master/images/ubuntu-build.svg)
+![gobadge](https://github.com/edoardottt/pwdsafety/blob/master/images/gobadge)
+![version](https://github.com/edoardottt/pwdsafety/blob/master/images/version.svg)
+[![Go Report Card](https://goreportcard.com/badge/github.com/edoardottt/pwdsafety)](https://goreportcard.com/report/github.com/edoardottt/pwdsafety)
+![Go](https://github.com/edoardottt/pwdsafety/workflows/Go/badge.svg?branch=master)
+![ubuntu-build](https://github.com/edoardottt/pwdsafety/blob/master/images/ubuntu-build.svg)
 
 
 **Command line tool that checks how much a password is safe.**
 
 <p align="center">
-  <img src="https://github.com/edoardottt/pwd-safety/blob/master/images/logo.png">
+  <img src="https://github.com/edoardottt/pwdsafety/blob/master/images/logo.png">
 </p>
 
 **This tool doesn't store any information!!**
@@ -50,7 +50,7 @@ It calculates then the entropy of a password.
 Password entropy is a measurement of how unpredictable a password is.
 
 The formula for entropy is:
-              ![CodeCogsEqn](https://github.com/edoardottt/pwd-safety/blob/master/images/CodeCogsEqn.gif)
+              ![CodeCogsEqn](https://github.com/edoardottt/pwdsafety/blob/master/images/CodeCogsEqn.gif)
               
 Where E = password entropy
 
@@ -90,33 +90,33 @@ SOME EXAMPLES :bar_chart:
 -------------------------------------------------
 - **Very weak password:**
 
-![veryWeak](https://github.com/edoardottt/pwd-safety/blob/master/images/veryWeak.png)
+![veryWeak](https://github.com/edoardottt/pwdsafety/blob/master/images/veryWeak.png)
 
 - **Weak password:**
 
-![weak](https://github.com/edoardottt/pwd-safety/blob/master/images/weak.png)
+![weak](https://github.com/edoardottt/pwdsafety/blob/master/images/weak.png)
 
 - **Reasonable password**
 
-![reasonable](https://github.com/edoardottt/pwd-safety/blob/master/images/reasonable.png)
+![reasonable](https://github.com/edoardottt/pwdsafety/blob/master/images/reasonable.png)
 
 - **Strong password**
 
-![strong](https://github.com/edoardottt/pwd-safety/blob/master/images/strong.png)
+![strong](https://github.com/edoardottt/pwdsafety/blob/master/images/strong.png)
 
 - **Very strong password**
 
-![veryStrong](https://github.com/edoardottt/pwd-safety/blob/master/images/veryStrong.png)
+![veryStrong](https://github.com/edoardottt/pwdsafety/blob/master/images/veryStrong.png)
 
 
 DOWNLOAD 📡
 -------------------------------------------------
 
-- GIT command on  CLI: `git -clone https://github.com/edoardottt/pwd-safety.git`
+- GIT command on  CLI: `git -clone https://github.com/edoardottt/pwdsafety.git`
 
-- Download by Browser: `https://github.com/edoardottt/pwd-safety`
+- Download by Browser: `https://github.com/edoardottt/pwdsafety`
 
-- WGET on Linux(Recommended on linux): `wget https://github.com/edoardottt/pwd-safety/archive/master.zip`
+- WGET on Linux(Recommended on linux): `wget https://github.com/edoardottt/pwdsafety/archive/master.zip`
 
 --------------------------
 If you liked it drop a :star:
