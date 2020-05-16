@@ -26,7 +26,7 @@ USAGE 💡
 
   - Edit the file /home/{REPLACE_USER}/.bashrc and append this row:
 
-        alias pwdsafety='cd YOUR-pwd-safety-PATH-FOLDER && go run main.go && cd $OLDPWD'
+        alias pwdsafety='cd YOUR-pwdsafety-PATH-FOLDER && go run main.go && cd $OLDPWD'
 
   - Then just type **pwdsafety** in your terminal where you want and press enter.
 
