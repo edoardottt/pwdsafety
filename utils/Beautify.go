@@ -24,8 +24,8 @@ import (
 	"log"
 	"os"
 	"os/exec"
-	"strings"
 	"strconv"
+	"strings"
 )
 
 //Beautify : If the terminal size is enough, print the label PWD-SAFETY.
@@ -45,7 +45,7 @@ func Beautify() {
 		log.Fatal(err)
 	}
 	words := strings.Fields(string(out)) // words[1] == size
-	size,_ := strconv. Atoi(words[1])
+	size, _ := strconv.Atoi(words[1])
 	if err != nil {
 		log.Fatal(err)
 	}

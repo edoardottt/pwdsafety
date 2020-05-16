@@ -22,9 +22,9 @@ package main
 
 import (
 	"fmt"
+	"github.com/edoardottt/pwdsafety/utils"
 	"github.com/fatih/color"
 	"os"
-	"github.com/edoardottt/pwd-safety/utils"
 )
 
 func main() {
