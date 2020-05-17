@@ -80,4 +80,3 @@ func CheckPwd(password string) {
 		os.Exit(1)
 	}
 }
-
