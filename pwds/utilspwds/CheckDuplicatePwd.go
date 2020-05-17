@@ -20,8 +20,30 @@
 
 package utilspwds
 
-//FindAllTxt : It finds all txt files in this folder.
-func FindAllTxt()  {}
+import (
+	"github.com/edoardottt/pwdsafety/utils"
+)
+
+//GenerateSetFiles : It generates a set of the array of strings from input
+func GenerateSetFiles(input []string) []string {
+	set := map[string]bool{}
+	result := []string{}
+	for i:= 0; i < len(input);i++ {
+		word := input[i]
+		existence := set[word]
+		if !existence {
+			set[word] = true // add element
+			result = append(result, word)
+		}
+	}
+	return result
+}
 
 //CheckDuplicatePwd : It checks for duplicate passwords in passwords files.
-func CheckDuplicatePwd() {}
+func CheckDuplicatePwd(fileName string) bool {
+	words := utils.ReadWords(fileName)
+	lengthWords := len(words)
+	setWords := GenerateSetFiles(words)
+	lengthSet := len(setWords)
+	return lengthWords == lengthSet
+}

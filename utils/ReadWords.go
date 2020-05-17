@@ -24,6 +24,7 @@ import (
 	"bufio"
 	"log"
 	"os"
+	"path/filepath"
 )
 
 //ReadWords : Read words from a file
@@ -43,4 +44,29 @@ func ReadWords(fileInput string) []string {
 		log.Fatalf("Failed closing file: %s", err)
 	}
 	return txtlines
+}
+
+//ListAllFiles : It lists all files in a folder
+func ListAllFiles(root string) []string {
+	var files []string
+	err := filepath.Walk(root, func(path string, info os.FileInfo, err error) error {
+		if filepath.Ext(path) == ".txt" {
+			files = append(files, path)
+		}
+		return nil
+	})
+	if err != nil {
+		log.Fatalf("Failed reading files: %s", err)
+	}
+	return files
+}
+
+//ReadAllFiles : Read arrays of words from inputted files
+func ReadAllFiles(folder string) [][]string {
+	files := ListAllFiles(folder)
+	var result [][]string
+	for i:= 0; i < len(files);i++ {
+		result = append(result, ReadWords(files[i]))
+	}
+	return result
 }

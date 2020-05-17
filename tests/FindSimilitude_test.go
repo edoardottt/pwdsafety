@@ -22,7 +22,7 @@ package tests
 
 import (
 	"fmt"
-	"github.com/edoardottt/pwd-safety/utils"
+	"github.com/edoardottt/pwdsafety/utils"
 	"strconv"
 	"testing"
 )

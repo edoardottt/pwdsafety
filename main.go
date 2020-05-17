@@ -31,13 +31,13 @@ func main() {
 	utils.Beautify()
 	password := utils.ReadSingleInput("Password")
 	CheckPwd(password)
-	words1 := utils.ReadWords("pwds/known-pwd.txt")
-	score := utils.Grader(words1, password)
+	words := utils.ReadAllFiles("pwds")
+	score := utils.Grader(words, password)
 	DisplayResult(score)
 	if score <= 68 {
 		crackTime := utils.CrackTime(password)
 		println("A botnet can crack this pwd in " + utils.ShowCrackTime(crackTime))
-		SuggestPwd(words1)
+		SuggestPwd(words)
 	}
 }
 
@@ -64,10 +64,10 @@ func DisplayResult(score float64) {
 }
 
 //SuggestPwd : Suggest a new random password
-func SuggestPwd(words1 []string) {
+func SuggestPwd(words [][]string) {
 	engWords := utils.ReadWords("engWordsList.txt")
 	randomPwd := utils.GenerateRandom(engWords)
-	scoreRandomPwd := utils.Grader(words1, randomPwd)
+	scoreRandomPwd := utils.Grader(words, randomPwd)
 	println("You should use this instead...")
 	println(randomPwd)
 	DisplayResult(scoreRandomPwd)
@@ -80,3 +80,4 @@ func CheckPwd(password string) {
 		os.Exit(1)
 	}
 }
+
