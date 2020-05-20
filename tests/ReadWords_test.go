@@ -22,7 +22,7 @@ package tests
 
 import (
 	"fmt"
-	"github.com/edoardottt/pwdsafety/tests/utilsTests"
+	"github.com/edoardottt/pwdsafety/tests/utilstests"
 	"github.com/edoardottt/pwdsafety/utils"
 	"testing"
 )
