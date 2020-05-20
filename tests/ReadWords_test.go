@@ -41,7 +41,7 @@ func TestReadWords(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		if output := utils.ReadWords(test.input); !utilsTests.TestEqString(test.expected, output) {
+		if output := utils.ReadWords(test.input); !utilstests.TestEqString(test.expected, output) {
 			errorString := fmt.Sprintf("Test Failed: %s inputted, %v expected, received: %v", test.input, test.expected, output)
 			t.Error(errorString)
 		}
