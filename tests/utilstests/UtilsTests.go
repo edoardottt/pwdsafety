@@ -18,9 +18,9 @@
  *      Edoardo Ottavianelli <edoardott@gmail.com>
  */
 
-package utilsTests
+package utilstests
 
-//Test if two slices of strings are equal
+//TestEqString : Test if two slices of strings are equal
 func TestEqString(a, b []string) bool {
 
 	// If one is nil, the other must also be nil.

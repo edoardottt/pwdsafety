@@ -158,7 +158,7 @@ func EntropyScore(password string) float64 {
 func Grader(words  [][]string, password string) float64 {
 	var optimalLength = 27
 	var optimalDifferentCharScore float64 = 7
-	var knownPwd float64 = 0
+	var knownPwd float64
 	for i := range words {
 		knownPwd1 := KnownPwdScore(words[i], password)
 		knownPwd = knownPwd1
@@ -166,7 +166,7 @@ func Grader(words  [][]string, password string) float64 {
 			break
 		}
 	}
-	var knownPwdReverse float64 = 0
+	var knownPwdReverse float64
 	for i := range words {
 		knownPwdReverse1 := KnownPwdReverseScore(words[i], password)
 		knownPwdReverse = knownPwdReverse1

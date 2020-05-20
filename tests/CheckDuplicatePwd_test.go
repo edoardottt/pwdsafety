@@ -23,7 +23,7 @@ package tests
 import (
 	"fmt"
 	"github.com/edoardottt/pwdsafety/pwds/utilspwds"
-	"github.com/edoardottt/pwdsafety/tests/utilsTests"
+	"github.com/edoardottt/pwdsafety/tests/utilstests"
 	"testing"
 )
 
@@ -41,7 +41,7 @@ func TestGenerateSetFiles(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		if output := utilspwds.GenerateSetFiles(test.input); !utilsTests.TestEqString(output, test.expected) {
+		if output := utilspwds.GenerateSetFiles(test.input); !utilstests.TestEqString(output, test.expected) {
 			errorString := fmt.Sprintf("Test Failed: %s inputted, %s expected, received: %s", test.input, test.expected, output)
 			t.Error(errorString)
 		}
