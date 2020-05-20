@@ -65,7 +65,7 @@ func ListAllFiles(root string) []string {
 func ReadAllFiles(folder string) [][]string {
 	files := ListAllFiles(folder)
 	var result [][]string
-	for i:= 0; i < len(files);i++ {
+	for i := 0; i < len(files); i++ {
 		result = append(result, ReadWords(files[i]))
 	}
 	return result

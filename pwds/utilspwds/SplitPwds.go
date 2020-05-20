@@ -24,8 +24,8 @@ import (
 	"bufio"
 	"fmt"
 	"github.com/edoardottt/pwdsafety/utils"
-	"strconv"
 	"os"
+	"strconv"
 )
 
 //WriteLines : it writes the lines to the given file.
@@ -42,7 +42,6 @@ func WriteLines(lines []string, path string) error {
 	}
 	return w.Flush()
 }
-
 
 //SplitPwds : It splits a single txt file that contains one password per line into n files.
 func SplitPwds(file string) {
@@ -62,7 +61,7 @@ func SplitPwds(file string) {
 		println("Insert a valid value.")
 		os.Exit(1)
 	}
-	LinesPerFile := lengthWords/files
+	LinesPerFile := lengthWords / files
 	baseName := "knownPwd"
 	index := 0
 	for i := 1; i <= files; i++ {

@@ -28,7 +28,7 @@ import (
 func GenerateSetFiles(input []string) []string {
 	set := map[string]bool{}
 	result := []string{}
-	for i:= 0; i < len(input);i++ {
+	for i := 0; i < len(input); i++ {
 		word := input[i]
 		existence := set[word]
 		if !existence {

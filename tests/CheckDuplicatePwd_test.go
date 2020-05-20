@@ -35,9 +35,9 @@ func TestGenerateSetFiles(t *testing.T) {
 	}{
 		{[]string{"hellohello"}, []string{"hellohello"}},
 		{[]string{}, []string{}},
-		{[]string{"ABC","ABC","DEF","GHJ","KIL","MNO","MNO","PQR","STU","VWX","YZ"}, []string{"ABC","DEF","GHJ","KIL","MNO","PQR","STU","VWX","YZ"}},
-		{[]string{"1","2","2","2","2","2","3"}, []string{"1","2","3"}},
-		{[]string{".",":",":",":",";","'","?","?","!","%","="}, []string{".",":",";","'","?","!","%","="}},
+		{[]string{"ABC", "ABC", "DEF", "GHJ", "KIL", "MNO", "MNO", "PQR", "STU", "VWX", "YZ"}, []string{"ABC", "DEF", "GHJ", "KIL", "MNO", "PQR", "STU", "VWX", "YZ"}},
+		{[]string{"1", "2", "2", "2", "2", "2", "3"}, []string{"1", "2", "3"}},
+		{[]string{".", ":", ":", ":", ";", "'", "?", "?", "!", "%", "="}, []string{".", ":", ";", "'", "?", "!", "%", "="}},
 	}
 
 	for _, test := range tests {
@@ -62,7 +62,7 @@ func TestCheckDuplicatePwd(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		if output := utilspwds.CheckDuplicatePwd(test.input); ! output == test.expected {
+		if output := utilspwds.CheckDuplicatePwd(test.input); !output == test.expected {
 			errorString := fmt.Sprintf("Test Failed: %s inputted, %v expected, received: %v", test.input, test.expected, output)
 			t.Error(errorString)
 		}

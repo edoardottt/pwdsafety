@@ -155,7 +155,7 @@ func EntropyScore(password string) float64 {
 }
 
 //Grader : Return the score of the password
-func Grader(words  [][]string, password string) float64 {
+func Grader(words [][]string, password string) float64 {
 	var optimalLength = 27
 	var optimalDifferentCharScore float64 = 7
 	var knownPwd float64
