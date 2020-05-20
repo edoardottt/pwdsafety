@@ -72,6 +72,10 @@ func SplitPwds(file string) {
 		} else {
 			err = WriteLines(words[index:], fileName)
 		}
+		if err != nil {
+			println("Error while writing lines.")
+			os.Exit(1)
+		}
 		index = index + LinesPerFile
 	}
 }
