@@ -54,6 +54,3 @@ jobs:
 
       - name: Build
         run: make build
-
-      - name: Codecov
-        uses: codecov/codecov-action@v1.0.7
