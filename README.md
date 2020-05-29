@@ -34,6 +34,28 @@ USAGE 💡
 
   - testing...
 
+SOME EXAMPLES :bar_chart:
+-------------------------------------------------
+- **Very weak password:**
+
+![veryWeak](https://github.com/edoardottt/pwdsafety/blob/master/images/veryWeak.png)
+
+- **Weak password:**
+
+![weak](https://github.com/edoardottt/pwdsafety/blob/master/images/weak.png)
+
+- **Reasonable password**
+
+![reasonable](https://github.com/edoardottt/pwdsafety/blob/master/images/reasonable.png)
+
+- **Strong password**
+
+![strong](https://github.com/edoardottt/pwdsafety/blob/master/images/strong.png)
+
+- **Very strong password**
+
+![veryStrong](https://github.com/edoardottt/pwdsafety/blob/master/images/veryStrong.png)
+
 DESCRIPTION 🔦 
 -------------------------------------------------
 
@@ -85,29 +107,6 @@ SCORING 💯
   - Unique different characters
   - Length
   - Entropy
-
-SOME EXAMPLES :bar_chart:
--------------------------------------------------
-- **Very weak password:**
-
-![veryWeak](https://github.com/edoardottt/pwdsafety/blob/master/images/veryWeak.png)
-
-- **Weak password:**
-
-![weak](https://github.com/edoardottt/pwdsafety/blob/master/images/weak.png)
-
-- **Reasonable password**
-
-![reasonable](https://github.com/edoardottt/pwdsafety/blob/master/images/reasonable.png)
-
-- **Strong password**
-
-![strong](https://github.com/edoardottt/pwdsafety/blob/master/images/strong.png)
-
-- **Very strong password**
-
-![veryStrong](https://github.com/edoardottt/pwdsafety/blob/master/images/veryStrong.png)
-
 
 DOWNLOAD 📡
 -------------------------------------------------
