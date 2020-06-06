@@ -33,6 +33,7 @@ USAGE 💡
 - **Other OS(Windows,MacOS and so on...):**
 
   - testing...
+  - If you want to test it on these OS, let me know :)
 
 SOME EXAMPLES :bar_chart:
 -------------------------------------------------
