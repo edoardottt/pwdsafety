@@ -36,7 +36,7 @@ func main() {
 	DisplayResult(score)
 	if score <= 68 {
 		crackTime := utils.CrackTime(password)
-		println("A botnet can crack this pwd in " + utils.ShowCrackTime(crackTime))
+		println("A little botnet can crack this pwd in " + utils.ShowCrackTime(crackTime))
 		SuggestPwd(words)
 	}
 }
