@@ -1,16 +1,47 @@
 <p align="center">
+  <!-- logo -->
   <img src="https://github.com/edoardottt/pwdsafety/blob/master/images/logo.png">
+  <b>Command line tool that checks how much a password is safe</b><br>
+  <sub>
+    Coded with 💙 by edoardottt.
+  </sub>
 </p>
 
+![gobadge]()
 
-**Command line tool that checks how much a password is safe.**
-
-![gobadge](https://github.com/edoardottt/pwdsafety/blob/master/images/gobadge)
-![version](https://github.com/edoardottt/pwdsafety/blob/master/images/version.svg)
-[![Go Report Card](https://goreportcard.com/badge/github.com/edoardottt/pwdsafety)](https://goreportcard.com/report/github.com/edoardottt/pwdsafety)
-![Go](https://github.com/edoardottt/pwdsafety/workflows/Go/badge.svg?branch=master)
-![ubuntu-build](https://github.com/edoardottt/pwdsafety/blob/master/images/ubuntu-build.svg)
-
+<!-- badges -->
+<p align="center">
+    <!-- mainteinance -->
+      <a href="https://edoardoottavianelli.it">
+        <img src="https://github.com/edoardottt/pwdsafety/blob/master/images/maintained-yes.svg" alt="Mainteinance yes" />
+      </a>
+    <!-- open-issues -->
+      <a href="https://edoardoottavianelli.it">
+        <img src="https://github.com/edoardottt/pwdsafety/blob/master/images/issues-0-open.svg" alt="open issues" />
+      </a>
+    <!-- version -->
+      <a href="https://edoardoottavianelli.it">
+        <img src="https://github.com/edoardottt/pwdsafety/blob/master/images/version.svg" alt="version" />
+      </a>
+  <br>
+    <!-- go-report-card -->
+      <a href="https://goreportcard.com/report/github.com/edoardottt/pwdsafety">
+        <img src="https://goreportcard.com/badge/github.com/edoardottt/pwdsafety" alt="go-report-card" />
+      </a>
+    <!-- workflows -->
+      <a href="https://edoardoottavianelli.it">
+        <img src="https://github.com/edoardottt/pwdsafety/workflows/Go/badge.svg?branch=master" alt="workflows" />
+      </a>
+    <!-- ubuntu-build -->
+      <a href="https://edoardoottavianelli.it">
+        <img src="https://github.com/edoardottt/pwdsafety/blob/master/images/ubuntu-build.svg" alt="ubuntu-build" />
+      </a>
+  <br>
+    <!-- gobadge -->
+      <a href="https://edoardoottavianelli.it">
+        <img src="https://github.com/edoardottt/pwdsafety/blob/master/images/gobadge" alt="gobadge" />
+      </a>
+</p>
 
 **This tool doesn't store any information!!**
 
