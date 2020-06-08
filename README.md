@@ -75,8 +75,9 @@ Get Started 🎉
   - testing...
   - If you want to test it on these OS, let me know :)
 
-SOME EXAMPLES :bar_chart:
--------------------------------------------------
+Some examples :bar_chart:
+----------
+
 - **Very weak password:**
 
 ![veryWeak](https://github.com/edoardottt/pwdsafety/blob/master/images/veryWeak.png)
@@ -98,7 +99,7 @@ SOME EXAMPLES :bar_chart:
 ![veryStrong](https://github.com/edoardottt/pwdsafety/blob/master/images/veryStrong.png)
 
 DESCRIPTION 🔦 
--------------------------------------------------
+----------
 
 It reads from standard input the entered password.
 
@@ -126,7 +127,7 @@ Then R^L = the number of possible passwords and the log of it is the number of b
 When the score <= 68(reasonable) it generates a random password using a list of all english words.
 
 SCORING 💯
--------------------------------------------------
+----------
 
 **Max score: 100**
 
@@ -150,7 +151,7 @@ SCORING 💯
   - Entropy
 
 DOWNLOAD 📡
--------------------------------------------------
+----------
 
 - GIT command on  CLI: `git -clone https://github.com/edoardottt/pwdsafety.git`
 
@@ -171,4 +172,4 @@ If you liked it drop a :star:
 https://www.edoardoottavianelli.it for contact me.
 
 
-                                                                            Edoardo Ottavianelli ©
+                                                                            Edoardo Ottavianelli
