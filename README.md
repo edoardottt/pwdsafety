@@ -21,6 +21,14 @@
       <a href="https://edoardoottavianelli.it">
         <img src="https://github.com/edoardottt/pwdsafety/blob/master/images/version.svg" alt="version" />
       </a>
+    <!-- pr-welcome -->
+      <a href="https://edoardoottavianelli.it">
+        <img src="https://github.com/edoardottt/READMENATOR/blob/master/images/pr-welcome.svg" alt="pr-welcome" />
+      </a>
+    <!-- ask-me-anything -->
+      <a href="https://edoardoottavianelli.it">
+        <img src="https://github.com/edoardottt/READMENATOR/blob/master/images/ask-me-anything.svg" alt="ask me anything" />
+      </a>
   <br>
     <!-- go-report-card -->
       <a href="https://goreportcard.com/report/github.com/edoardottt/pwdsafety">
@@ -39,14 +47,18 @@
       <a href="https://edoardoottavianelli.it">
         <img src="https://github.com/edoardottt/pwdsafety/blob/master/images/gobadge" alt="gobadge" />
       </a>
+    <!-- license GPLv3.0 -->
+      <a href="https://github.com/edoardottt/READMENATOR/blob/master/LICENSE">
+        <img src="https://github.com/edoardottt/READMENATOR/blob/master/images/license-GPL3.svg" alt="license-GPL3" />
+      </a>
 </p>
 
 **This tool doesn't store any information!!**
 
 **Remember, never use personal(or related to you) info in your password!**
 
-USAGE 💡
--------------------------------------------------
+Get Started 🎉
+----------
 
 - **Linux:**
 
@@ -145,6 +157,12 @@ DOWNLOAD 📡
 - Download by Browser: `https://github.com/edoardottt/pwdsafety`
 
 - WGET on Linux(Recommended on linux): `wget https://github.com/edoardottt/pwdsafety/archive/master.zip`
+
+Contributing 🛠
+-------
+
+Just open an issue/pull request. See also [CONTRIBUTING.md](https://github.com/edoardottt/pwdsafety/blob/master/CONTRIBUTING.md) and [CODE OF CONDUCT.md](https://github.com/edoardottt/pwdsafety/blob/master/CODE_OF_CONDUCT.md)
+
 
 --------------------------
 If you liked it drop a :star:
