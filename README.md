@@ -1,6 +1,6 @@
 <p align="center">
   <!-- logo -->
-  <img src="https://github.com/edoardottt/pwdsafety/blob/master/images/logo.png">
+  <img src="https://github.com/edoardottt/pwdsafety/blob/master/images/logo.png"><br>
   <b>Command line tool that checks how much a password is safe</b><br>
   <sub>
     Coded with 💙 by edoardottt.
@@ -13,11 +13,11 @@
 <p align="center">
     <!-- mainteinance -->
       <a href="https://edoardoottavianelli.it">
-        <img src="https://github.com/edoardottt/pwdsafety/blob/master/images/maintained-yes.svg" alt="Mainteinance yes" />
+        <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="Mainteinance yes" />
       </a>
     <!-- open-issues -->
       <a href="https://edoardoottavianelli.it">
-        <img src="https://github.com/edoardottt/pwdsafety/blob/master/images/issues-0-open.svg" alt="open issues" />
+        <img src="https://img.shields.io/github/issues/Naereen/StrapDown.js.svg" alt="open issues" />
       </a>
     <!-- version -->
       <a href="https://edoardoottavianelli.it">
