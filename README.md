@@ -1,4 +1,9 @@
-# 🔒pwdsafety🔒
+<p align="center">
+  <img src="https://github.com/edoardottt/pwdsafety/blob/master/images/logo.png">
+</p>
+
+
+**Command line tool that checks how much a password is safe.**
 
 ![gobadge](https://github.com/edoardottt/pwdsafety/blob/master/images/gobadge)
 ![version](https://github.com/edoardottt/pwdsafety/blob/master/images/version.svg)
@@ -6,12 +11,6 @@
 ![Go](https://github.com/edoardottt/pwdsafety/workflows/Go/badge.svg?branch=master)
 ![ubuntu-build](https://github.com/edoardottt/pwdsafety/blob/master/images/ubuntu-build.svg)
 
-
-**Command line tool that checks how much a password is safe.**
-
-<p align="center">
-  <img src="https://github.com/edoardottt/pwdsafety/blob/master/images/logo.png">
-</p>
 
 **This tool doesn't store any information!!**
 
