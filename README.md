@@ -7,8 +7,6 @@
   </sub>
 </p>
 
-![gobadge]()
-
 <!-- badges -->
 <p align="center">
     <!-- mainteinance -->
