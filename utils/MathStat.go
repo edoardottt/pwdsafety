@@ -58,23 +58,11 @@ func CountTypeElements(input string) map[string]float64 {
 //CrackTime : Returns the seconds needed to crack the password
 func CrackTime(password string) float64 {
 	const GPU float64 = 1000000000
-	var bots float64 = 500
+	var bots float64 = 15000
 	var KPS = bots * GPU
 	var combinations float64
 	length := float64(len(password))
-	var pool float64
-	if IsThereNumber(password) {
-		pool += 10
-	}
-	if IsThereUpperCase(password) {
-		pool += 26
-	}
-	if IsThereLowerCase(password) {
-		pool += 26
-	}
-	if IsThereSymbol(password) {
-		pool += 33
-	}
+	var pool float64 = 95
 	combinations = math.Pow(pool, length)
 	return combinations / KPS
 }
