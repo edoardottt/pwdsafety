@@ -98,7 +98,7 @@ Some examples :bar_chart:
 
 ![veryStrong](https://github.com/edoardottt/pwdsafety/blob/master/images/veryStrong.png)
 
-DESCRIPTION 🔦 
+Description 🔦 
 ----------
 
 It reads from standard input the entered password.
@@ -126,7 +126,7 @@ Then R^L = the number of possible passwords and the log of it is the number of b
 
 When the score <= 68(reasonable) it generates a random password using a list of all english words.
 
-SCORING 💯
+Scoring 💯
 ----------
 
 **Max score: 100**
@@ -150,7 +150,7 @@ SCORING 💯
   - Length
   - Entropy
 
-DOWNLOAD 📡
+Download 📡
 ----------
 
 - GIT command on  CLI: `git -clone https://github.com/edoardottt/pwdsafety.git`
@@ -165,9 +165,9 @@ Contributing 🛠
 Just open an issue/pull request. See also [CONTRIBUTING.md](https://github.com/edoardottt/pwdsafety/blob/master/CONTRIBUTING.md) and [CODE OF CONDUCT.md](https://github.com/edoardottt/pwdsafety/blob/master/CODE_OF_CONDUCT.md)
 
 
---------------------------
+
 If you liked it drop a :star:
---------------------------
+-------
 
 https://www.edoardoottavianelli.it for contact me.
 
