@@ -1,6 +1,6 @@
 <p align="center">
   <!-- logo -->
-  <img src="https://github.com/edoardottt/pwdsafety/blob/master/images/logo.png"><br>
+  <img src="https://github.com/edoardottt/pwdsafety/blob/master/images/logo.jpg"><br>
   <b>Command line tool that checks how much a password is safe</b><br>
   <sub>
     Coded with 💙 by edoardottt.
