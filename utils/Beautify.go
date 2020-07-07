@@ -21,6 +21,7 @@
 package utils
 
 import (
+	"fmt"
 	"log"
 	"os"
 	"os/exec"
@@ -52,4 +53,33 @@ func Beautify() {
 	if size >= minSize {
 		println(beauty)
 	}
+}
+
+//WrapTable : It wraps some key-value entries inside a CLI table
+func WrapTable(title string, input map[string]string) {
+	maxValue := 0
+	result := ""
+	for _, key := range input {
+		currentLength := len(key) + len(input[key])
+		if currentLength > maxValue {
+			maxValue = currentLength
+		}
+	}
+	basicDeco := "-"
+	titBar1 := strings.Repeat(basicDeco, maxValue) + "\n"
+	titBar := "|"
+	if !(int(maxValue/2)-len(title)/2-1 >= 0) {
+		maxValue = len(title)
+	}
+	titBar += strings.Repeat(" ", int(maxValue/2)-int(len(title)/2)-1)
+	titBar += title
+	titBar += strings.Repeat(" ", int(maxValue/2)-int(len(title)/2)-1)
+	titBar += "|\n"
+	titBar2 := strings.Repeat(basicDeco, maxValue) + "\n"
+	result += result + titBar1 + titBar + titBar2
+	for _, elem := range input {
+		row := "|"
+
+	}
+	fmt.Println(result)
 }

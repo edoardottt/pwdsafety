@@ -57,8 +57,8 @@ func CountTypeElements(input string) map[string]float64 {
 
 //CrackTime : Returns the seconds needed to crack the password
 func CrackTime(password string) float64 {
-	const GPU float64 = 1000000000
-	var bots float64 = 9000
+	const GPU float64 = 2000000000
+	var bots float64 = 40000
 	var KPS = bots * GPU
 	var combinations float64
 	length := float64(len(password))
