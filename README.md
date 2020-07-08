@@ -75,28 +75,10 @@ Get Started 🎉
   - testing...
   - If you want to test it on these OS, let me know :)
 
-Some examples :bar_chart:
+Example :bar_chart:
 ----------
 
-- **Very weak password:**
-
-![veryWeak](https://github.com/edoardottt/pwdsafety/blob/master/images/veryWeak.png)
-
-- **Weak password:**
-
-![weak](https://github.com/edoardottt/pwdsafety/blob/master/images/weak.png)
-
-- **Reasonable password**
-
-![reasonable](https://github.com/edoardottt/pwdsafety/blob/master/images/reasonable.png)
-
-- **Strong password**
-
-![strong](https://github.com/edoardottt/pwdsafety/blob/master/images/strong.png)
-
-- **Very strong password**
-
-![veryStrong](https://github.com/edoardottt/pwdsafety/blob/master/images/veryStrong.png)
+![Example](https://github.com/edoardottt/pwdsafety/blob/master/images/screen.jpg)
 
 Description 🔦 
 ----------
