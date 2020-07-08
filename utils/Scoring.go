@@ -20,6 +20,10 @@
 
 package utils
 
+import (
+	"fmt"
+)
+
 /*
 KnownPwdScore :
 Scores known password
@@ -155,6 +159,7 @@ func Grader(words [][]string, password string) float64 {
 	var optimalLength = 27
 	var optimalDifferentCharScore float64 = 7
 	var knownPwd float64
+	//check if password is into known leaked passwords
 	for i := range words {
 		knownPwd1 := KnownPwdScore(words[i], password)
 		knownPwd = knownPwd1
@@ -174,6 +179,26 @@ func Grader(words [][]string, password string) float64 {
 	compositionPwdScore := CompositionPwdScore(password)
 	differentCharScore := DifferentCharScore(password)
 	entropyScore := EntropyScore(password)
+	//Printing results
+	knownStr := ""
+	knownStrReverse := ""
+	if knownPwd < 0 {
+		knownStr = "Yes"
+	} else {
+		knownStr = "No"
+	}
+	if knownPwdReverse < 0 {
+		knownStrReverse = "Yes"
+	} else {
+		knownStrReverse = "No"
+	}
+	fmt.Println("Password found in known leaked passwords: " + knownStr)
+	fmt.Println("Password (reversed) found in known leaked passwords: " + knownStrReverse)
+	fmt.Println("Length Score: " + fmt.Sprint(lengthScore) + "/30")
+	fmt.Println("Composition Score: " + fmt.Sprint(compositionPwdScore) + "/20")
+	fmt.Println("Unique chars Score: " + fmt.Sprint(differentCharScore) + "/15")
+	entropyRounded := fmt.Sprintf("%.2f", entropyScore)
+	fmt.Println("Entropy Score: " + fmt.Sprint(entropyRounded) + "/35")
 	score := knownPwd + knownPwdReverse + lengthScore + compositionPwdScore + differentCharScore + entropyScore
 	//if it's an optimal password by very high length and good different/unique ratio score
 	if differentCharScore >= optimalDifferentCharScore && len(password) > optimalLength {

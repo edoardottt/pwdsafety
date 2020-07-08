@@ -38,14 +38,18 @@ func main() {
 		crackTime := utils.CrackTime(password)
 		println("Estimated password cracking time: " + utils.ShowCrackTime(crackTime))
 		fmt.Println("-------------------------")
-		SuggestPwd(words)
+		randomPwd := SuggestPwd(words)
+		password = randomPwd
 	}
+	fmt.Println("MD5 : " + utils.GetMD5Hash(password))
+	fmt.Println("SHA1 : " + utils.GetSHA1Hash(password))
+	fmt.Println("SHA256 : " + utils.GetSHA256Hash(password))
 }
 
 //DisplayResult : Display the result for a password
 func DisplayResult(score float64) {
 	scoreRounded := fmt.Sprintf("%.2f", score)
-	fmt.Printf("Score:%s/100", scoreRounded)
+	fmt.Printf("Final Score: %s/100", scoreRounded)
 	print("\n")
 	if score <= 35 {
 		color.Red("VERY WEAK")
@@ -65,13 +69,14 @@ func DisplayResult(score float64) {
 }
 
 //SuggestPwd : Suggest a new random password
-func SuggestPwd(words [][]string) {
+func SuggestPwd(words [][]string) string {
 	engWords := utils.ReadWords("engWordsList.txt")
 	randomPwd := utils.GenerateRandom(engWords)
-	scoreRandomPwd := utils.Grader(words, randomPwd)
 	println("You should use this instead...")
 	println(randomPwd)
+	scoreRandomPwd := utils.Grader(words, randomPwd)
 	DisplayResult(scoreRandomPwd)
+	return randomPwd
 }
 
 //CheckPwd : Check if a password is useless
