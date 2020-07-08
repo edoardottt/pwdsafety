@@ -40,10 +40,6 @@ func main() {
 		fmt.Println("-------------------------")
 		SuggestPwd(words)
 	}
-	//DEBUG
-	map1 := make(map[string]string)
-	map1["sha1"] = "rgbehkgbrhjabgjbefewgqtw3463743-6.3àò3gbabhaj"
-	utils.WrapTable("hash-table", map1)
 }
 
 //DisplayResult : Display the result for a password
