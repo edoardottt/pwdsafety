@@ -21,7 +21,6 @@
 package utils
 
 import (
-	"fmt"
 	"log"
 	"os"
 	"os/exec"
