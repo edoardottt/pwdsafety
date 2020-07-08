@@ -30,13 +30,14 @@ import (
 
 //Beautify : If the terminal size is enough, print the label PWD-SAFETY.
 func Beautify() {
-	minSize := 55
-	firstLine := "                  _                  __      _         \n"
-	secondLine := " _ ____      ____| |      ___  __ _ / _| ___| |_ _   _ \n"
-	thirdLine := "| '_ \\ \\ /\\ / / _` |_____/ __|/ _` | |_ / _ \\ __| | | |\n"
-	fourthLine := "| |_) \\ V  V / (_| |_____\\__ \\ (_| |  _|  __/ |_| |_| |\n"
-	fifthLine := "| .__/ \\_/\\_/ \\__,_|     |___/\\__,_|_|  \\___|\\__|\\__, |\n"
-	sixthLine := "|_|                                              |___/ \n"
+	minSize := 50
+	firstLine := "	          _            __      _       \n"
+	secondLine := " _ ____      ____| |___  __ _ / _| ___| |_ _   _ \n"
+	thirdLine := "| '_ \\ \\ /\\ / / _` / __|/ _` | |_ / _ \\ __| | | |\n"
+	fourthLine := "| |_) \\ V  V / (_| \\__ \\ (_| |  _|  __/ |_| |_| |\n"
+	fifthLine := "| .__/ \\_/\\_/ \\__,_|___/\\__,_|_|  \\___|\\__|\\__, |\n"
+	sixthLine := "|_|                                        |___/ \n"
+
 	beauty := firstLine + secondLine + thirdLine + fourthLine + fifthLine + sixthLine
 	cmd := exec.Command("stty", "size")
 	cmd.Stdin = os.Stdin
