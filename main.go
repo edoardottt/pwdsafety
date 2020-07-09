@@ -41,9 +41,18 @@ func main() {
 		randomPwd := SuggestPwd(words)
 		password = randomPwd
 	}
-	fmt.Println("MD5 : " + utils.GetMD5Hash(password))
-	fmt.Println("SHA1 : " + utils.GetSHA1Hash(password))
+	fmt.Println("Hash functions for " + password)
+	fmt.Println("MD4 (deprecated) : " + utils.GetMD4Hash(password))
+	fmt.Println("MD5 (deprecated) : " + utils.GetMD5Hash(password))
+	fmt.Println("SHA1 (deprecated) : " + utils.GetSHA1Hash(password))
+	fmt.Println("RIPEMD160 (deprecated) : " + utils.GetRipemd160Hash(password))
+	fmt.Println("SHA224 : " + utils.GetSHA224Hash(password))
 	fmt.Println("SHA256 : " + utils.GetSHA256Hash(password))
+	fmt.Println("SHA384 : " + utils.GetSHA384Hash(password))
+	fmt.Println("SHA512 : " + utils.GetSHA512Hash(password))
+	fmt.Println("Blake2b256 : " + utils.GetBlake2b256Hash(password))
+	fmt.Println("Blake2b384 : " + utils.GetBlake2b384Hash(password))
+	fmt.Println("Blake2b512 : " + utils.GetBlake2b512Hash(password))
 }
 
 //DisplayResult : Display the result for a password
