@@ -21,6 +21,7 @@
 package utils
 
 import (
+	"fmt"
 	"math"
 	"strconv"
 )
@@ -53,6 +54,22 @@ func CountTypeElements(input string) map[string]float64 {
 		}
 	}
 	return res
+}
+
+//Round : Round in a clever way float64 numbers
+func Round(input string) float64 {
+	value, err := strconv.ParseFloat(input, 64)
+	if err != nil {
+		panic(err)
+	}
+	if math.Mod(value, 1) == 0 {
+		v, err := strconv.ParseFloat(fmt.Sprintf("%.0f", value), 64)
+		if err != nil {
+			panic(err)
+		}
+		value = v
+	}
+	return value
 }
 
 //CrackTime : Returns the seconds needed to crack the password

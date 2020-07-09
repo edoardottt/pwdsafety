@@ -197,7 +197,8 @@ func Grader(words [][]string, password string) float64 {
 	fmt.Println("Length Score: " + fmt.Sprint(lengthScore) + "/30")
 	fmt.Println("Composition Score: " + fmt.Sprint(compositionPwdScore) + "/20")
 	fmt.Println("Unique chars Score: " + fmt.Sprint(differentCharScore) + "/15")
-	entropyRounded := fmt.Sprintf("%.2f", entropyScore)
+
+	entropyRounded := Round(fmt.Sprintf("%.2f", entropyScore))
 	fmt.Println("Entropy Score: " + fmt.Sprint(entropyRounded) + "/35")
 	score := knownPwd + knownPwdReverse + lengthScore + compositionPwdScore + differentCharScore + entropyScore
 	//if it's an optimal password by very high length and good different/unique ratio score

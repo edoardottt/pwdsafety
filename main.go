@@ -37,7 +37,7 @@ func main() {
 	if score <= 68 {
 		crackTime := utils.CrackTime(password)
 		println("Estimated password cracking time: " + utils.ShowCrackTime(crackTime))
-		fmt.Println("-------------------------")
+		fmt.Println("------------------------------")
 		randomPwd := SuggestPwd(words)
 		password = randomPwd
 	}
@@ -57,9 +57,8 @@ func main() {
 
 //DisplayResult : Display the result for a password
 func DisplayResult(score float64) {
-	scoreRounded := fmt.Sprintf("%.2f", score)
-	fmt.Printf("Final Score: %s/100", scoreRounded)
-	print("\n")
+	scoreRounded := utils.Round(fmt.Sprintf("%.2f", score))
+	fmt.Println("Final Score: " + fmt.Sprint(scoreRounded) + "/100")
 	if score <= 35 {
 		color.Red("VERY WEAK")
 	}
