@@ -21,6 +21,7 @@
 package utils
 
 import (
+	"math"
 	"math/rand"
 	"strconv"
 	"strings"
@@ -36,6 +37,13 @@ func GenerateRandom(engWords []string) string {
 	word1 := engWords[rand1]
 	word2 := engWords[rand2]
 	rand4 := rand.Intn(100)
-	newPwd := word1 + "-" + strings.ToUpper(word2) + "-" + strconv.Itoa(rand4)
+	if math.Mod(float64(rand1), 2) == 0 {
+		word2 = strings.ToUpper(word2)
+	} else {
+		word1 = strings.ToUpper(word1)
+	}
+	symbols := []string{"-", ".", "_", "#", "$", "&"}
+	rand3 := math.Mod(float64(rand1+rand2), float64(len(symbols)))
+	newPwd := word1 + symbols[int(rand3)] + word2 + symbols[int(rand3)] + strconv.Itoa(rand4)
 	return newPwd
 }
