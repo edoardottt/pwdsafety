@@ -74,7 +74,7 @@ func Round(input string) float64 {
 
 //CrackTime : Returns the seconds needed to crack the password
 func CrackTime(password string) float64 {
-	const GPU float64 = 2000000000
+	const GPU float64 = 1000000000
 	var bots float64 = 15000
 	var KPS = bots * GPU
 	var combinations float64
