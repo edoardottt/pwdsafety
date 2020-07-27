@@ -135,7 +135,7 @@ Scoring 💯
 Download 📡
 ----------
 
-- GIT command on  CLI: `git -clone https://github.com/edoardottt/pwdsafety.git`
+- GIT command on  CLI: `git clone https://github.com/edoardottt/pwdsafety.git`
 
 - Download by Browser: `https://github.com/edoardottt/pwdsafety`
 
