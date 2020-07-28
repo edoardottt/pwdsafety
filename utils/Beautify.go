@@ -20,37 +20,19 @@
 
 package utils
 
-import (
-	"log"
-	"os"
-	"os/exec"
-	"strconv"
-	"strings"
-)
-
 //Beautify : If the terminal size is enough, print the label PWD-SAFETY.
 func Beautify() {
-	minSize := 50
-	firstLine := "	          _            __      _       \n"
-	secondLine := " _ ____      ____| |___  __ _ / _| ___| |_ _   _ \n"
-	thirdLine := "| '_ \\ \\ /\\ / / _` / __|/ _` | |_ / _ \\ __| | | |\n"
-	fourthLine := "| |_) \\ V  V / (_| \\__ \\ (_| |  _|  __/ |_| |_| |\n"
-	fifthLine := "| .__/ \\_/\\_/ \\__,_|___/\\__,_|_|  \\___|\\__|\\__, |\n"
-	sixthLine := "|_|                                        |___/ \n"
-
-	beauty := firstLine + secondLine + thirdLine + fourthLine + fifthLine + sixthLine
-	cmd := exec.Command("stty", "size")
-	cmd.Stdin = os.Stdin
-	out, err := cmd.Output()
-	if err != nil {
-		log.Fatal(err)
-	}
-	words := strings.Fields(string(out)) // words[1] == size
-	size, _ := strconv.Atoi(words[1])
-	if err != nil {
-		log.Fatal(err)
-	}
-	if size >= minSize {
-		println(beauty)
-	}
+	zeroLine := "********************************************************\n"
+	firstLine := "* 	            _            __      _             *\n"
+	secondLine := "*  _ ____      ____| |___  __ _ / _| ___| |_ _   _     *\n"
+	thirdLine := "* | '_ \\ \\ /\\ / / _` / __|/ _` | |_ / _ \\ __| | | |    *\n"
+	fourthLine := "* | |_) \\ V  V / (_| \\__ \\ (_| |  _|  __/ |_| |_| |    *\n"
+	fifthLine := "* | .__/ \\_/\\_/ \\__,_|___/\\__,_|_|  \\___|\\__|\\__, |    *\n"
+	sixthLine := "* |_|                                        |___/     *\n"
+	seventhLine := "* https://github.com/edoardottt/pwdsafety              *\n"
+	eighthLine := "* edoardottt, https://www.edoardoottavianelli.it       *\n"
+	ninethLine := "* v0.1.3                                               *\n"
+	tenthLine := "********************************************************\n"
+	beauty := zeroLine + firstLine + secondLine + thirdLine + fourthLine + fifthLine + sixthLine + seventhLine + eighthLine + ninethLine + tenthLine
+	println(beauty)
 }
