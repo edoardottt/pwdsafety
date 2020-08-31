@@ -1,4 +1,4 @@
-PROJECT_NAME := "pwd-safety"
+PROJECT_NAME := "pwdsafety"
 PKG := "github.com/edoardottt/$(PROJECT_NAME)"
 PKG_LIST := $(shell go list ${PKG}/... | grep -v /vendor/)
 GO_FILES := $(shell find . -name '*.go' | grep -v /vendor/ | grep -v _test.go)
