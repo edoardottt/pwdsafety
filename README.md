@@ -139,7 +139,7 @@ Download 📡
 
 - Download by Browser: `https://github.com/edoardottt/pwdsafety`
 
-- WGET on Linux(Recommended on linux): `wget https://github.com/edoardottt/pwdsafety/archive/master.zip`
+- WGET(Recommended for linux): `wget https://github.com/edoardottt/pwdsafety/archive/master.zip`
 
 Contributing 🛠
 -------
@@ -156,4 +156,4 @@ If you liked it drop a :star:
 https://www.edoardoottavianelli.it for contact me.
 
 
-                                                                            Edoardo Ottavianelli
+                                                                        Edoardo Ottavianelli
