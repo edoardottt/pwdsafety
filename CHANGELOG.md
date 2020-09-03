@@ -1,4 +1,8 @@
-
+**[v0.1.3](https://github.com/edoardottt/pwd-safety/releases/tag/v0.1.3):**
+          
+          - Added:
+                  - Hash hex results for password
+                  - Better output readability
 
 **[v0.1.2](https://github.com/edoardottt/pwd-safety/releases/tag/v0.1.2):**
           
