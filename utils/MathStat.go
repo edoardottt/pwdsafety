@@ -79,7 +79,19 @@ func CrackTime(password string) float64 {
 	var KPS = bots * GPU
 	var combinations float64
 	length := float64(len(password))
-	var pool float64 = 95
+	var pool float64 = 0
+	if IsThereLowerCase(password) {
+		pool += 26
+	}
+	if IsThereUpperCase(password) {
+		pool += 26
+	}
+	if IsThereNumber(password) {
+		pool += 10
+	}
+	if IsThereSymbol(password) {
+		pool += 33
+	}
 	combinations = math.Pow(pool, length)
 	return combinations / KPS
 }
