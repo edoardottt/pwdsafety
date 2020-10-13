@@ -144,6 +144,8 @@ Download 📡
 Contributing 🛠
 -------
 
+[![](https://sourcerer.io/fame/edoardottt/edoardottt/pwdsafety/images/0)](https://sourcerer.io/fame/edoardottt/edoardottt/pwdsafety/links/0)[![](https://sourcerer.io/fame/edoardottt/edoardottt/pwdsafety/images/1)](https://sourcerer.io/fame/edoardottt/edoardottt/pwdsafety/links/1)[![](https://sourcerer.io/fame/edoardottt/edoardottt/pwdsafety/images/2)](https://sourcerer.io/fame/edoardottt/edoardottt/pwdsafety/links/2)[![](https://sourcerer.io/fame/edoardottt/edoardottt/pwdsafety/images/3)](https://sourcerer.io/fame/edoardottt/edoardottt/pwdsafety/links/3)[![](https://sourcerer.io/fame/edoardottt/edoardottt/pwdsafety/images/4)](https://sourcerer.io/fame/edoardottt/edoardottt/pwdsafety/links/4)[![](https://sourcerer.io/fame/edoardottt/edoardottt/pwdsafety/images/5)](https://sourcerer.io/fame/edoardottt/edoardottt/pwdsafety/links/5)[![](https://sourcerer.io/fame/edoardottt/edoardottt/pwdsafety/images/6)](https://sourcerer.io/fame/edoardottt/edoardottt/pwdsafety/links/6)[![](https://sourcerer.io/fame/edoardottt/edoardottt/pwdsafety/images/7)](https://sourcerer.io/fame/edoardottt/edoardottt/pwdsafety/links/7)
+
 Just open an issue/pull request. 
 
 See also [CONTRIBUTING.md](https://github.com/edoardottt/pwdsafety/blob/master/CONTRIBUTING.md) and [CODE OF CONDUCT.md](https://github.com/edoardottt/pwdsafety/blob/master/CODE_OF_CONDUCT.md)
