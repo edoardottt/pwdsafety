@@ -70,10 +70,14 @@ Get Started 🎉
 
   - Then just type **pwdsafety** in your terminal where you want and press enter.
 
-- **Other OS(Windows,MacOS and so on...):**
+- **Windows:**
+
+  - It works perfectly
+
+- **macOS:**
 
   - testing...
-  - If you want to test it on these OS, let me know :)
+  - If you want to test it on this OS, let me know :)
 
 Example :bar_chart:
 ----------
