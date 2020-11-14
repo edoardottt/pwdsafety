@@ -31,7 +31,7 @@ func Entropy(password string) float64 {
 	var E float64
 	var pool float64 = 95
 	length := float64(len(password))
-	E = math.Log2(math.Pow(pool, length))
+	E = -(math.Log2(1 / (math.Pow(pool, length))))
 	return E
 }
 
