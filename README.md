@@ -57,6 +57,10 @@
 
 **Remember, never use personal(or related to you) info in your password!**
 
+ - Use a password manager
+ - Don't use the same password for different services
+ - Enable 2FA when possible
+
 Get Started 🎉
 ----------
 
