@@ -104,7 +104,7 @@ It calculates then the entropy of a password.
 Password entropy is a measurement of how unpredictable a password is.
 
 The formula for entropy is:
-              ![CodeCogsEqn](https://github.com/edoardottt/pwdsafety/blob/master/images/CodeCogsEqn.gif)
+              ![formula](https://github.com/edoardottt/pwdsafety/blob/master/images/forula.png)
               
 Where E = password entropy
 
