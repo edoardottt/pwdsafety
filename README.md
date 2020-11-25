@@ -112,7 +112,7 @@ R = pool of unique characters
 
 L = number of characters in your password
 
-Then R^L = the number of possible passwords and the log of it is the number of bits of entropy.
+Then R^L = the number of possible passwords
 
 When the score <= 68(reasonable) it generates a random password using a list of all english words.
 
