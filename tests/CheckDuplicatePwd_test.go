@@ -1,6 +1,4 @@
 /*
- *    Copyright (C) 2020 Edoardo Ottavianelli
- *
  *    This program is free software: you can redistribute it and/or modify
  *    it under the terms of the GNU Public License as published
  *    by the Free Software Foundation, either version 3 of the License, or
@@ -22,9 +20,10 @@ package tests
 
 import (
 	"fmt"
+	"testing"
+
 	"github.com/edoardottt/pwdsafety/pwds/utilspwds"
 	"github.com/edoardottt/pwdsafety/tests/utilstests"
-	"testing"
 )
 
 //Test the correct operation of Reverse func
