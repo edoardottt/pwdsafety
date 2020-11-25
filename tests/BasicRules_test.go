@@ -1,6 +1,4 @@
 /*
- *    Copyright (C) 2020 Edoardo Ottavianelli
- *
  *    This program is free software: you can redistribute it and/or modify
  *    it under the terms of the GNU Public License as published
  *    by the Free Software Foundation, either version 3 of the License, or
@@ -22,9 +20,10 @@ package tests
 
 import (
 	"fmt"
-	"github.com/edoardottt/pwdsafety/utils"
 	"strconv"
 	"testing"
+
+	"github.com/edoardottt/pwdsafety/utils"
 )
 
 //Test if two slices of bytes are equal
