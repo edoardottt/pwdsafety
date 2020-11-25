@@ -1,6 +1,4 @@
 /*
- *    Copyright (C) 2020 Edoardo Ottavianelli
- *
  *    This program is free software: you can redistribute it and/or modify
  *    it under the terms of the GNU Public License as published
  *    by the Free Software Foundation, either version 3 of the License, or
@@ -23,9 +21,10 @@ package utilspwds
 import (
 	"bufio"
 	"fmt"
-	"github.com/edoardottt/pwdsafety/utils"
 	"os"
 	"strconv"
+
+	"github.com/edoardottt/pwdsafety/utils"
 )
 
 //WriteLines : it writes the lines to the given file.
