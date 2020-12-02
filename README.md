@@ -86,7 +86,7 @@ Get Started 🎉
 Example :bar_chart:
 ----------
 
-![Example](https://github.com/edoardottt/pwdsafety/blob/master/images/screen.jpg)
+![Example](https://github.com/edoardottt/pwdsafety/blob/master/images/screen.gif)
 
 Description 🔦 
 ----------
