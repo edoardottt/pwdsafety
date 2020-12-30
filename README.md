@@ -60,6 +60,19 @@
  - Use a password manager
  - Don't use the same password for different services
  - Enable 2FA when possible
+ 
+ - [Example](https://github.com/edoardottt/pwdsafety#example-bar_chart)
+ - [Get Started](https://github.com/edoardottt/pwdsafety#get-started-)
+ - [Description](https://github.com/edoardottt/pwdsafety#description-)
+ - [Scoring](https://github.com/edoardottt/pwdsafety#scoring-)
+ - [Download](https://github.com/edoardottt/pwdsafety#download-)
+ - [Contributing](https://github.com/edoardottt/pwdsafety#contributing-)
+
+
+Example :bar_chart:
+----------
+
+![Example](https://github.com/edoardottt/pwdsafety/blob/master/images/screen.gif)
 
 Get Started 🎉
 ----------
@@ -82,11 +95,6 @@ Get Started 🎉
 
   - testing...
   - If you want to test it on this OS, let me know :)
-
-Example :bar_chart:
-----------
-
-![Example](https://github.com/edoardottt/pwdsafety/blob/master/images/screen.gif)
 
 Description 🔦 
 ----------
