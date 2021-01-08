@@ -19,7 +19,7 @@
       </a>
     <!-- version -->
       <a href="https://edoardoottavianelli.it">
-        <img src="https://github.com/edoardottt/images/blob/main/pwdafety/version.svg" alt="version" />
+        <img src="https://github.com/edoardottt/images/blob/main/pwdsafety/version.svg" alt="version" />
       </a>
     <!-- pr-welcome -->
       <a href="https://edoardoottavianelli.it">
