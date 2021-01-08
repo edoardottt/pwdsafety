@@ -19,7 +19,7 @@
       </a>
     <!-- version -->
       <a href="https://edoardoottavianelli.it">
-        <img src="https://github.com/edoardottt/pwdsafety/blob/master/images/version.svg" alt="version" />
+        <img src="https://github.com/edoardottt/images/blob/main/pwdafety/version.svg" alt="version" />
       </a>
     <!-- pr-welcome -->
       <a href="https://edoardoottavianelli.it">
@@ -40,12 +40,12 @@
       </a>
     <!-- ubuntu-build -->
       <a href="https://edoardoottavianelli.it">
-        <img src="https://github.com/edoardottt/pwdsafety/blob/master/images/ubuntu-build.svg" alt="ubuntu-build" />
+        <img src="https://github.com/edoardottt/images/blob/main/pwdsafety/ubuntu-build.svg" alt="ubuntu-build" />
       </a>
   <br>
     <!-- gobadge -->
       <a href="https://edoardoottavianelli.it">
-        <img src="https://github.com/edoardottt/pwdsafety/blob/master/images/gobadge" alt="gobadge" />
+        <img src="https://github.com/edoardottt/images/blob/main/pwdsafety/gobadge" alt="gobadge" />
       </a>
     <!-- license GPLv3.0 -->
       <a href="https://github.com/edoardottt/READMENATOR/blob/master/LICENSE">
@@ -73,7 +73,7 @@
 Example :bar_chart:
 ----------
 
-![Example](https://github.com/edoardottt/pwdsafety/blob/master/images/screen.gif)
+![Example](https://github.com/edoardottt/images/blob/main/pwdsafety/screen.gif)
 
 Get Started 🎉
 ----------
