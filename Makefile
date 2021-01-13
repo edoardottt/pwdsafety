@@ -2,7 +2,7 @@ PROJECT_NAME := "pwdsafety"
 PKG := "github.com/edoardottt/$(PROJECT_NAME)"
 
 fmt:
-	@gofmt -s ./*; \
+	@gofmt -s ./*
 	@echo "Done."
 
 remod:
@@ -14,7 +14,7 @@ remod:
 update:
 	@go get -u; \
 	go mod tidy -v; \
-	@echo "Done."
+	echo "Done."
 
 linux:
 	@go build -o ./pwdsafety
@@ -32,4 +32,4 @@ unlinux:
 
 test:
 	@go test -v -race ./... ; \
-	@echo "Done."
+	echo "Done."
