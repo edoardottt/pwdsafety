@@ -81,7 +81,7 @@ Get Started 🎉
 
   - `git clone https://github.com/edoardottt/pwdsafety.git`
 
-- Scilla has external dependencies, so they need to be pulled in:
+- pwdsafety has external dependencies, so they need to be pulled in:
 
   - `go get`
 
