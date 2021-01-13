@@ -1,31 +1,35 @@
 PROJECT_NAME := "pwdsafety"
 PKG := "github.com/edoardottt/$(PROJECT_NAME)"
-PKG_LIST := $(shell go list ${PKG}/... | grep -v /vendor/)
-GO_FILES := $(shell find . -name '*.go' | grep -v /vendor/ | grep -v _test.go)
- 
-.PHONY: all dep lint vet test test-coverage build clean
- 
-all: build
 
-dep: ## Get the dependencies
-	@go mod download
+fmt:
+	@gofmt -s ./*; \
+	@echo "Done."
 
-lint: ## Lint Golang files
-	@golint -set_exit_status ${PKG_LIST}
+remod:
+	rm -rf go.*
+	go mod init ${PKG}
+	go get
+	@echo "Done."
 
-vet: ## Run go vet
-	@go vet ${PKG_LIST}
+update:
+	@go get -u; \
+	go mod tidy -v; \
+	@echo "Done."
 
-test: ## Run unittests
-	@go test -short ${PKG_LIST}
+linux:
+	@go build -o ./pwdsafety
+	mv ./pwdsafety /usr/bin/
+	mkdir -p /usr/bin/pwds/
+	cp -r pwds/*.txt /usr/bin/pwds/
+	cp engWordsList.txt /usr/bin/
+	@echo "Done."
 
-test-coverage: ## Run tests with coverage
-	@go test -short -coverprofile cover.out -covermode=atomic ${PKG_LIST} 
-	@cat cover.out >> coverage.txt
+unlinux:
+	rm -rf /usr/bin/pwdsafety
+	rm -rf /usr/bin/pwds
+	rm -rf /usr/bin/engWordsList.txt
+	@echo "Done."
 
-build: dep ## Build the binary file
-	@go build -i -o build/main $(PKG)
- 
-clean: ## Remove previous build
-	@rm -f $(PROJECT_NAME)/build
- 
+test:
+	@go test -v -race ./... ; \
+	@echo "Done."
