@@ -2,8 +2,8 @@ PROJECT_NAME := "pwdsafety"
 PKG := "github.com/edoardottt/$(PROJECT_NAME)"
 
 fmt:
-	@gofmt -s ./*
-	@echo "Done."
+	@gofmt -s ./*; \
+	echo "Done."
 
 remod:
 	rm -rf go.*
