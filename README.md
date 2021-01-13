@@ -1,6 +1,6 @@
 <p align="center">
   <!-- logo -->
-  <img src="https://github.com/edoardottt/pwdsafety/blob/master/images/logo.jpg"><br>
+  <img src="https://github.com/edoardottt/images/blob/main/pwdsafety/logo.jpg"><br>
   <b>Command line tool that checks how much a password is safe</b><br>
   <sub>
     Coded with 💙 by edoardottt.
@@ -66,7 +66,6 @@
  - [Get Started](https://github.com/edoardottt/pwdsafety#get-started-)
  - [Description](https://github.com/edoardottt/pwdsafety#description-)
  - [Scoring](https://github.com/edoardottt/pwdsafety#scoring-)
- - [Download](https://github.com/edoardottt/pwdsafety#download-)
  - [Contributing](https://github.com/edoardottt/pwdsafety#contributing-)
 
 
@@ -78,24 +77,25 @@ Example :bar_chart:
 Get Started 🎉
 ----------
 
-- **Linux:**
+- First of all, clone the repo locally
 
-  - After downloaded the package and extracted, just for comfort, create the alias:
+  - `git clone https://github.com/edoardottt/pwdsafety.git`
 
-  - Edit the file /home/**{REPLACE_USER}**/.bashrc and append this row:
+- Scilla has external dependencies, so they need to be pulled in:
 
-       `alias pwdsafety="OLD=$(pwd) && cd YOUR-pwdsafety-PATH-FOLDER && go run main.go; cd $OLD; unset OLD"`
+  - `go get`
 
-  - Then just type **pwdsafety** in your terminal where you want and press enter.
+- Linux (Requires high perms, run with sudo)
 
-- **Windows:**
+  - `make linux`
 
-  - It works perfectly
+  - `make unlinux`
 
-- **macOS:**
+- Windows (executable works only in pwdsafety folder. Alias?)
 
-  - testing...
-  - If you want to test it on this OS, let me know :)
+  - `make windows`
+
+  - `make unwindows`
 
 Description 🔦 
 ----------
@@ -148,15 +148,6 @@ Scoring 💯
   - Unique different characters
   - Length
   - Entropy
-
-Download 📡
-----------
-
-- GIT command on  CLI: `git clone https://github.com/edoardottt/pwdsafety.git`
-
-- Download by Browser: `https://github.com/edoardottt/pwdsafety`
-
-- WGET(Recommended for linux): `wget https://github.com/edoardottt/pwdsafety/archive/master.zip`
 
 Contributing 🛠
 -------
