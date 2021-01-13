@@ -1,5 +1,7 @@
 PROJECT_NAME := "pwdsafety"
 PKG := "github.com/edoardottt/$(PROJECT_NAME)"
+PKG_LIST := $(shell go list ${PKG}/... | grep -v /vendor/)
+GO_FILES := $(shell find . -name '*.go' | grep -v /vendor/ | grep -v _test.go)
 
 fmt:
 	@gofmt -s ./*; \
@@ -33,3 +35,12 @@ unlinux:
 test:
 	@go test -v -race ./... ; \
 	echo "Done."
+
+dep: ## Get the dependencies
+	@go mod download
+
+lint: ## Lint Golang files
+	@golint -set_exit_status ${PKG_LIST}
+
+build: dep ## Build the binary file
+	@go build -i -o build/main $(PKG)
