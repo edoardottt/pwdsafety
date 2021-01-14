@@ -19,29 +19,49 @@
 package utils
 
 import (
-	"math"
 	"math/rand"
-	"strconv"
-	"strings"
 	"time"
 )
 
 //GenerateRandom : Generate a strong random password
-func GenerateRandom(engWords []string) string {
+func GenerateRandom(length int) string {
+	var lowerCharSet = "abcdefghijklmnopqrstuvwxyz"
+	var upperCharSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	var specialCharSet = "!@#$%&*-_+-=)("
+	var numberSet = "0123456789"
 	rand.Seed(time.Now().UnixNano())
-	max := len(engWords) - 1
-	rand1 := rand.Intn(max)
-	rand2 := rand.Intn(max)
-	word1 := engWords[rand1]
-	word2 := engWords[rand2]
-	rand4 := rand.Intn(100)
-	if math.Mod(float64(rand1), 2) == 0 {
-		word2 = strings.ToUpper(word2)
-	} else {
-		word1 = strings.ToUpper(word1)
+	var randomPwd string = ""
+
+	for i := 0; i < length; i++ {
+
+		switch choice := rand.Intn(4); choice {
+		case 0:
+			leng := len(lowerCharSet)
+			index := rand.Intn(leng)
+			elem := lowerCharSet[index]
+			randomPwd += string(elem)
+		case 1:
+			leng := len(upperCharSet)
+			index := rand.Intn(leng)
+			elem := upperCharSet[index]
+			randomPwd += string(elem)
+		case 2:
+			leng := len(specialCharSet)
+			index := rand.Intn(leng)
+			elem := specialCharSet[index]
+			randomPwd += string(elem)
+		case 3:
+			leng := len(numberSet)
+			index := rand.Intn(leng)
+			elem := numberSet[index]
+			randomPwd += string(elem)
+		default:
+			leng := len(lowerCharSet)
+			index := rand.Intn(leng)
+			elem := lowerCharSet[index]
+			randomPwd += string(elem)
+		}
 	}
-	symbols := []string{"-", ".", "_", "#", "$", "&"}
-	rand3 := math.Mod(float64(rand1+rand2), float64(len(symbols)))
-	newPwd := word1 + symbols[int(rand3)] + word2 + symbols[int(rand3)] + strconv.Itoa(rand4)
-	return newPwd
+
+	return randomPwd
 }

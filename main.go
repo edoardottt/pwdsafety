@@ -21,7 +21,6 @@ package main
 import (
 	"fmt"
 	"os"
-	"runtime"
 
 	"github.com/edoardottt/pwdsafety/utils"
 	"github.com/fatih/color"
@@ -78,13 +77,7 @@ func DisplayResult(score float64) {
 
 //SuggestPwd : Suggest a new random password
 func SuggestPwd(words [][]string) string {
-	engWords := []string{}
-	if runtime.GOOS == "windows" {
-		engWords = utils.ReadWords("engWordsList.txt")
-	} else { // linux
-		engWords = utils.ReadWords("/usr/bin/engWordsList.txt")
-	}
-	randomPwd := utils.GenerateRandom(engWords)
+	randomPwd := utils.GenerateRandom(30)
 	println("[!] You should use this instead...")
 	println("[O] " + randomPwd)
 	scoreRandomPwd := utils.Grader(words, randomPwd)

@@ -23,13 +23,11 @@ linux:
 	mv ./pwdsafety /usr/bin/
 	mkdir -p /usr/bin/pwds/
 	cp -r pwds/*.txt /usr/bin/pwds/
-	cp engWordsList.txt /usr/bin/
 	@echo "Done."
 
 unlinux:
 	rm -rf /usr/bin/pwdsafety
 	rm -rf /usr/bin/pwds
-	rm -rf /usr/bin/engWordsList.txt
 	@echo "Done."
 
 test:
