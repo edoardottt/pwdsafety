@@ -29,8 +29,8 @@ import (
 	"golang.org/x/crypto/blake2s"
 	"golang.org/x/crypto/md4"
 	"golang.org/x/crypto/ripemd160"
+	"golang.org/x/crypto/sha3"
 
-	//"golang.org/x/crypto/sha3"
 	"io"
 )
 
@@ -82,6 +82,30 @@ func GetSHA384Hash(text string) string {
 //GetSHA512Hash : Return SHA512 hash of input
 func GetSHA512Hash(text string) string {
 	hash := sha512.Sum512([]byte(text))
+	return hex.EncodeToString(hash[:])
+}
+
+//GetSHA3224Hash : Return SHA3 224 hash of input
+func GetSHA3224Hash(text string) string {
+	hash := sha3.Sum224([]byte(text))
+	return hex.EncodeToString(hash[:])
+}
+
+//GetSHA3256Hash : Return SHA3 256 hash of input
+func GetSHA3256Hash(text string) string {
+	hash := sha3.Sum256([]byte(text))
+	return hex.EncodeToString(hash[:])
+}
+
+//GetSHA3384Hash : Return SHA3 384 hash of input
+func GetSHA3384Hash(text string) string {
+	hash := sha3.Sum384([]byte(text))
+	return hex.EncodeToString(hash[:])
+}
+
+//GetSHA3512Hash : Return SHA3 512 hash of input
+func GetSHA3512Hash(text string) string {
+	hash := sha3.Sum512([]byte(text))
 	return hex.EncodeToString(hash[:])
 }
 
