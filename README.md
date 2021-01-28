@@ -13,10 +13,6 @@
       <a href="https://edoardoottavianelli.it">
         <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="Mainteinance yes" />
       </a>
-    <!-- open-issues -->
-      <a href="https://edoardoottavianelli.it">
-        <img src="https://img.shields.io/github/issues/Naereen/StrapDown.js.svg" alt="open issues" />
-      </a>
     <!-- version -->
       <a href="https://edoardoottavianelli.it">
         <img src="https://github.com/edoardottt/images/blob/main/pwdsafety/version.svg" alt="version" />
