@@ -21,13 +21,10 @@ update:
 linux:
 	@go build -o ./pwdsafety
 	mv ./pwdsafety /usr/bin/
-	mkdir -p /usr/bin/pwds/
-	cp -r pwds/*.txt /usr/bin/pwds/
 	@echo "Done."
 
 unlinux:
 	rm -rf /usr/bin/pwdsafety
-	rm -rf /usr/bin/pwds
 	@echo "Done."
 
 test:
