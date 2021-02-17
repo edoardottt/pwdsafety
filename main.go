@@ -40,7 +40,7 @@ func main() {
 		randomPwd := SuggestPwd(words)
 		password = randomPwd
 	}
-	fmt.Println("[&] Hash functions for " + password)
+	fmt.Println("[&] Hash functions for " + password + " :")
 	fmt.Println("[&] MD4 (deprecated) : " + utils.GetMD4Hash(password))
 	fmt.Println("[&] MD5 (deprecated) : " + utils.GetMD5Hash(password))
 	fmt.Println("[&] SHA1 (deprecated) : " + utils.GetSHA1Hash(password))

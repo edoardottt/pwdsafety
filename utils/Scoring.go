@@ -127,9 +127,11 @@ func EntropyScore(password string) float64 {
 pwnedPwds returns the scores for pwned password and
 reversed password.
 
-Found : -8
+Found : -30
 Not Found : 0
 
+Found (Reversed): -10
+Not Found (Reversed): 0
 */
 func pwnedPwds(password string) (float64, float64) {
 	var scoreKnownPwd float64
@@ -151,13 +153,13 @@ func pwnedPwds(password string) (float64, float64) {
 	}
 
 	if knownPwd.Pwned {
-		scoreKnownPwd = -8
+		scoreKnownPwd = -30
 	} else {
 		scoreKnownPwd = 0
 	}
 
 	if knownPwdReverse.Pwned {
-		scoreKnownPwdReverse = -8
+		scoreKnownPwdReverse = -10
 	} else {
 		scoreKnownPwdReverse = 0
 	}
@@ -180,12 +182,12 @@ func Grader(words [][]string, password string) float64 {
 	entropyScore := EntropyScore(password)
 	//Printing results
 	if scoreKnownPwd != 0 {
-		knownStr = "Yes"
+		knownStr = "Yes (-30)"
 	} else {
 		knownStr = "No"
 	}
 	if scoreKnownPwdReverse != 0 {
-		knownStrReverse = "Yes"
+		knownStrReverse = "Yes (-10)"
 	} else {
 		knownStrReverse = "No"
 	}
