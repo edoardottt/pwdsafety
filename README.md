@@ -152,7 +152,7 @@ Just open an issue/pull request.
 
 See also [CONTRIBUTING.md](https://github.com/edoardottt/pwdsafety/blob/master/CONTRIBUTING.md) and [CODE OF CONDUCT.md](https://github.com/edoardottt/pwdsafety/blob/master/CODE_OF_CONDUCT.md)
 
-Thanks to [ecnepsnai](https://github.com/ecnepsnai/pwnedpassword/blob/master/pwned.go).
+Thanks to [fabaff](https://github.com/fabaff) and [ecnepsnai](https://github.com/ecnepsnai/pwnedpassword/blob/master/pwned.go).
 
 If you liked it drop a :star:
 -------
