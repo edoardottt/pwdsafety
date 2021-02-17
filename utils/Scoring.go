@@ -20,37 +20,8 @@ package utils
 
 import (
 	"fmt"
+	"os"
 )
-
-/*
-KnownPwdScore :
-Scores known password
-	total = -18
-	It's present = -18
-	There isn't = 0
-*/
-func KnownPwdScore(words []string, password string) float64 {
-	found := FindExactly(words, password)
-	if found {
-		return -18
-	}
-	return 0
-}
-
-/*
-KnownPwdReverseScore :
-Scores known reversed password
-	total = -8
-	It's present = -8
-	There isn't = 0
-*/
-func KnownPwdReverseScore(words []string, password string) float64 {
-	foundReverse := FindExactlyReversed(words, password)
-	if foundReverse {
-		return -8
-	}
-	return 0
-}
 
 /*
 LengthScore :
@@ -152,40 +123,68 @@ func EntropyScore(password string) float64 {
 	return entropyScore
 }
 
+/*
+pwnedPwds returns the scores for pwned password and
+reversed password.
+
+Found : -8
+Not Found : 0
+
+*/
+func pwnedPwds(password string) (float64, float64) {
+	var scoreKnownPwd float64
+	var scoreKnownPwdReverse float64
+	var knownPwd *Result
+	var knownPwdReverse *Result
+	//check if password is into known leaked passwords
+
+	knownPwd, err := IsPwned(password)
+	if err != nil {
+		fmt.Println("Error while retrieving data on password...")
+		os.Exit(1)
+	}
+
+	knownPwdReverse, err = IsPwned(Reverse(password))
+	if err != nil {
+		fmt.Println("Error while retrieving data on password...")
+		os.Exit(1)
+	}
+
+	if knownPwd.Pwned {
+		scoreKnownPwd = -8
+	} else {
+		scoreKnownPwd = 0
+	}
+
+	if knownPwdReverse.Pwned {
+		scoreKnownPwdReverse = -8
+	} else {
+		scoreKnownPwdReverse = 0
+	}
+	return scoreKnownPwd, scoreKnownPwdReverse
+}
+
 //Grader : Return the score of the password
 func Grader(words [][]string, password string) float64 {
 	var optimalLength = 27
 	var optimalDifferentCharScore float64 = 7
-	var knownPwd float64
-	//check if password is into known leaked passwords
-	for i := range words {
-		knownPwd1 := KnownPwdScore(words[i], password)
-		knownPwd = knownPwd1
-		if knownPwd < 0 {
-			break
-		}
-	}
-	var knownPwdReverse float64
-	for i := range words {
-		knownPwdReverse1 := KnownPwdReverseScore(words[i], password)
-		knownPwdReverse = knownPwdReverse1
-		if knownPwdReverse < 0 {
-			break
-		}
-	}
+	var knownStr string
+	var knownStrReverse string
+	var scoreKnownPwd float64
+	var scoreKnownPwdReverse float64
+
+	scoreKnownPwd, scoreKnownPwdReverse = pwnedPwds(password)
 	lengthScore := LengthScore(password)
 	compositionPwdScore := CompositionPwdScore(password)
 	differentCharScore := DifferentCharScore(password)
 	entropyScore := EntropyScore(password)
 	//Printing results
-	knownStr := ""
-	knownStrReverse := ""
-	if knownPwd < 0 {
+	if scoreKnownPwd != 0 {
 		knownStr = "Yes"
 	} else {
 		knownStr = "No"
 	}
-	if knownPwdReverse < 0 {
+	if scoreKnownPwdReverse != 0 {
 		knownStrReverse = "Yes"
 	} else {
 		knownStrReverse = "No"
@@ -198,7 +197,7 @@ func Grader(words [][]string, password string) float64 {
 
 	entropyRounded := Round(fmt.Sprintf("%.2f", entropyScore))
 	fmt.Println("[%] Entropy Score: " + fmt.Sprint(entropyRounded) + "/35")
-	score := knownPwd + knownPwdReverse + lengthScore + compositionPwdScore + differentCharScore + entropyScore
+	score := scoreKnownPwd + scoreKnownPwdReverse + lengthScore + compositionPwdScore + differentCharScore + entropyScore
 	//if it's an optimal password by very high length and good different/unique ratio score
 	if differentCharScore >= optimalDifferentCharScore && len(password) > optimalLength {
 		return 100
