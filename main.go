@@ -83,7 +83,7 @@ func DisplayResult(score float64) {
 func SuggestPwd(words [][]string) string {
 	randomPwd := utils.GenerateRandom(30)
 	println("[!] You should use this instead...")
-	println("[O] " + randomPwd)
+	color.Green("[>>] " + randomPwd)
 	scoreRandomPwd := utils.Grader(words, randomPwd)
 	DisplayResult(scoreRandomPwd)
 	return randomPwd
