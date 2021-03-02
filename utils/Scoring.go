@@ -28,11 +28,11 @@ LengthScore :
 Scores password's length
 	total = 30
 	length<=7 = 0
-	length==8 = 8
-	length==9 = 12
-	10 <= length <= 15 = 20
-	16 <= length <= 19 = 25
-	20 <= length <= 24 = 28
+	length==8 = 4
+	length==9 = 10
+	10 <= length <= 15 = 15
+	16 <= length <= 19 = 21
+	20 <= length <= 24 = 26
 	length >=25 = 30
 */
 func LengthScore(password string) float64 {
@@ -41,19 +41,19 @@ func LengthScore(password string) float64 {
 		return 0
 	}
 	if length == 8 {
-		return 7
+		return 4
 	}
 	if length == 9 {
-		return 12
+		return 10
 	}
 	if length > 9 && length < 16 {
-		return 20
+		return 15
 	}
 	if length > 15 && length < 20 {
-		return 25
+		return 21
 	}
 	if length > 19 && length < 25 {
-		return 28
+		return 26
 	}
 	return 30
 }
