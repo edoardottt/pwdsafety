@@ -80,43 +80,35 @@ Get Started 🎉
 
 - Linux (Requires high perms, run with sudo)
 
-  - `make linux`
+  - `make linux` (to install)
 
-  - `make unlinux`
+  - `make unlinux` (to uninstall)
 
 - Windows (executable works only in pwdsafety folder. Alias?)
 
-  - `make windows`
+  - `make windows` (to install)
 
-  - `make unwindows`
+  - `make unwindows` (to uninstall)
 
 Description 🔦 
 ----------
 
-It reads from standard input the entered password.
-
-First, it searches if the password or the password reversed is a well known pwd.
-
-Then, just do little calculations, checking if the basic rules are respected, like if there are UPPERCASE CHARS, lowercase chars, numb3rs and symbols.
-
-It stores the length of the password and the ratio [ unique different chars / total chars].
-
-It calculates then the entropy of a password.
-
-Password entropy is a measurement of how unpredictable a password is.
-
-The formula for entropy is:
-              ![formula](https://github.com/edoardottt/images/blob/main/pwdsafety/formula.png)
+It reads from standard input the entered password.  
+First, it searches if the password or the password reversed is a well known pwd.  
+Then, just do little calculations, checking if the basic rules are respected, like if there are UPPERCASE CHARS, lowercase chars, numb3rs and symbols.  
+It stores the length of the password and the ratio [ unique different chars / total chars].  
+It calculates then the entropy of a password.  
+Password entropy is a measurement of how unpredictable a password is.  
+The formula for entropy is:  
+              ![formula](https://github.com/edoardottt/images/blob/main/pwdsafety/formula.png)  
               
-Where E = password entropy
+Where:
+- E = password entropy  
+- R = pool of unique characters  
+- L = number of characters in your password  
+- Then R^L = the number of possible passwords  
 
-R = pool of unique characters
-
-L = number of characters in your password
-
-Then R^L = the number of possible passwords
-
-When the score <= 68(reasonable) it generates a random password.
+When the score <= 68(reasonable) it generates a random password.  
 
 Scoring 💯
 ----------
