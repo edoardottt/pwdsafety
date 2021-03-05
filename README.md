@@ -48,22 +48,19 @@
         <img src="https://github.com/edoardottt/READMENATOR/blob/master/images/license-GPL3.svg" alt="license-GPL3" />
       </a>
 </p>
+<p align="center">
+  <a href="#example-bar_chart">Example</a> •
+  <a href="#get-started-">Get Started</a> •
+  <a href="#description-">Description</a> •
+  <a href="#scoring-">Scoring</a> •
+  <a href="#contributing-">Contributing</a>
+</p>
 
 **This tool doesn't store any information!!**  
 **Remember, never use personal(or related to you) info in your password!**  
  - Use a password manager  
  - Don't use the same password for different services  
  - Enable 2FA when possible  
- 
- Table of Contents 📽
- ------
- 
- - [Example](https://github.com/edoardottt/pwdsafety#example-bar_chart)
- - [Get Started](https://github.com/edoardottt/pwdsafety#get-started-)
- - [Description](https://github.com/edoardottt/pwdsafety#description-)
- - [Scoring](https://github.com/edoardottt/pwdsafety#scoring-)
- - [Contributing](https://github.com/edoardottt/pwdsafety#contributing-)
-
 
 Example :bar_chart:
 ----------
