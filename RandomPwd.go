@@ -16,7 +16,7 @@
  *      Edoardo Ottavianelli <edoardott@gmail.com>
  */
 
-package utils
+package main
 
 import (
 	"math/rand"

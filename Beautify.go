@@ -16,7 +16,7 @@
  *      Edoardo Ottavianelli <edoardott@gmail.com>
  */
 
-package utils
+package main
 
 //Beautify : If the terminal size is enough, print the label PWD-SAFETY.
 func Beautify() {

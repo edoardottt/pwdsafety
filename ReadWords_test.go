@@ -16,14 +16,11 @@
  *      Edoardo Ottavianelli <edoardott@gmail.com>
  */
 
-package tests
+package main
 
 import (
 	"fmt"
 	"testing"
-
-	"github.com/edoardottt/pwdsafety/tests/utilstests"
-	"github.com/edoardottt/pwdsafety/utils"
 )
 
 //Test the correct operation of ReadWords func
@@ -40,7 +37,7 @@ func TestReadWords(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		if output := utils.ReadWords(test.input); !utilstests.TestEqString(test.expected, output) {
+		if output := ReadWords(test.input); !TestEqString(test.expected, output) {
 			errorString := fmt.Sprintf("Test Failed: %s inputted, %v expected, received: %v", test.input, test.expected, output)
 			t.Error(errorString)
 		}

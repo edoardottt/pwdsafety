@@ -18,7 +18,7 @@
  *      Edoardo Ottavianelli <edoardott@gmail.com>
  */
 
-package utilstests
+package main
 
 //TestEqString : Test if two slices of strings are equal
 func TestEqString(a, b []string) bool {

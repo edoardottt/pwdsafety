@@ -16,14 +16,12 @@
  *      Edoardo Ottavianelli <edoardott@gmail.com>
  */
 
-package tests
+package main
 
 import (
 	"fmt"
 	"strconv"
 	"testing"
-
-	"github.com/edoardottt/pwdsafety/utils"
 )
 
 //Test if two slices of bytes are equal
@@ -62,7 +60,7 @@ func TestGenerateSetString(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		if output := utils.GenerateSetString(test.input); !testEqRune(test.expected, output) {
+		if output := GenerateSetString(test.input); !testEqRune(test.expected, output) {
 			errorString := fmt.Sprintf("Test Failed: %s inputted, %d expected, received: %d", test.input, test.expected, output)
 			t.Error(errorString)
 		}
@@ -83,7 +81,7 @@ func TestHowManyDifferents(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		if output := utils.HowManyDifferents(test.input); output != test.expected {
+		if output := HowManyDifferents(test.input); output != test.expected {
 			errorString := fmt.Sprintf("Test Failed: %s inputted, %d expected, received: %d", test.input, test.expected, output)
 			t.Error(errorString)
 		}
@@ -104,7 +102,7 @@ func TestIsThereUpperCase(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		if output := utils.IsThereUpperCase(test.input); output != test.expected {
+		if output := IsThereUpperCase(test.input); output != test.expected {
 			errorString := fmt.Sprintf("Test Failed: %s inputted, %s expected, received: %s", test.input, strconv.FormatBool(test.expected), strconv.FormatBool(output))
 			t.Error(errorString)
 		}
@@ -125,7 +123,7 @@ func TestIsThereLowerCase(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		if output := utils.IsThereLowerCase(test.input); output != test.expected {
+		if output := IsThereLowerCase(test.input); output != test.expected {
 			errorString := fmt.Sprintf("Test Failed: %s inputted, %s expected, received: %s", test.input, strconv.FormatBool(test.expected), strconv.FormatBool(output))
 			t.Error(errorString)
 		}
@@ -146,7 +144,7 @@ func TestIsThereSymbol(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		if output := utils.IsThereSymbol(test.input); output != test.expected {
+		if output := IsThereSymbol(test.input); output != test.expected {
 			errorString := fmt.Sprintf("Test Failed: %s inputted, %s expected, received: %s", test.input, strconv.FormatBool(test.expected), strconv.FormatBool(output))
 			t.Error(errorString)
 		}
@@ -167,7 +165,7 @@ func TestIsThereNumber(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		if output := utils.IsThereNumber(test.input); output != test.expected {
+		if output := IsThereNumber(test.input); output != test.expected {
 			errorString := fmt.Sprintf("Test Failed: %s inputted, %s expected, received: %s", test.input, strconv.FormatBool(test.expected), strconv.FormatBool(output))
 			t.Error(errorString)
 		}
@@ -188,7 +186,7 @@ func TestHowManyTypes(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		if output := utils.HowManyTypes(test.input); output != test.expected {
+		if output := HowManyTypes(test.input); output != test.expected {
 			errorString := fmt.Sprintf("Test Failed: %s inputted, %d expected, received: %d", test.input, test.expected, output)
 			t.Error(errorString)
 		}
