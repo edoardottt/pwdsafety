@@ -76,6 +76,7 @@ Get Started 🎉
 
 - pwdsafety has external dependencies, so they need to be pulled in:
 
+  - `cd pwdsafety`
   - `go get`
 
 - Linux (Requires high perms, run with sudo)
