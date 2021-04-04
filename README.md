@@ -65,7 +65,7 @@
 Example :bar_chart:
 ----------
 
-![Example](https://github.com/edoardottt/images/blob/main/pwdsafety/screen.gif)
+[![asciicast](https://asciinema.org/a/KPvfWtpyqtiZqCdoiSZNE22yl.svg)](https://asciinema.org/a/KPvfWtpyqtiZqCdoiSZNE22yl)
 
 Get Started 🎉
 ----------
