@@ -65,7 +65,7 @@
 Example :bar_chart:
 ----------
 
-[![asciicast](https://asciinema.org/a/KPvfWtpyqtiZqCdoiSZNE22yl.svg)](https://asciinema.org/a/KPvfWtpyqtiZqCdoiSZNE22yl)
+[![asciicast](https://asciinema.org/a/406710.svg)](https://asciinema.org/a/406710)
 
 Get Started 🎉
 ----------
