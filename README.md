@@ -144,10 +144,8 @@ See also [CONTRIBUTING.md](https://github.com/edoardottt/pwdsafety/blob/master/C
 
 Thanks to [fabaff](https://github.com/fabaff) and [ecnepsnai](https://github.com/ecnepsnai/pwnedpassword/blob/master/pwned.go).
 
-If you liked it drop a :star:
+License 📝
 -------
 
-https://www.edoardoottavianelli.it for contact me.
-
-
-                                                                Edoardo Ottavianelli
+This repository is under [GNU General Public License v3.0](https://github.com/edoardottt/pwdsafety/blob/master/LICENSE).  
+[edoardoottavianelli.it](https://www.edoardoottavianelli.it) for contact me.
