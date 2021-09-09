@@ -13,6 +13,6 @@
 
 ## Security alerts
 
-If you find some bugs or other weird things, feel free to contact me here edoardott@gmail.com
+If you find some bugs or other weird things, just open an [issue](https://github.com/edoardottt/pwdsafety/issues) or feel free to contact me here edoardott@gmail.com
   
   https://edoardoottavianelli.it
