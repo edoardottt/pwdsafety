@@ -5,31 +5,31 @@ GO_FILES := $(shell find . -name '*.go' | grep -v /vendor/ | grep -v _test.go)
 
 fmt:
 	@gofmt -s ./*; \
-	echo "Done."
+	@echo "Done."
 
 remod:
-	rm -rf go.*
-	go mod init ${PKG}
-	go get
+	@rm -rf go.*
+	@go mod init ${PKG}
+	@go get
 	@echo "Done."
 
 update:
 	@go get -u; \
-	go mod tidy -v; \
-	echo "Done."
+	@go mod tidy -v; \
+	@echo "Done."
 
 linux:
 	@go build -o ./pwdsafety
-	mv ./pwdsafety /usr/bin/
+	@mv ./pwdsafety /usr/bin/
 	@echo "Done."
 
 unlinux:
-	rm -rf /usr/bin/pwdsafety
+	@rm -rf /usr/bin/pwdsafety
 	@echo "Done."
 
 test:
 	@go test -v -race ./... ; \
-	echo "Done."
+	@echo "Done."
 
 dep: ## Get the dependencies
 	@go mod download
