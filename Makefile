@@ -29,7 +29,7 @@ unlinux:
 
 test:
 	@go test -v -race ./... ; \
-	@echo "Done."
+	echo "Done."
 
 dep: ## Get the dependencies
 	@go mod download
