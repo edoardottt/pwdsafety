@@ -1,3 +1,9 @@
+**[v0.2](https://github.com/edoardottt/pwd-safety/releases/tag/v0.2):**
+          
+          - Remove all the txt files containing known password.
+          - Now it checks if the password (and the pwd reversed) is leaked via an API.
+
+
 **[v0.1.3](https://github.com/edoardottt/pwd-safety/releases/tag/v0.1.3):**
           
           - Added:
