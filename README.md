@@ -57,7 +57,7 @@
 </p>
 
 **This tool doesn't store any information!!**  
-**Remember, never use personal(or related to you) info in your password!**  
+**Remember, never use personal information in your password!**  
  - Use a password manager (I recommend [BitWarden](https://bitwarden.com/))  
  - Don't use the same password for different services  
  - Enable 2FA when possible  
