@@ -4,7 +4,7 @@ PKG_LIST := $(shell go list ${PKG}/... | grep -v /vendor/)
 GO_FILES := $(shell find . -name '*.go' | grep -v /vendor/ | grep -v _test.go)
 
 fmt:
-	@gofmt -s ./*; \
+	@gofmt -s ./*;
 	@echo "Done."
 
 remod:
