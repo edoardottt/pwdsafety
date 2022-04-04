@@ -65,7 +65,7 @@ set GOOS=windows
 set GOARCH=amd64
 set GO111MODULE=on
 set CGO_ENABLED=0
-go build -o pwdsafety.exe
+cd cmd && go build -o ../pwdsafety.exe
 echo Done.
 EXIT /B 0
 
