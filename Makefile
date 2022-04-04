@@ -10,26 +10,26 @@ fmt:
 remod:
 	@rm -rf go.*
 	@go mod init ${PKG}
-	@go get
+	@cd cmd && go get
 	@echo "Done."
 
 update:
-	@go get -u; \
-	@go mod tidy -v; \
+	@cd cmd && go get -u;
+	@cd cmd && go mod tidy -v;
 	@echo "Done."
 
 linux:
-	@go build -o ./pwdsafety
-	@mv ./pwdsafety /usr/bin/
+	@cd cmd && go build -o ./pwdsafety
+	@sudo mv ./cmd/pwdsafety /usr/bin/
 	@echo "Done."
 
 unlinux:
-	@rm -rf /usr/bin/pwdsafety
+	@sudo rm -rf /usr/bin/pwdsafety
 	@echo "Done."
 
 test:
-	@go test -v -race ./... ; \
-	echo "Done."
+	@go test -v -race ./... ;
+	@echo "Done."
 
 dep: ## Get the dependencies
 	@go mod download
