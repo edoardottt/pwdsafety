@@ -1,15 +1,6 @@
 # Security Policy
 
-## Supported Versions
-
-| Version | Supported          |
-| ------- | ------------------ |
-|  0.2  | ✔️ |
-|  0.1.4  | :x: |
-|  0.1.3  | :x: |
-|  0.1.2  | :x: |
-|  0.1.1  | :x: |
-|  0.1  | :x: |
+The supported version is the latest.
 
 ## Security alerts
 
