@@ -70,6 +70,14 @@ Example :bar_chart:
 Get Started 🎉
 ----------
 
+### Go1.17+
+
+```bash
+go install -v github.com/edoardottt/pwdsafety@latest
+```
+
+### From source
+
 - First of all, clone the repo locally
 
   - `git clone https://github.com/edoardottt/pwdsafety.git`
