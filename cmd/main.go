@@ -37,7 +37,7 @@ func main() {
 	DisplayResult(score)
 	if score <= 68 {
 		crackTime := scoring.CrackTime(password)
-		println("[?] Estimated password cracking time: " + ShowCrackTime(crackTime))
+		println("[?] Estimated password cracking time: " + scoring.ShowCrackTime(crackTime))
 		fmt.Println("[-] ------------------------------")
 		randomPwd := SuggestPwd(words)
 		password = randomPwd
