@@ -112,6 +112,7 @@ func HowManyTypes(password string) int {
 	return howMany
 }
 
+//Entropy computes the entropy of a password
 func Entropy(password string) float64 {
 	var E float64
 	var pool float64 = 95
