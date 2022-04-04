@@ -1,3 +1,7 @@
+coverage.txt
+.idea
+pwdsafety
+
 # Binaries for programs and plugins
 *.exe
 *.exe~
@@ -15,9 +19,3 @@
 # vendor/
 
 build
-
-coverage.txt
-
-.idea
-
-pwds/known-pwd.txt

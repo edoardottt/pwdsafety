@@ -22,6 +22,9 @@ import (
 	"fmt"
 	"os"
 
+	beauty "github.com/edoardottt/pwdsafety/internal"
+	"github.com/edoardottt/pwdsafety/pkg/hash"
+	"github.com/edoardottt/pwdsafety/pkg/scoring"
 	"github.com/fatih/color"
 )
 
@@ -30,36 +33,36 @@ func main() {
 	password := ReadSingleInput("Password")
 	CheckPwd(password)
 	words := ReadAllFiles("pwds")
-	score := Grader(words, password)
+	score := scoring.Grader(words, password)
 	DisplayResult(score)
 	if score <= 68 {
-		crackTime := CrackTime(password)
+		crackTime := scoring.CrackTime(password)
 		println("[?] Estimated password cracking time: " + ShowCrackTime(crackTime))
 		fmt.Println("[-] ------------------------------")
 		randomPwd := SuggestPwd(words)
 		password = randomPwd
 	}
 	fmt.Println("[&] Hash functions for " + password + " :")
-	fmt.Println("[&] MD4 : " + GetMD4Hash(password))
-	fmt.Println("[&] MD5 : " + GetMD5Hash(password))
-	fmt.Println("[&] SHA1 : " + GetSHA1Hash(password))
-	fmt.Println("[&] RIPEMD160 : " + GetRipemd160Hash(password))
-	fmt.Println("[&] SHA2-224 : " + GetSHA224Hash(password))
-	fmt.Println("[&] SHA2-256 : " + GetSHA256Hash(password))
-	fmt.Println("[&] SHA2-384 : " + GetSHA384Hash(password))
-	fmt.Println("[&] SHA2-512 : " + GetSHA512Hash(password))
-	fmt.Println("[&] SHA3-224 : " + GetSHA3224Hash(password))
-	fmt.Println("[&] SHA3-256 : " + GetSHA3256Hash(password))
-	fmt.Println("[&] SHA3-384 : " + GetSHA3384Hash(password))
-	fmt.Println("[&] SHA3-512 : " + GetSHA3512Hash(password))
-	fmt.Println("[&] Blake2b256 : " + GetBlake2b256Hash(password))
-	fmt.Println("[&] Blake2b384 : " + GetBlake2b384Hash(password))
-	fmt.Println("[&] Blake2b512 : " + GetBlake2b512Hash(password))
+	fmt.Println("[&] MD4 : " + hash.GetMD4Hash(password))
+	fmt.Println("[&] MD5 : " + hash.GetMD5Hash(password))
+	fmt.Println("[&] SHA1 : " + hash.GetSHA1Hash(password))
+	fmt.Println("[&] RIPEMD160 : " + hash.GetRipemd160Hash(password))
+	fmt.Println("[&] SHA2-224 : " + hash.GetSHA224Hash(password))
+	fmt.Println("[&] SHA2-256 : " + hash.GetSHA256Hash(password))
+	fmt.Println("[&] SHA2-384 : " + hash.GetSHA384Hash(password))
+	fmt.Println("[&] SHA2-512 : " + hash.GetSHA512Hash(password))
+	fmt.Println("[&] SHA3-224 : " + hash.GetSHA3224Hash(password))
+	fmt.Println("[&] SHA3-256 : " + hash.GetSHA3256Hash(password))
+	fmt.Println("[&] SHA3-384 : " + hash.GetSHA3384Hash(password))
+	fmt.Println("[&] SHA3-512 : " + hash.GetSHA3512Hash(password))
+	fmt.Println("[&] Blake2b256 : " + hash.GetBlake2b256Hash(password))
+	fmt.Println("[&] Blake2b384 : " + hash.GetBlake2b384Hash(password))
+	fmt.Println("[&] Blake2b512 : " + hash.GetBlake2b512Hash(password))
 }
 
 //DisplayResult : Display the result for a password
 func DisplayResult(score float64) {
-	scoreRounded := Round(fmt.Sprintf("%.2f", score))
+	scoreRounded := scoring.Round(fmt.Sprintf("%.2f", score))
 	fmt.Println("[!] Final Score: " + fmt.Sprint(scoreRounded) + "/100")
 	if score <= 35 {
 		color.Red("[X] VERY WEAK")
@@ -80,10 +83,10 @@ func DisplayResult(score float64) {
 
 //SuggestPwd : Suggest a new random password
 func SuggestPwd(words [][]string) string {
-	randomPwd := GenerateRandom(30)
+	randomPwd := scoring.GenerateRandom(30)
 	println("[!] You should use this instead...")
 	color.Green("[>>] " + randomPwd)
-	scoreRandomPwd := Grader(words, randomPwd)
+	scoreRandomPwd := scoring.Grader(words, randomPwd)
 	DisplayResult(scoreRandomPwd)
 	return randomPwd
 }
