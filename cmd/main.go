@@ -26,7 +26,7 @@ import (
 )
 
 func main() {
-	Beautify()
+	beauty.Beautify()
 	password := ReadSingleInput("Password")
 	CheckPwd(password)
 	words := ReadAllFiles("pwds")
