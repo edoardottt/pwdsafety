@@ -36,6 +36,3 @@ dep: ## Get the dependencies
 
 lint: ## Lint Golang files
 	@golint -set_exit_status ${PKG_LIST}
-
-build: dep ## Build the binary file
-	@go build -i -o build/main $(PKG)
