@@ -30,7 +30,7 @@ func Beautify() {
 	seventhLine := " |                                                      |\n"
 	eigthLine := " | https://github.com/edoardottt/pwdsafety              |\n"
 	ninethLine := " | edoardottt, https://www.edoardoottavianelli.it       |\n"
-	tenthLine := " | v0.2                                                 |\n"
+	tenthLine := " | v0.3                                                 |\n"
 	eleventhLine := " ========================================================\n"
 	beauty := zeroLine + firstLine + secondLine + thirdLine + fourthLine + fifthLine + sixthLine + seventhLine + eigthLine + ninethLine + tenthLine + eleventhLine
 	firstAdvice := " -> Use a password manager\n"
