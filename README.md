@@ -153,18 +153,6 @@ See also [CONTRIBUTING.md](https://github.com/edoardottt/pwdsafety/blob/master/C
 Thanks to [fabaff](https://github.com/fabaff) and [ecnepsnai](https://github.com/ecnepsnai/pwnedpassword/blob/master/pwned.go).
 
 
-Changelog ⚙️
--------
-
-**[v0.3](https://github.com/edoardottt/pwd-safety/releases/tag/v0.3):**
-          
-  - The structure of the code has been completely reorganized.
-
-**[v0.2](https://github.com/edoardottt/pwd-safety/releases/tag/v0.2):**
-          
-  - Remove all the txt files containing known password.
-  - Now it checks if the password (and the pwd reversed) is leaked via an API.
-
 
 License 📝
 -------
