@@ -172,12 +172,6 @@ Changelog ⚙️
     - Hash hex results for password
     - Better output readability
 
-**[v0.1.2](https://github.com/edoardottt/pwd-safety/releases/tag/v0.1.2):**
-          
-  - Solved Bad Input from Keyboard
-  - Added:
-    - Password Cracking time estimate
-    - Makefile
 
 
 License 📝
