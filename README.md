@@ -152,7 +152,9 @@ See also [CONTRIBUTING.md](https://github.com/edoardottt/pwdsafety/blob/master/C
 
 Thanks to [fabaff](https://github.com/fabaff) and [ecnepsnai](https://github.com/ecnepsnai/pwnedpassword/blob/master/pwned.go).
 
-
+Changelog 📌
+-------
+Detailed changes for each release are documented in the [release notes](https://github.com/edoardottt/pwdsafety/releases).
 
 License 📝
 -------
