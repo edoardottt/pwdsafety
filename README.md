@@ -179,12 +179,6 @@ Changelog ⚙️
     - Password Cracking time estimate
     - Makefile
 
-**[v0.1.1](https://github.com/edoardottt/pwd-safety/releases/tag/v0.1.1):**
-  
-  - Added:
-    - Generates random password when score <= REASONABLE
-    - Errors code table
-
 
 License 📝
 -------
