@@ -185,10 +185,6 @@ Changelog ⚙️
     - Generates random password when score <= REASONABLE
     - Errors code table
 
-**[v0.1](https://github.com/edoardottt/pwd-safety/releases/tag/v0.1):**
-  
-  - First pre-release
-
 
 License 📝
 -------
