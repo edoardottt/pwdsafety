@@ -1,5 +1,6 @@
 coverage.txt
 .idea
+.vscode/
 pwdsafety
 
 # Binaries for programs and plugins
