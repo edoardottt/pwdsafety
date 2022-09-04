@@ -148,6 +148,12 @@ Contributing 🛠
 
 Just open an [issue](https://github.com/edoardottt/pwdsafety/issues) / [pull request](https://github.com/edoardottt/pwdsafety/pulls). 
 
+Before opening a pull request, download [golangci-lint](https://golangci-lint.run/usage/install/) and run
+```bash
+golangci-lint run
+```
+If there aren't errors, go ahead :)
+
 See also [CONTRIBUTING.md](https://github.com/edoardottt/pwdsafety/blob/master/CONTRIBUTING.md) and [CODE OF CONDUCT.md](https://github.com/edoardottt/pwdsafety/blob/master/CODE_OF_CONDUCT.md)
 
 Thanks to [fabaff](https://github.com/fabaff) and [ecnepsnai](https://github.com/ecnepsnai/pwnedpassword/blob/master/pwned.go).
