@@ -26,68 +26,85 @@ import (
 	"path/filepath"
 )
 
-//ReadInput : Reading all inputs from stdin
+// ReadInput : Reading all inputs from stdin.
 func ReadInput() []string {
-	var result []string
 	inputs := [5]string{"name", "surname", "birthday(ddmmyyyy)", "telephone number", "pet's name"}
+
+	result := []string{}
 	for _, value := range inputs {
 		result = append(result, ReadSingleInput(value))
 	}
+
 	return result
 }
 
-//ReadSingleInput : Reading one single input
+// ReadSingleInput : Reading one single input.
 func ReadSingleInput(input string) string {
 	reader := bufio.NewReader(os.Stdin)
+
 	fmt.Print("[>] Enter " + input + ": ")
+
 	text, _ := reader.ReadString('\n')
 	ind := len(text)
+
 	if ind > 0 && text[ind-1] == '\n' {
 		text = text[:ind-1]
 	}
+
 	return text
 }
 
-//ReadWords : Read words from a file
+// ReadWords : Read words from a file.
 func ReadWords(fileInput string) []string {
 	file, err := os.Open(fileInput)
 	if err != nil {
 		log.Fatalf("Failed opening file: %s", err)
 	}
+
 	scanner := bufio.NewScanner(file)
 	scanner.Split(bufio.ScanLines)
+
 	var txtlines []string
 	for scanner.Scan() {
 		txtlines = append(txtlines, scanner.Text())
 	}
+
 	err = file.Close()
+
 	if err != nil {
 		log.Fatalf("Failed closing file: %s", err)
 	}
+
 	return txtlines
 }
 
-//ListAllFiles : It lists all files in a folder
+// ListAllFiles : It lists all files in a folder.
 func ListAllFiles(root string) []string {
 	var files []string
+
 	err := filepath.Walk(root, func(path string, info os.FileInfo, err error) error {
 		if filepath.Ext(path) == ".txt" {
 			files = append(files, path)
 		}
+
 		return nil
 	})
+
 	if err != nil {
 		log.Fatalf("Failed reading files: %s", err)
 	}
+
 	return files
 }
 
-//ReadAllFiles : Read arrays of words from inputted files
+// ReadAllFiles : Read arrays of words from inputted files.
 func ReadAllFiles(folder string) [][]string {
 	files := ListAllFiles(folder)
-	var result [][]string
+	result := [][]string{}
+
 	for i := 0; i < len(files); i++ {
 		result = append(result, ReadWords(files[i]))
 	}
+
 	return result
 }

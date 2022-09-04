@@ -30,18 +30,25 @@ import (
 
 func main() {
 	beauty.Beautify()
+
 	password := ReadSingleInput("Password")
+
 	CheckPwd(password)
+
 	words := ReadAllFiles("pwds")
 	score := scoring.Grader(words, password)
+
 	DisplayResult(score)
+
 	if score <= 68 {
 		crackTime := scoring.CrackTime(password)
 		println("[?] Estimated password cracking time: " + scoring.ShowCrackTime(crackTime))
 		fmt.Println("[-] ------------------------------")
+
 		randomPwd := SuggestPwd(words)
 		password = randomPwd
 	}
+
 	fmt.Println("[&] Hash functions for " + password + " :")
 	fmt.Println("[&] MD4 : " + hash.GetMD4Hash(password))
 	fmt.Println("[&] MD5 : " + hash.GetMD5Hash(password))
@@ -60,38 +67,47 @@ func main() {
 	fmt.Println("[&] Blake2b512 : " + hash.GetBlake2b512Hash(password))
 }
 
-//DisplayResult : Display the result for a password
+// DisplayResult : Display the result for a password.
 func DisplayResult(score float64) {
 	scoreRounded := scoring.Round(fmt.Sprintf("%.2f", score))
+
 	fmt.Println("[!] Final Score: " + fmt.Sprint(scoreRounded) + "/100")
+
 	if score <= 35 {
 		color.Red("[X] VERY WEAK")
 	}
+
 	if score > 35 && score <= 59 {
 		color.Red("[X] WEAK")
 	}
+
 	if score > 59 && score <= 68 {
 		color.Yellow("[.] REASONABLE")
 	}
+
 	if score > 68 && score <= 80 {
 		color.Green("[!] STRONG")
 	}
+
 	if score > 80 {
 		color.Green("[!] VERY STRONG")
 	}
 }
 
-//SuggestPwd : Suggest a new random password
+// SuggestPwd : Suggest a new random password.
 func SuggestPwd(words [][]string) string {
 	randomPwd := scoring.GenerateRandom(30)
+
 	println("[!] You should use this instead...")
 	color.Green("[>>] " + randomPwd)
+
 	scoreRandomPwd := scoring.Grader(words, randomPwd)
 	DisplayResult(scoreRandomPwd)
+
 	return randomPwd
 }
 
-//CheckPwd : Check if a password is useless
+// CheckPwd : Check if a password is useless.
 func CheckPwd(password string) {
 	if len(password) <= 5 {
 		println("[X] Hey....Do you know what is password cracking?")

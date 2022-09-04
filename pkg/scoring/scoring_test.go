@@ -16,17 +16,18 @@
  *      Edoardo Ottavianelli <edoardott@gmail.com>
  */
 
-package scoring
+package scoring_test
 
 import (
 	"fmt"
 	"strconv"
 	"testing"
+
+	"github.com/edoardottt/pwdsafety/pkg/scoring"
 )
 
-//Test if two slices of bytes are equal
+// Test if two slices of bytes are equal.
 func testEqRune(a, b []rune) bool {
-
 	// If one is nil, the other must also be nil.
 	if (a == nil) != (b == nil) {
 		return false
@@ -41,10 +42,11 @@ func testEqRune(a, b []rune) bool {
 			return false
 		}
 	}
+
 	return true
 }
 
-//Test the correct operation of GenerateSetString func
+// Test the correct operation of GenerateSetString func.
 func TestGenerateSetString(t *testing.T) {
 	var tests = []struct {
 		input    string
@@ -52,7 +54,8 @@ func TestGenerateSetString(t *testing.T) {
 	}{
 		{"hellohello", []rune{'h', 'e', 'l', 'o'}},
 		{"", []rune{}},
-		{"abcdefghijklmnopqrstuvwxyz", []rune{'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'}},
+		{"abcdefghijklmnopqrstuvwxyz", []rune{'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
+			'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'}},
 		{"blablablablabla", []rune{'b', 'l', 'a'}},
 		{" !#$%&()*", []rune{' ', '!', '#', '$', '%', '&', '(', ')', '*'}},
 		{"+,-./:;<?@[]^", []rune{'+', ',', '-', '.', '/', ':', ';', '<', '?', '@', '[', ']', '^'}},
@@ -60,14 +63,14 @@ func TestGenerateSetString(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		if output := GenerateSetString(test.input); !testEqRune(test.expected, output) {
+		if output := scoring.GenerateSetString(test.input); !testEqRune(test.expected, output) {
 			errorString := fmt.Sprintf("Test Failed: %s inputted, %d expected, received: %d", test.input, test.expected, output)
 			t.Error(errorString)
 		}
 	}
 }
 
-//Test the correct operation of HowManyDifferents func
+// Test the correct operation of HowManyDifferents func.
 func TestHowManyDifferents(t *testing.T) {
 	var tests = []struct {
 		input    string
@@ -81,14 +84,14 @@ func TestHowManyDifferents(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		if output := HowManyDifferents(test.input); output != test.expected {
+		if output := scoring.HowManyDifferents(test.input); output != test.expected {
 			errorString := fmt.Sprintf("Test Failed: %s inputted, %d expected, received: %d", test.input, test.expected, output)
 			t.Error(errorString)
 		}
 	}
 }
 
-//Test the correct operation of IsThereUpperCase func
+// Test the correct operation of IsThereUpperCase func.
 func TestIsThereUpperCase(t *testing.T) {
 	var tests = []struct {
 		input    string
@@ -102,14 +105,15 @@ func TestIsThereUpperCase(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		if output := IsThereUpperCase(test.input); output != test.expected {
-			errorString := fmt.Sprintf("Test Failed: %s inputted, %s expected, received: %s", test.input, strconv.FormatBool(test.expected), strconv.FormatBool(output))
+		if output := scoring.IsThereUpperCase(test.input); output != test.expected {
+			errorString := fmt.Sprintf("Test Failed: %s inputted, %s expected, received: %s",
+				test.input, strconv.FormatBool(test.expected), strconv.FormatBool(output))
 			t.Error(errorString)
 		}
 	}
 }
 
-//Test the correct operation of IsThereLowerCase func
+// Test the correct operation of IsThereLowerCase func.
 func TestIsThereLowerCase(t *testing.T) {
 	var tests = []struct {
 		input    string
@@ -123,14 +127,15 @@ func TestIsThereLowerCase(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		if output := IsThereLowerCase(test.input); output != test.expected {
-			errorString := fmt.Sprintf("Test Failed: %s inputted, %s expected, received: %s", test.input, strconv.FormatBool(test.expected), strconv.FormatBool(output))
+		if output := scoring.IsThereLowerCase(test.input); output != test.expected {
+			errorString := fmt.Sprintf("Test Failed: %s inputted, %s expected, received: %s",
+				test.input, strconv.FormatBool(test.expected), strconv.FormatBool(output))
 			t.Error(errorString)
 		}
 	}
 }
 
-//Test the correct operation of IsThereSymbol func
+// Test the correct operation of IsThereSymbol func.
 func TestIsThereSymbol(t *testing.T) {
 	var tests = []struct {
 		input    string
@@ -144,14 +149,15 @@ func TestIsThereSymbol(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		if output := IsThereSymbol(test.input); output != test.expected {
-			errorString := fmt.Sprintf("Test Failed: %s inputted, %s expected, received: %s", test.input, strconv.FormatBool(test.expected), strconv.FormatBool(output))
+		if output := scoring.IsThereSymbol(test.input); output != test.expected {
+			errorString := fmt.Sprintf("Test Failed: %s inputted, %s expected, received: %s",
+				test.input, strconv.FormatBool(test.expected), strconv.FormatBool(output))
 			t.Error(errorString)
 		}
 	}
 }
 
-//Test the correct operation of IsThereNumber func
+// Test the correct operation of IsThereNumber func.
 func TestIsThereNumber(t *testing.T) {
 	var tests = []struct {
 		input    string
@@ -165,14 +171,15 @@ func TestIsThereNumber(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		if output := IsThereNumber(test.input); output != test.expected {
-			errorString := fmt.Sprintf("Test Failed: %s inputted, %s expected, received: %s", test.input, strconv.FormatBool(test.expected), strconv.FormatBool(output))
+		if output := scoring.IsThereNumber(test.input); output != test.expected {
+			errorString := fmt.Sprintf("Test Failed: %s inputted, %s expected, received: %s",
+				test.input, strconv.FormatBool(test.expected), strconv.FormatBool(output))
 			t.Error(errorString)
 		}
 	}
 }
 
-//Test the correct operation of HowManyTypes func
+// Test the correct operation of HowManyTypes func.
 func TestHowManyTypes(t *testing.T) {
 	var tests = []struct {
 		input    string
@@ -186,8 +193,9 @@ func TestHowManyTypes(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		if output := HowManyTypes(test.input); output != test.expected {
-			errorString := fmt.Sprintf("Test Failed: %s inputted, %d expected, received: %d", test.input, test.expected, output)
+		if output := scoring.HowManyTypes(test.input); output != test.expected {
+			errorString := fmt.Sprintf("Test Failed: %s inputted, %d expected, received: %d",
+				test.input, test.expected, output)
 			t.Error(errorString)
 		}
 	}

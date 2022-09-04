@@ -23,7 +23,7 @@ import (
 	"testing"
 )
 
-//Test the correct operation of ReadWords func
+// Test the correct operation of ReadWords func.
 func TestReadWords(t *testing.T) {
 	var tests = []struct {
 		input    string
@@ -33,7 +33,8 @@ func TestReadWords(t *testing.T) {
 		{"testFiles/Pwd2.txt", []string{"main", "main", "main", "mainpassmain"}},
 		{"testFiles/Pwd3.txt", nil},
 		{"testFiles/Pwd4.txt", []string{"iwfcaheuhwilehli38ry2r8RYBW8RYBYELYT8AOVWYÒV8LOylR-ù-,à.èù-àq.vàfqè+"}},
-		{"testFiles/Pwd5.txt", []string{"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"}},
+		{"testFiles/Pwd5.txt", []string{"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
+			"M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"}},
 	}
 
 	for _, test := range tests {
@@ -44,9 +45,8 @@ func TestReadWords(t *testing.T) {
 	}
 }
 
-//EqStringTest : Test if two slices of strings are equal
+// EqStringTest : Test if two slices of strings are equal.
 func EqStringTest(a, b []string) bool {
-
 	// If one is nil, the other must also be nil.
 	if (a == nil) != (b == nil) {
 		return false

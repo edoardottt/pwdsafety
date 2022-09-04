@@ -18,7 +18,7 @@
 
 package beauty
 
-//Beautify : If the terminal size is enough, print the label PWD-SAFETY.
+// Beautify : If the terminal size is enough, print the label PWD-SAFETY.
 func Beautify() {
 	zeroLine := " ========================================================\n"
 	firstLine := " |  	              _            __      _            |\n"
@@ -32,7 +32,8 @@ func Beautify() {
 	ninethLine := " | edoardottt, https://www.edoardoottavianelli.it       |\n"
 	tenthLine := " | v0.3                                                 |\n"
 	eleventhLine := " ========================================================\n"
-	beauty := zeroLine + firstLine + secondLine + thirdLine + fourthLine + fifthLine + sixthLine + seventhLine + eigthLine + ninethLine + tenthLine + eleventhLine
+	beauty := zeroLine + firstLine + secondLine + thirdLine + fourthLine + fifthLine + sixthLine +
+		seventhLine + eigthLine + ninethLine + tenthLine + eleventhLine
 	firstAdvice := " -> Use a password manager\n"
 	secondAdvice := " -> Don't use the same password for different services\n"
 	thirdAdvice := " -> Enable 2FA when possible\n"
