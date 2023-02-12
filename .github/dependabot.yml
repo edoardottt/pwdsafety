@@ -6,7 +6,7 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    target-branch: "devel"
+    target-branch: "master"
     commit-message:
       prefix: "chore"
       include: "scope"
