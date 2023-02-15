@@ -32,7 +32,7 @@
       </a>
     <!-- workflows -->
       <a href="https://edoardoottavianelli.it">
-        <img src="https://github.com/edoardottt/pwdsafety/workflows/Go/badge.svg?branch=master" alt="workflows" />
+        <img src="https://github.com/edoardottt/pwdsafety/actions/workflows/go.yml/badge.svg" alt="workflows" />
       </a>
     <!-- ubuntu-build -->
       <a href="https://edoardoottavianelli.it">
