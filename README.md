@@ -31,7 +31,7 @@
         <img src="https://goreportcard.com/badge/github.com/edoardottt/pwdsafety" alt="go-report-card" />
       </a>
     <!-- workflows -->
-      <a href="https://edoardoottavianelli.it">
+      <a href="https://github.com/edoardottt/pwdsafety/actions">
         <img src="https://github.com/edoardottt/pwdsafety/actions/workflows/go.yml/badge.svg" alt="workflows" />
       </a>
     <!-- ubuntu-build -->
