@@ -9,13 +9,13 @@ base: core20
 confinement: strict
 
 apps:
-  cariddi:
+  pwdsafety:
     command: bin/pwdsafety
     plugs:
       - home
 
 parts:
-  cariddi:
+  pwdsafety:
     plugin: go
     source-type: git
     source: https://github.com/edoardottt/pwdsafety
