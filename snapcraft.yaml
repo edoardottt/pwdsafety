@@ -1,0 +1,21 @@
+name: pwdsafety
+summary: CLI tool checking password safety
+description: |
+      Takes as input a password and output a score of strengthness. If not sufficiently strong, it suggests a random password.
+version: 0.3
+grade: stable
+base: core20
+
+confinement: strict
+
+apps:
+  cariddi:
+    command: bin/pwdsafety
+    plugs:
+      - home
+
+parts:
+  cariddi:
+    plugin: go
+    source-type: git
+    source: https://github.com/edoardottt/pwdsafety
