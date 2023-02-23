@@ -2,6 +2,7 @@ coverage.txt
 .idea
 .vscode/
 pwdsafety
+*.snap
 
 # Binaries for programs and plugins
 *.exe

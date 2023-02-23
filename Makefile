@@ -14,13 +14,16 @@ remod:
 	@echo "Done."
 
 update:
-	@cd cmd && go get -u;
-	@cd cmd && go mod tidy -v;
+	@go get -u
+	@go mod tidy -v
+	@make unlinux
+	@git pull
+	@make linux
 	@echo "Done."
 
 linux:
-	@cd cmd && go build -o ./pwdsafety
-	@sudo mv ./cmd/pwdsafety /usr/bin/
+	@go build ./cmd/pwdsafety
+	@sudo mv ./pwdsafety /usr/bin/
 	@echo "Done."
 
 unlinux:

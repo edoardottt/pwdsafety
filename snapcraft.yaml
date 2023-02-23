@@ -10,7 +10,7 @@ confinement: strict
 
 apps:
   pwdsafety:
-    command: bin/pwdsafety
+    command: bin/cmd
     plugs:
       - home
 
