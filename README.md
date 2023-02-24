@@ -71,8 +71,12 @@ Example :bar_chart:
 Get Started 🎉
 ----------
 
-### Go1.17+
+### Snap
+```bash
+sudo snap install pwdsafety
+```
 
+### Go1.17+
 ```bash
 go install -v github.com/edoardottt/pwdsafety@latest
 ```
