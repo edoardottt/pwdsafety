@@ -11,8 +11,6 @@ confinement: strict
 apps:
   pwdsafety:
     command: bin/pwdsafety
-    plugs:
-      - home
 
 parts:
   pwdsafety:
