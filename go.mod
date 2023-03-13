@@ -3,7 +3,7 @@ module github.com/edoardottt/pwdsafety
 go 1.18
 
 require (
-	github.com/fatih/color v1.14.1
+	github.com/fatih/color v1.15.0
 	golang.org/x/crypto v0.7.0
 )
 
