@@ -50,7 +50,7 @@
   <a href="#description-">Description</a> •
   <a href="#scoring-">Scoring</a> •
   <a href="#contributing-">Contributing</a> •
-  <a href="#changelog-%EF%B8%8F">Changelog</a>
+  <a href="#changelog-">Changelog</a>
 </p>
 
 **This tool doesn't store any information!!**  
