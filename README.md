@@ -68,12 +68,12 @@ Get Started 🎉
 ----------
 
 ### Snap
-```bash
+```console
 sudo snap install pwdsafety
 ```
 
 ### Go1.17+
-```bash
+```console
 go install -v github.com/edoardottt/pwdsafety@latest
 ```
 
@@ -105,7 +105,7 @@ Description 🔦
 It reads from standard input the entered password.  
 First, it searches if the password or the password reversed is a well known pwd.  
 Then, just do little calculations, checking if the basic rules are respected, like if there are UPPERCASE CHARS, lowercase chars, numb3rs and symbols.  
-It stores the length of the password and the ratio [ unique different chars / total chars].  
+It stores the length of the password and the ratio [unique different chars / total chars].  
 It calculates then the entropy of a password.  
 Password entropy is a measurement of how unpredictable a password is.  
 The formula for entropy is:  
@@ -149,7 +149,7 @@ Contributing 🛠
 Just open an [issue](https://github.com/edoardottt/pwdsafety/issues) / [pull request](https://github.com/edoardottt/pwdsafety/pulls). 
 
 Before opening a pull request, download [golangci-lint](https://golangci-lint.run/usage/install/) and run
-```bash
+```console
 golangci-lint run
 ```
 If there aren't errors, go ahead :)
