@@ -39,10 +39,6 @@
         <img src="https://github.com/edoardottt/images/blob/main/pwdsafety/ubuntu-build.svg" alt="ubuntu-build" />
       </a>
   <br>
-    <!-- gobadge -->
-      <a href="https://edoardoottavianelli.it">
-        <img src="https://github.com/edoardottt/images/blob/main/pwdsafety/gobadge" alt="gobadge" />
-      </a>
     <!-- license GPLv3.0 -->
       <a href="https://github.com/edoardottt/READMENATOR/blob/master/LICENSE">
         <img src="https://github.com/edoardottt/READMENATOR/blob/master/images/license-GPL3.svg" alt="license-GPL3" />
