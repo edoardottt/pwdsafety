@@ -45,7 +45,7 @@
       </a>
 </p>
 <p align="center">
-  <a href="#example-bar_chart">Example</a> •
+  <a href="#preview-">Example</a> •
   <a href="#get-started-">Get Started</a> •
   <a href="#description-">Description</a> •
   <a href="#scoring-">Scoring</a> •
@@ -60,7 +60,7 @@
 - Don't use the same password for different services  
 - Enable 2FA when possible  
 
-Example :bar_chart
+Preview 📊
 ----------
 
 [![asciicast](https://asciinema.org/a/406710.svg)](https://asciinema.org/a/406710)
