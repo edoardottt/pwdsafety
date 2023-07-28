@@ -45,7 +45,7 @@
       </a>
 </p>
 <p align="center">
-  <a href="#preview-">Example</a> •
+  <a href="#preview-">Preview</a> •
   <a href="#get-started-">Get Started</a> •
   <a href="#description-">Description</a> •
   <a href="#scoring-">Scoring</a> •
