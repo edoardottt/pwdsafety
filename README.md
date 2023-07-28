@@ -55,11 +55,12 @@
 
 **This tool doesn't store any information!!**  
 **Remember, never use personal information in your password!**  
- - Use a password manager (I recommend [bitwarden](https://bitwarden.com/))  
- - Don't use the same password for different services  
- - Enable 2FA when possible  
 
-Example :bar_chart:
+- Use a password manager (I recommend [bitwarden](https://bitwarden.com/))  
+- Don't use the same password for different services  
+- Enable 2FA when possible  
+
+Example :bar_chart
 ----------
 
 [![asciicast](https://asciinema.org/a/406710.svg)](https://asciinema.org/a/406710)
@@ -68,11 +69,13 @@ Get Started 🎉
 ----------
 
 ### Snap
+
 ```console
 sudo snap install pwdsafety
 ```
 
 ### Go1.17+
+
 ```console
 go install -v github.com/edoardottt/pwdsafety@latest
 ```
@@ -99,7 +102,7 @@ go install -v github.com/edoardottt/pwdsafety@latest
 
   - `make unwindows` (to uninstall)
 
-Description 🔦 
+Description 🔦
 ----------
 
 It reads from standard input the entered password.  
@@ -110,8 +113,9 @@ It calculates then the entropy of a password.
 Password entropy is a measurement of how unpredictable a password is.  
 The formula for entropy is:  
               ![formula](https://github.com/edoardottt/images/blob/main/pwdsafety/formula.png)  
-              
+
 Where:
+
 - E = password entropy  
 - R = pool of unique characters  
 - L = number of characters in your password  
@@ -125,33 +129,37 @@ Scoring 💯
 **Max score: 100**
 
 **Scores:**
-  - Very weak: 0 - 35
-  - Weak: 36 - 59
-  - Reasonable: 60 - 68
-  - Strong: 69 - 80
-  - Very strong: 81 -100
+
+- Very weak: 0 - 35
+- Weak: 36 - 59
+- Reasonable: 60 - 68
+- Strong: 69 - 80
+- Very strong: 81 -100
   
 **Scoring parameters:**
-  - Found in known password
-  - Found in known password reversed
-  - Password composition:
-      - numbers
-      - symbols
-      - uppercase
-      - lowercase
-  - Unique different characters
-  - Length
-  - Entropy
+
+- Found in known password
+- Found in known password reversed
+- Password composition:
+  - numbers
+  - symbols
+  - uppercase
+  - lowercase
+- Unique different characters
+- Length
+- Entropy
 
 Contributing 🛠
 -------
 
-Just open an [issue](https://github.com/edoardottt/pwdsafety/issues) / [pull request](https://github.com/edoardottt/pwdsafety/pulls). 
+Just open an [issue](https://github.com/edoardottt/pwdsafety/issues) / [pull request](https://github.com/edoardottt/pwdsafety/pulls).
 
 Before opening a pull request, download [golangci-lint](https://golangci-lint.run/usage/install/) and run
+
 ```console
 golangci-lint run
 ```
+
 If there aren't errors, go ahead :)
 
 See also [CONTRIBUTING.md](https://github.com/edoardottt/pwdsafety/blob/master/CONTRIBUTING.md) and [CODE OF CONDUCT.md](https://github.com/edoardottt/pwdsafety/blob/master/CODE_OF_CONDUCT.md)
@@ -160,6 +168,7 @@ Thanks to [fabaff](https://github.com/fabaff) and [ecnepsnai](https://github.com
 
 Changelog 📌
 -------
+
 Detailed changes for each release are documented in the [release notes](https://github.com/edoardottt/pwdsafety/releases).
 
 License 📝
