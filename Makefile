@@ -14,7 +14,7 @@ remod:
 	@echo "Done."
 
 update:
-	@go get -u
+	@go get -u ./...
 	@go mod tidy -v
 	@make unlinux
 	@git pull
