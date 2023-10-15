@@ -45,7 +45,6 @@
       </a>
 </p>
 <p align="center">
-  <a href="#preview-">Preview</a> •
   <a href="#get-started-">Get Started</a> •
   <a href="#description-">Description</a> •
   <a href="#scoring-">Scoring</a> •
@@ -59,9 +58,6 @@
 - Use a password manager (I recommend [bitwarden](https://bitwarden.com/))  
 - Don't use the same password for different services  
 - Enable 2FA when possible  
-
-Preview 📊
-----------
 
 [![asciicast](https://asciinema.org/a/406710.svg)](https://asciinema.org/a/406710)
 
