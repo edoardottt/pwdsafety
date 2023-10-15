@@ -57,7 +57,7 @@
 
 - Use a password manager (I recommend [bitwarden](https://bitwarden.com/))  
 - Don't use the same password for different services  
-- Enable 2FA when possible  
+- Enable 2FA wherever possible  
 
 [![asciicast](https://asciinema.org/a/406710.svg)](https://asciinema.org/a/406710)
 
