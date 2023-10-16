@@ -52,14 +52,18 @@
   <a href="#changelog-">Changelog</a>
 </p>
 
-**This tool doesn't store any information!!**  
-**Remember, never use personal information in your password!**  
+<p align="center">
+  <img src="https://github.com/edoardottt/images/blob/main/pwdsafety/pwdsafety.gif">
+</p>
+
+**This tool doesn't store any information!**  
+**Never use personal information in your password!**  
 
 - Use a password manager (I recommend [bitwarden](https://bitwarden.com/))  
 - Don't use the same password for different services  
 - Enable 2FA wherever possible  
 
-[![asciicast](https://asciinema.org/a/406710.svg)](https://asciinema.org/a/406710)
+<!-- [![asciicast](https://asciinema.org/a/406710.svg)](https://asciinema.org/a/406710) -->
 
 Get Started 🎉
 ----------
