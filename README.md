@@ -13,10 +13,6 @@
       <a href="https://edoardoottavianelli.it">
         <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="Mainteinance yes" />
       </a>
-    <!-- version -->
-      <a href="https://edoardoottavianelli.it">
-        <img src="https://github.com/edoardottt/images/blob/main/pwdsafety/version.svg" alt="version" />
-      </a>
     <!-- pr-welcome -->
       <a href="https://edoardoottavianelli.it">
         <img src="https://github.com/edoardottt/READMENATOR/blob/master/images/pr-welcome.svg" alt="pr-welcome" />
@@ -25,11 +21,11 @@
       <a href="https://edoardoottavianelli.it">
         <img src="https://github.com/edoardottt/READMENATOR/blob/master/images/ask-me-anything.svg" alt="ask me anything" />
       </a>
-  <br>
     <!-- go-report-card -->
       <a href="https://goreportcard.com/report/github.com/edoardottt/pwdsafety">
         <img src="https://goreportcard.com/badge/github.com/edoardottt/pwdsafety" alt="go-report-card" />
       </a>
+  <br>
     <!-- workflows -->
       <a href="https://github.com/edoardottt/pwdsafety/actions">
         <img src="https://github.com/edoardottt/pwdsafety/actions/workflows/go.yml/badge.svg" alt="workflows" />
@@ -38,7 +34,6 @@
       <a href="https://edoardoottavianelli.it">
         <img src="https://github.com/edoardottt/images/blob/main/pwdsafety/ubuntu-build.svg" alt="ubuntu-build" />
       </a>
-  <br>
     <!-- license GPLv3.0 -->
       <a href="https://github.com/edoardottt/READMENATOR/blob/master/LICENSE">
         <img src="https://github.com/edoardottt/READMENATOR/blob/master/images/license-GPL3.svg" alt="license-GPL3" />
