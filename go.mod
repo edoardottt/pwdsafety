@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/fatih/color v1.16.0
-	golang.org/x/crypto v0.19.0
+	golang.org/x/crypto v0.20.0
 )
 
 require (
