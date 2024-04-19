@@ -31,11 +31,11 @@ func Beautify() {
 	fifthLine := "  | .__/ \\_/\\_/ \\__,_|___/\\__,_|_|  \\___|\\__|\\__, |   \n"
 	sixthLine := "  |_|                                        |___/   " + Version + "\n"
 	seventhLine := " https://github.com/edoardottt/pwdsafety              \n"
-	eigthLine := " edoardottt, https://www.edoardoottavianelli.it\n"
+	eigthLine := " edoardottt, https://www.edoardoottavianelli.it"
 	beauty := firstLine + secondLine + thirdLine + fourthLine + fifthLine + sixthLine +
 		seventhLine + eigthLine
 	firstAdvice := " > Use a password manager\n"
 	secondAdvice := " > Don't use the same password for different services\n"
 	thirdAdvice := " > Enable 2FA wherever possible\n"
-	println(beauty + "\n" + firstAdvice + secondAdvice + thirdAdvice)
+	println(beauty + firstAdvice + secondAdvice + thirdAdvice)
 }
