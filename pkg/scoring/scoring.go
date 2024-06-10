@@ -22,7 +22,6 @@ import (
 	"crypto/sha1"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"math"
 	"math/rand"
 	"net/http"
@@ -345,7 +344,7 @@ func IsPwned(password string) (*Result, error) {
 
 	defer resp.Body.Close()
 
-	body, err := ioutil.ReadAll(resp.Body)
+	body, err := io.ReadAll(resp.Body)
 
 	if err != nil {
 		return nil, err
@@ -427,7 +426,7 @@ func GenerateRandom(length int) string {
 		numberSet      = "0123456789"
 	)
 
-	rand.Seed(time.Now().UnixNano())
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 
 	var (
 		randomPwd = ""
@@ -435,30 +434,30 @@ func GenerateRandom(length int) string {
 	)
 
 	for i := 0; i < length; i++ {
-		switch choice := rand.Intn(choices); choice {
+		switch choice := r.Intn(choices); choice {
 		case 0:
 			leng := len(lowerCharSet)
-			index := rand.Intn(leng)
+			index := r.Intn(leng)
 			elem := lowerCharSet[index]
 			randomPwd += string(elem)
 		case 1:
 			leng := len(upperCharSet)
-			index := rand.Intn(leng)
+			index := r.Intn(leng)
 			elem := upperCharSet[index]
 			randomPwd += string(elem)
 		case 2:
 			leng := len(specialCharSet)
-			index := rand.Intn(leng)
+			index := r.Intn(leng)
 			elem := specialCharSet[index]
 			randomPwd += string(elem)
 		case 3:
 			leng := len(numberSet)
-			index := rand.Intn(leng)
+			index := r.Intn(leng)
 			elem := numberSet[index]
 			randomPwd += string(elem)
 		default:
 			leng := len(lowerCharSet)
-			index := rand.Intn(leng)
+			index := r.Intn(leng)
 			elem := lowerCharSet[index]
 			randomPwd += string(elem)
 		}
@@ -470,6 +469,7 @@ func GenerateRandom(length int) string {
 /*
 LengthScore :
 Scores password's length
+
 	total = 30
 	length<=7 = 0
 	length==8 = 4
@@ -511,6 +511,7 @@ func LengthScore(password string) float64 {
 /*
 CompositionPwdScore :
 Scores password's composition
+
 	total = 20
 	There is numbers = 5
 	There is symbol = 5
@@ -547,6 +548,7 @@ func CompositionPwdScore(password string) float64 {
 /*
 DifferentCharScore :
 Scores How many different chars in relation to the length
+
 	total = 15
 	n = (different_chars*total)/total_chars
 */
@@ -564,6 +566,7 @@ func DifferentCharScore(password string) float64 {
 /*
 EntropyScore :
 Scores Entropy's password
+
 	total = 35
 	< 28 bits = 3
 	28 - 35 bits = 8
