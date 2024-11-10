@@ -10,15 +10,15 @@
 <!-- badges -->
 <p align="center">
     <!-- mainteinance -->
-      <a href="https://edoardoottavianelli.it">
+      <a href="https://edoardottt.com/">
         <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="Mainteinance yes" />
       </a>
     <!-- pr-welcome -->
-      <a href="https://edoardoottavianelli.it">
+      <a href="https://edoardottt.com/">
         <img src="https://github.com/edoardottt/READMENATOR/blob/master/images/pr-welcome.svg" alt="pr-welcome" />
       </a>
     <!-- ask-me-anything -->
-      <a href="https://edoardoottavianelli.it">
+      <a href="https://edoardottt.com/">
         <img src="https://github.com/edoardottt/READMENATOR/blob/master/images/ask-me-anything.svg" alt="ask me anything" />
       </a>
     <!-- go-report-card -->
@@ -31,7 +31,7 @@
         <img src="https://github.com/edoardottt/pwdsafety/actions/workflows/go.yml/badge.svg" alt="workflows" />
       </a>
     <!-- ubuntu-build -->
-      <a href="https://edoardoottavianelli.it">
+      <a href="https://edoardottt.com/">
         <img src="https://github.com/edoardottt/images/blob/main/pwdsafety/ubuntu-build.svg" alt="ubuntu-build" />
       </a>
     <!-- license GPLv3.0 -->
@@ -170,4 +170,4 @@ License 📝
 -------
 
 This repository is under [GNU General Public License v3.0](https://github.com/edoardottt/pwdsafety/blob/master/LICENSE).  
-[edoardoottavianelli.it](https://www.edoardoottavianelli.it) to contact me.
+[edoardottt.com](https://edoardottt.com/) to contact me.
