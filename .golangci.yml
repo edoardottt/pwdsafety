@@ -7,16 +7,15 @@ linters:
     - bodyclose
     - dogsled
     - dupl
+    - err113
     - errcheck
     - exhaustive
-    - exportloopref
     - gochecknoglobals
     - gochecknoinits
     - goconst
     - gocritic
     - godot
     - godox
-    - goerr113
     - goheader
     - gomodguard
     - goprintffuncname
