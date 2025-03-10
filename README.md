@@ -72,7 +72,7 @@ sudo snap install pwdsafety
 ### Go1.17+
 
 ```console
-go install -v github.com/edoardottt/pwdsafety@latest
+go install -v github.com/edoardottt/pwdsafety/cmd/pwdsafety@latest
 ```
 
 ### From source
