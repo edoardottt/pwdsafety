@@ -70,7 +70,6 @@ func ReadWords(fileInput string) []string {
 	}
 
 	err = file.Close()
-
 	if err != nil {
 		log.Fatalf("Failed closing file: %s", err)
 	}
@@ -89,7 +88,6 @@ func ListAllFiles(root string) []string {
 
 		return nil
 	})
-
 	if err != nil {
 		log.Fatalf("Failed reading files: %s", err)
 	}

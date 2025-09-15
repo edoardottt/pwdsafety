@@ -29,16 +29,16 @@ import (
 
 	"golang.org/x/crypto/blake2b"
 	"golang.org/x/crypto/blake2s"
-	"golang.org/x/crypto/md4"
-	"golang.org/x/crypto/ripemd160"
+	"golang.org/x/crypto/md4"       //nolint:staticcheck
+	"golang.org/x/crypto/ripemd160" //nolint:staticcheck
 	"golang.org/x/crypto/sha3"
 )
 
 // GetMD4Hash : Return MD4 hash of input.
 func GetMD4Hash(text string) string {
 	h := md4.New()
-	_, err := io.WriteString(h, text)
 
+	_, err := io.WriteString(h, text)
 	if err != nil {
 		log.Fatal(err)
 	}

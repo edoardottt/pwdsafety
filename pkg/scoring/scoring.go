@@ -345,7 +345,6 @@ func IsPwned(password string) (*Result, error) {
 	defer resp.Body.Close()
 
 	body, err := io.ReadAll(resp.Body)
-
 	if err != nil {
 		return nil, err
 	}
@@ -385,8 +384,8 @@ func IsPwned(password string) (*Result, error) {
 
 func getHash(password string) (*pwnedHash, error) {
 	h := sha1.New()
-	_, err := io.WriteString(h, password)
 
+	_, err := io.WriteString(h, password)
 	if err != nil {
 		return nil, err
 	}

@@ -1,10 +1,10 @@
+version: "2"
 linters:
-  # Enable all available linters.
-  # Default: false
-  disable-all: true
+  default: none
   enable:
     - asciicheck
     - bodyclose
+    - copyloopvar
     - dogsled
     - dupl
     - err113
@@ -19,10 +19,8 @@ linters:
     - goheader
     - gomodguard
     - goprintffuncname
-    - gosimple
     - govet
     - ineffassign
-    - lll
     - misspell
     - nakedret
     - nolintlint
@@ -30,20 +28,27 @@ linters:
     - rowserrcheck
     - sqlclosecheck
     - staticcheck
-    - stylecheck
     - testpackage
     - unconvert
     - unparam
     - unused
     - whitespace
-    - wsl
-
-linters-settings:
-  wsl:
-    strict-append: false
-    enforce-err-cuddling: true
-
-issues:
-  exclude-rules:
-    - path: pkg/hash/hash.go
-      text: "SA1019"
+    - wsl_v5
+  exclusions:
+    generated: lax
+    presets:
+      - comments
+      - common-false-positives
+      - legacy
+      - std-error-handling
+    paths:
+      - third_party$
+      - builtin$
+      - examples$
+formatters:
+  exclusions:
+    generated: lax
+    paths:
+      - third_party$
+      - builtin$
+      - examples$
