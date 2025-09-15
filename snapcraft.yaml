@@ -2,7 +2,7 @@ name: pwdsafety
 summary: CLI tool checking password safety
 description: |
       Takes as input a password and output a score of strengthness. If not sufficiently strong, it suggests a random password.
-version: v0.4.0
+version: v0.4.1
 grade: stable
 base: core20
 

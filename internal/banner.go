@@ -19,7 +19,7 @@
 package beauty
 
 const (
-	Version = "v0.4.0"
+	Version = "v0.4.1"
 )
 
 // Beautify : If the terminal size is enough, print the label PWD-SAFETY.
