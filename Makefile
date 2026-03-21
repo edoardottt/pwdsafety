@@ -38,4 +38,4 @@ dep: ## Get the dependencies
 	@go mod download
 
 lint: ## Lint Golang files
-	@golint -set_exit_status ${PKG_LIST}
+	@golangci-lint run

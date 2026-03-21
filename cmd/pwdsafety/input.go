@@ -30,7 +30,7 @@ import (
 func ReadInput() []string {
 	inputs := [5]string{"name", "surname", "birthday(ddmmyyyy)", "telephone number", "pet's name"}
 
-	result := []string{}
+	result := make([]string, 0, len(inputs))
 	for _, value := range inputs {
 		result = append(result, ReadSingleInput(value))
 	}
